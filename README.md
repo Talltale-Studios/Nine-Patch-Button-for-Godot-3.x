@@ -17,8 +17,10 @@ Place your corresponding textures and sound files in the exported variable's box
 If you experience any bugs or want to give a suggestion please feel free to open an Issue here on the plugin's Github page.
 
 ## Future plans
-- Fix the text
-- Add the Texture Button's `Click Mask` feature
+- Fix the text display issue
+- Add the `Click Mask` property from the Texture Button
+- Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity
+- Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity
 
 ## Changelog:
 ### v1.4.0
