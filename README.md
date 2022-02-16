@@ -21,7 +21,7 @@ If you experience any bugs or want to give a suggestion please feel free to open
 - Add the `Click Mask` property from the Texture Button to enable the user to set up more fitting click masks
 - Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity
 - Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity
-- Add Texture Button-esque texture stretching? Might not work... but could be cool to have that as an alternative to the already-implemented NinePatchRect-esque button texturing method
+- Add Texture Button-esque texture stretching? Might not work... but it could be cool to have that as an alternative to the already-implemented NinePatchRect-esque button texturing method
 
 ## Changelog:
 ### v1.4.0
