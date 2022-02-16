@@ -12,7 +12,7 @@ The Texture Button stretches the custom textures you add to it, which is especia
 To set up the NinePatchRect button texturing simply load your texture into
 
 ## Got Any Feedback?
-If you have any feedback, be it a bug report or a suggestion, feel free to open an issue on GitHub. All we ask is that you try to label your issue suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for. If an issue on that topic already exists, instead add on to that issue with a comment of your own.
+If you have any feedback, be it a bug report, a complaint, a suggestion or a request, feel free to open an issue on GitHub. All we ask is that you try to label your issue suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for. If an issue on that topic already exists, instead add on to that issue with a comment of your own.
 
 We appreciate any kind of constructive feedback you can give us as it is important for us to know if something isn't working as expected or if you have any suggestions for us on how to improve the plugin.
 
