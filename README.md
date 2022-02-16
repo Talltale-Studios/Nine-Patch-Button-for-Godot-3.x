@@ -23,34 +23,34 @@ If you experience any bugs or want to give a suggestion please feel free to open
 - Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity.
 - Add Texture Button-esque button texturing? It might not work... but it could be useful to have that as an alternative to the already-implemented NinePatchRect-esque button texturing.
 - Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using Texture Button-esque button texturing and NinePatchRect-esque nutton texturing without clogging up the Inspector.
+- Add all exported properties to custom property groups.
 
 ## Changelog:
 ### v1.4.0
-- Initial public release of the plugin on the [Asset Library](https://godotengine.org/asset-library) for Godot version 3.x
+- Initial public release of the plugin on the [Asset Library](https://godotengine.org/asset-library) for Godot version 3.x.
 
 ### v1.3.0
-- Added all exported Script Variables to custom property groups
-- Added a new custom `Focused Sound` property
-- Added the `Focused Texture` property from the Texture Button
-- Added the `Action Mode` property from the Button
-- Fixed a typo in one of the properties
-- Removed the deprecated `Enabled Focus Mode` property from the Button (according to its own tooltip it is deprecated and scheduled for removal in Godot 4 anyways)
-- Cleaned up the plugin's code
+- Added a new custom `Focused Sound` property.
+- Added the `Focused Texture` property from the Texture Button.
+- Added the `Action Mode` property from the Button.
+- Fixed a typo in one of the properties.
+- Removed the deprecated `Enabled Focus Mode` property from the Button (according to its own tooltip it is deprecated and scheduled for removal in Godot 4 anyways).
+- Cleaned up the plugin's code.
 
 ### v1.2.1
 - Fixed a bug.
 
 ### v1.2.0
-- Made the plugin use `tool`
-- Removed the now-redundant `NinePatchButton.tscn`
+- Made the plugin use `tool`.
+- Removed the now-redundant `NinePatchButton.tscn`.
 
 ### v1.1.0
-- Fixed a bug
-- Renamed the plugin's scripts
-- Cleaned up the plugin's code
+- Fixed a bug.
+- Renamed the plugin's scripts.
+- Cleaned up the plugin's code.
 
 ### v1.0.1
-- Added a custom icon for the plugin
+- Added a custom icon for the plugin.
 
 ### v1.0.0
-- Initial private release of the plugin for in-house testing and development for Godot 3.x
+- Initial private release of the plugin for in-house testing and development for Godot 3.x.
