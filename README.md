@@ -6,7 +6,7 @@ A new type of node that combines the features of the NinePatchRect, the Button a
 *Note: We've been having issues with getting text to display correctly on the NinePatchButton, so we've had to disable that feature for now. We'll revisit this at a later time. For now you could use a Label (or something similar) and add text to the button manually. If you can manage to integrate the text you want to display into the button's texture then that could work as well.*
 
 ## Why Did We Make This?
-The Texture Button stretches the custom textures you add to it, which is especially annoying when using pixel art. The NinePatchRect doesn't have this issue, so the sensible thing to do would be to use the NinePatchRect's method to add custom textures to our buttons instead, so we combined the features of the NinePatchRect with those of the Button. The TextureButton still had some good features though, so we added some of them into the mix as well, along with a our custom sound system.
+The Texture Button stretches the custom textures you add to it, which is especially noticable when trying to use pixel art. The NinePatchRect doesn't have this issue, so the sensible thing to do would be to use the NinePatchRect's method to add custom textures to our buttons instead, so we combined the features of the NinePatchRect with those of the Button. The TextureButton still had some good features though, so we added some of them into the mix as well, along with a our custom sound system.
 
 ## Usage Guide
 Place your desired texture into the `Texture` property of the NinePatchRect's 
