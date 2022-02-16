@@ -19,6 +19,7 @@ If you experience any bugs or want to give a suggestion please feel free to open
 - Initial public release of the plugin on the [Asset Library](https://godotengine.org/asset-library) for Godot version 3.x
 
 ### v1.3.0
+- Added all exported script variables to custom property groups befitting of their functions and/or origins
 - Added a new custom `Focused Sound` property
 - Added the `Focused Texture` property from the Texture Button
 - Added the `Action Mode` property from the Button
