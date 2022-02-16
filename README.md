@@ -27,7 +27,7 @@ If you experience any bugs or want to give a suggestion please feel free to open
 
 ## Changelog:
 ### v1.4.0
-- Initial public release of the plugin on the [Asset Library](https://godotengine.org/asset-library) for Godot version 3.x.
+- Initial public release of the plugin on the [Asset Library](https://godotengine.org/asset-library) for Godot version 3.x as well as the setup of the GitHub repository and everything else that goes with those two things.
 
 ### v1.3.0
 - Added a new custom `Focused Sound` property.
