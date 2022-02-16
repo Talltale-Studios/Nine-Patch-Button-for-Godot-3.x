@@ -33,11 +33,11 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 
 ### v1.3.0
 - Added a new custom `Focused Sound` property, based on the Texture Button's `Focused Texture` property.
-- Added the `Focused Texture` property from the Texture Button.
-- Added the `Action Mode` property from the Button.
+- Added the `Focused Texture` property that originated from the Texture Button.
+- Added the `Action Mode` property that originated from the Button.
 - Fixed a typo in one of the properties.
-- Fixed the default values of some properties that were mistakenly left undefined
-- Removed the deprecated `Enabled Focus Mode` property from the Button (according to its own tooltip it is deprecated and scheduled for removal in Godot 4 anyways).
+- Fixed the default values of some properties that were mistakenly left undefined.
+- Removed the deprecated `Enabled Focus Mode` property that originated from the Button. It has been superceded by the Control node's own `Focus Mode` property, and is scheduled for removal in Godot 4.
 - Cleaned up the plugin's code.
 
 ### v1.2.1
