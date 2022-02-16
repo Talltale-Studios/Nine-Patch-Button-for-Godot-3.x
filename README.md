@@ -19,11 +19,11 @@ If you experience any bugs or want to give a suggestion please feel free to open
 - Initial public release of the plugin on the [Asset Library](https://godotengine.org/asset-library) for Godot version 3.x
 
 ### v1.3.0
-- Fixed a typo in one of the properties
 - Added a new custom `Focused Sound` property
 - Added the `Focused Texture` property from the Texture Button
 - Added the `Action Mode` property from the Button
-- Removed the deprecated `Enabled Focus Mode` property from the Button (at least, according to its own tooltip it is deprecated and scheduled for removal in Godot 4 anyways)
+- Fixed a typo in one of the properties
+- Removed the deprecated `Enabled Focus Mode` property from the Button (according to its own tooltip it is deprecated and scheduled for removal in Godot 4 anyways)
 - Cleaned up the plugin's code
 
 ### v1.2.1
