@@ -26,7 +26,7 @@ If you experience any bugs or want to give a suggestion please feel free to open
 - Add all exported properties to custom property groups.
 
 ## Changelog:
-### v1.4.0
+### v2.0.0
 - Initial public release of the plugin on the [Asset Library](https://godotengine.org/asset-library) for Godot version 3.x as well as the setup of the GitHub repository and everything else that goes with those two things.
 
 ### v1.3.0
@@ -41,12 +41,12 @@ If you experience any bugs or want to give a suggestion please feel free to open
 - Fixed a bug.
 
 ### v1.2.0
-- Made the plugin use `tool`.
+- Added `tool` to the plugin's scripts to allow it to run in the editor.
 - Removed the now-redundant `NinePatchButton.tscn`.
 
 ### v1.1.0
 - Fixed a bug.
-- Renamed the plugin's scripts.
+- Changed the names of the plugin's scripts.
 - Cleaned up the plugin's code.
 
 ### v1.0.1
