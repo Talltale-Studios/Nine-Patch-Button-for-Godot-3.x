@@ -1,5 +1,5 @@
 # Nine-Patch-Button-for-Godot-3.x
-A new type of node that combines the features of the NinePatchRect, the Button and the TextureButton. We also took the liberty to add a built-in sound system to the NinePatchButton, which allows you to assign sounds for hovering over it, pressing it and attempting to press it while it is disabled. As we've been having issues with getting the Button's text to work correctly though we've had to disable that feature.
+A new type of node that combines the features of the NinePatchRect, the Button and the TextureButton. We also took the liberty to add a built-in sound system to the NinePatchButton, which allows you to assign sounds for hovering over it, focusing it, pressing it and attempting to press it while it is disabled. As we've been having issues with getting the Button's text to work correctly though we've had to disable that feature.
 
 A normal Button node often stretches your custom textures, especially if they are pixel art. This plugin adds a new aptly named NinePatchButton node that allows you to use a NinePatchRect's method of adding implementing a texture alongside the usual functions of the Button.
 
@@ -15,7 +15,7 @@ If you experience any bugs or want to give a suggestion please feel free to open
 ## Changelog:
 v1.5.0 - Initial public release of the plugin on the [Asset Library](https://godotengine.org/asset-library) for Godot version 3.x.
 
-v1.4.0 - Added the `Focused Texture` property from the Texture Button.
+v1.4.0 - Added the `Focused Texture` property from the Texture Button and added the new custom `Focused Sound` property.
 
 v1.3.0 - Added the `Action Mode` property from the Button, removed the deprecated `Enabled Focus Mode` property from the Button (at least, according to its own tooltip it is deprecated and scheduled for removal in Godot 4 anyways), and cleaned up plugin code.
 
