@@ -16,6 +16,10 @@ Place your corresponding textures and sound files in the exported variable's box
 
 If you experience any bugs or want to give a suggestion please feel free to open an Issue here on the plugin's Github page.
 
+## Future plans
+- Fix the text.
+- Add the Texture Button's `Click Mask` feature.
+
 ## Changelog:
 ### v1.4.0
 - Initial public release of the plugin on the [Asset Library](https://godotengine.org/asset-library) for Godot version 3.x
