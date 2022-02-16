@@ -1,19 +1,25 @@
 # Nine-Patch-Button-for-Godot-3.x
 
-## What is the NinePatchButton?
+## What Is This?
 A new type of node that combines the features of the NinePatchRect, the Button and the TextureButton, with the NinePatchRect being used as the base. We also took the liberty to add a custom sound system to the NinePatchButton, which allows you to assign sounds for pressing it, hovering over it, attempting to press it while it is disabled, and focusing it.
 
 *Note: We've been having issues with getting text to display correctly on the NinePatchButton, so we've had to disable that feature for now. We'll revisit this at a later time. For now you could use a Label (or something similar) and add text to the button manually. If you can manage to integrate the text you want to display into the button's texture then that could work as well.*
 
-## Why did we make it?
+## Why Did We Make This?
 The Texture Button stretches the custom textures you add to it, which is especially annoying when using pixel art. The NinePatchRect doesn't have this issue, so the sensible thing to do would be to use the NinePatchRect's method to add custom textures to our buttons instead, so we combined the features of the NinePatchRect with those of the Button. The TextureButton still had some good features though, so we added some of them into the mix as well, along with a our custom sound system.
 
-## How to use it
+## Usage Guide
 Place your desired texture into the `Texture` property of the NinePatchRect's 
 
 Place your corresponding textures and sound files in the exported variable's box, in the inspector tab. Adjust your texture region like you would with the normal NinePatchRect. After that, it should work like a normal button, but with better textures and sound effects.
 
 If you experience any bugs or want to give a suggestion please feel free to open an Issue here on the plugin's Github page.
+
+## Got Any Feedback?
+If you have any feedback, be it a bug report or a suggestion, feel free to open an issue on GitHub. All we ask is that you try to label your issue suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for. If an issue on that topic already exists, instead add on to that issue with a comment of your own.
+
+We appreciate any kind of constructive feedback you can give us as it is important for us to know if something isn't working as expected or if you have any suggestions for us on how to improve the plugin.
+
 
 ## Future plans
 - Fix the text display issue.
