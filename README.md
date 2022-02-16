@@ -23,7 +23,7 @@ If you experience any bugs or want to give a suggestion please feel free to open
 - Add Texture Button-esque button texturing? It might not work... but it could be useful to have that as an alternative to the already-implemented NinePatchRect-esque button texturing.
 - Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using Texture Button-esque button texturing and NinePatchRect-esque button texturing without clogging up the Inspector.
 - Add exported properties to custom property groups.
-- Port the plugin to Godot 4, complete with a separate Asset Library page and GitHub repository. The link to the ported Godot 4 version of the plugin will be included in the description of this plugin once it is done.
+- Port the plugin to Godot 4, complete with a separate Asset Library page and GitHub repository. The link to the ported Godot 4 version of the plugin will be included here once it is done.
 
 ## Changelog:
 ### v2.0.0
