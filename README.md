@@ -1,13 +1,15 @@
 # Nine-Patch-Button-for-Godot-3.x
+
+## What is the NinePatchButton?
 A new type of node that combines the features of the NinePatchRect, the Button and the TextureButton, with the NinePatchRect being used as the base. We also took the liberty to add a built-in sound system to the NinePatchButton, which allows you to assign sounds for pressing it, hovering over it, attempting to press it while it is disabled, and focusing it.
 
 *Note: We've been having issues with getting text to display correctly on the NinePatchButton, so we've had to disable that feature for now. We will revisit this at a later time. For now you can use a Label (or something similar) and add text to the button manually. If you can manage to integrate the text into the button's texture then that can work as well.*
 
-A normal Button node often stretches your custom textures, especially if they are pixel art. This plugin adds a new aptly named NinePatchButton node that allows you to use a NinePatchRect's method of adding implementing a texture alongside the usual functions of the Button.
+## Why did we make it?
 
 The reason I made it, is because the normal Button, if you add pixel textures, it will stretch the texture. NinePatchRect nodes, doesn't have this issue. So I devised a plan, and made the NinePatchButton! It works as expected. It took me a while to get it to work, so I'm happy with it's condition.
 
-## Usage:
+## How to use the Nine Patch Button
 Place your desired texture into the `Texture` property of the NinePatchRect's 
 
 Place your corresponding textures and sound files in the exported variable's box, in the inspector tab. Adjust your texture region like you would with the normal NinePatchRect. After that, it should work like a normal button, but with better textures and sound effects.
