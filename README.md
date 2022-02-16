@@ -15,18 +15,31 @@ Place your corresponding textures and sound files in the exported variable's box
 If you experience any bugs or want to give a suggestion please feel free to open an Issue here on the plugin's Github page.
 
 ## Changelog:
-v1.5.0 - Initial public release of the plugin on the [Asset Library](https://godotengine.org/asset-library) for Godot version 3.x.
+### v1.4.0
+- Initial public release of the plugin on the [Asset Library](https://godotengine.org/asset-library) for Godot version 3.x
 
-v1.4.0 - Added the `Focused Texture` property from the Texture Button, added a new custom `Focused Sound` property, fixed a typo, and cleaned up the plugin's code.
+### v1.3.0
+- Fixed a typo in one of the properties
+- Added a new custom `Focused Sound` property
+- Added the `Focused Texture` property from the Texture Button
+- Added the `Action Mode` property from the Button
+- Removed the deprecated `Enabled Focus Mode` property from the Button (at least, according to its own tooltip it is deprecated and scheduled for removal in Godot 4 anyways)
+- Cleaned up the plugin's code
 
-v1.3.0 - Added the `Action Mode` property from the Button, removed the deprecated `Enabled Focus Mode` property from the Button (at least, according to its own tooltip it is deprecated and scheduled for removal in Godot 4 anyways), and cleaned up plugin's code.
+### v1.2.1
+- Fixed a bug.
 
-v1.2.1 - Fixed a bug.
+### v1.2.0
+- Made the plugin use `tool`
+- Removed the now-redundant `NinePatchButton.tscn`
 
-v1.2.0 - Made the plugin use `tool` and removed the now-redundant `NinePatchButton.tscn`.
+### v1.1.0
+- Fixed a bug
+- Renamed the plugin's scripts
+- Cleaned up the plugin's code
 
-v1.1.0 - Fixed a bug, renamed the scripts, and cleaned up plugin's code.
+### v1.0.1
+- Added a custom icon for the plugin
 
-v1.0.1 - Added a custom icon for the plugin.
-
-v1.0.0 - Initial private release of the plugin for in-house testing and development for Godot 3.x.
+### v1.0.0
+- Initial private release of the plugin for in-house testing and development for Godot 3.x
