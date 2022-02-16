@@ -9,11 +9,7 @@ A new type of node that combines the features of the NinePatchRect, the Button a
 The Texture Button stretches the custom textures you add to it, which is especially noticable when trying to use pixel art. The NinePatchRect doesn't have this issue, so the sensible thing to do would be to use the NinePatchRect's method to add custom textures to our buttons instead, so we combined the features of the NinePatchRect with those of the Button. The TextureButton still had some good features though, so we added some of them into the mix as well, along with a our custom sound system.
 
 ## Usage Guide
-Place your desired texture into the `Texture` property of the NinePatchRect's 
-
-Place your corresponding textures and sound files in the exported variable's box, in the inspector tab. Adjust your texture region like you would with the normal NinePatchRect. After that, it should work like a normal button, but with better textures and sound effects.
-
-If you experience any bugs or want to give a suggestion please feel free to open an Issue here on the plugin's Github page.
+To set up the NinePatchRect button texturing simply load your texture into
 
 ## Got Any Feedback?
 If you have any feedback, be it a bug report or a suggestion, feel free to open an issue on GitHub. All we ask is that you try to label your issue suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for. If an issue on that topic already exists, instead add on to that issue with a comment of your own.
