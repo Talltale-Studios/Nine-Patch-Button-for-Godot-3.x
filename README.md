@@ -18,7 +18,7 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 
 
 ## Future plans
-- Fix the text display issue (and add new default values to the properties that go along with the text display).
+- Fix the text display issue and instance any related properties.
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button.
 - Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity.
 - Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity.
