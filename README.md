@@ -17,11 +17,12 @@ Place your corresponding textures and sound files in the exported variable's box
 If you experience any bugs or want to give a suggestion please feel free to open an Issue here on the plugin's Github page.
 
 ## Future plans
-- Fix the text display issue
-- Add the `Click Mask` property from the Texture Button to enable the user to set up more fitting click masks
-- Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity
-- Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity
-- Add Texture Button-esque texture stretching? Might not work... but it could be cool to have that as an alternative to the already-implemented NinePatchRect-esque button texturing method
+- Fix the text display issue.
+- Add the `Click Mask` property from the Texture Button to enable the user to set up more fitting click masks.
+- Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity.
+- Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity.
+- Add Texture Button-esque button texturing? It might not work... but it could be useful to have that as an alternative to the already-implemented NinePatchRect-esque button texturing.
+- Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using Texture Button-esque button texturing and NinePatchRect-esque nutton texturing without clogging up the Inspector.
 
 ## Changelog:
 ### v1.4.0
