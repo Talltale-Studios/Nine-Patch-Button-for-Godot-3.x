@@ -36,6 +36,7 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 - Added the `Focused Texture` property from the Texture Button.
 - Added the `Action Mode` property from the Button.
 - Fixed a typo in one of the properties.
+- Fixed the default values of some properties that were mistakenly left undefined
 - Removed the deprecated `Enabled Focus Mode` property from the Button (according to its own tooltip it is deprecated and scheduled for removal in Godot 4 anyways).
 - Cleaned up the plugin's code.
 
