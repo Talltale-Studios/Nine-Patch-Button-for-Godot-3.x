@@ -1,13 +1,12 @@
 # Nine-Patch-Button-for-Godot-3.x
 
 ## What is the NinePatchButton?
-A new type of node that combines the features of the NinePatchRect, the Button and the TextureButton, with the NinePatchRect being used as the base. We also took the liberty to add a built-in sound system to the NinePatchButton, which allows you to assign sounds for pressing it, hovering over it, attempting to press it while it is disabled, and focusing it.
+A new type of node that combines the features of the NinePatchRect, the Button and the TextureButton, with the NinePatchRect being used as the base. We also took the liberty to add a custom sound system to the NinePatchButton, which allows you to assign sounds for pressing it, hovering over it, attempting to press it while it is disabled, and focusing it.
 
 *Note: We've been having issues with getting text to display correctly on the NinePatchButton, so we've had to disable that feature for now. We will revisit this at a later time. For now you can use a Label (or something similar) and add text to the button manually. If you can manage to integrate the text into the button's texture then that can work as well.*
 
 ## Why did we make it?
-
-The reason I made it, is because the normal Button, if you add pixel textures, it will stretch the texture. NinePatchRect nodes, doesn't have this issue. So I devised a plan, and made the NinePatchButton! It works as expected. It took me a while to get it to work, so I'm happy with it's condition.
+The Texture Button stretches the custom textures you add to it, which is especially annoying when using pixel art. The NinePatchRect doesn't have this issue, so the sensible thing to do would be to use the NinePatchRect's method to texture the button instead, so we combined it with the Button. The TextureButton still had some good features though, so we added some of them into the mix as well, along with a our custom sound system.
 
 ## How to use it
 Place your desired texture into the `Texture` property of the NinePatchRect's 
@@ -22,12 +21,12 @@ If you experience any bugs or want to give a suggestion please feel free to open
 - Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity.
 - Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity.
 - Add Texture Button-esque button texturing? It might not work... but it could be useful to have that as an alternative to the already-implemented NinePatchRect-esque button texturing.
-- Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using Texture Button-esque button texturing and NinePatchRect-esque nutton texturing without clogging up the Inspector.
-- Add all exported properties to custom property groups.
+- Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using Texture Button-esque button texturing and NinePatchRect-esque button texturing without clogging up the Inspector.
+- Add exported properties to custom property groups.
 
 ## Changelog:
 ### v2.0.0
-- Initial public release of the plugin on the [Asset Library](https://godotengine.org/asset-library) for Godot version 3.x as well as the setup of the GitHub repository and everything else that goes with those two things.
+- Initial public release of the plugin on the [Asset Library](https://godotengine.org/asset-library) as well as the setup of the GitHub repository and everything else that goes with those two things.
 
 ### v1.3.0
 - Added a new custom `Focused Sound` property.
@@ -53,4 +52,4 @@ If you experience any bugs or want to give a suggestion please feel free to open
 - Added a custom icon for the plugin.
 
 ### v1.0.0
-- Initial private release of the plugin for in-house testing and development for Godot 3.x.
+- Initial private release of the plugin for in-house testing and development.
