@@ -9,7 +9,7 @@ A new type of node that combines the features of the NinePatchRect, the Button a
 
 The reason I made it, is because the normal Button, if you add pixel textures, it will stretch the texture. NinePatchRect nodes, doesn't have this issue. So I devised a plan, and made the NinePatchButton! It works as expected. It took me a while to get it to work, so I'm happy with it's condition.
 
-## How to use the Nine Patch Button
+## How to use it
 Place your desired texture into the `Texture` property of the NinePatchRect's 
 
 Place your corresponding textures and sound files in the exported variable's box, in the inspector tab. Adjust your texture region like you would with the normal NinePatchRect. After that, it should work like a normal button, but with better textures and sound effects.
