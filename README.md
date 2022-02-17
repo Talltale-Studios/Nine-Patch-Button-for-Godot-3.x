@@ -9,7 +9,11 @@ A new type of node that combines the features of the NinePatchRect, the Button a
 The Texture Button stretches the custom textures you add to it, which is especially noticable when trying to use pixel art. The NinePatchRect doesn't have this issue, so the sensible thing to do would be to use the NinePatchRect's method to add custom textures to our buttons instead, so we combined the features of the NinePatchRect with those of the Button. The TextureButton still had some good features though, so we added some of them into the mix as well, along with a our custom sound system.
 
 ## Usage Guide
-To set up the NinePatchRect button texturing simply load your texture into
+Once the plugin is downloaded, installed and enabled, you can add a new NinePatchButton node to your scene and it can be used in the place of a normal Button or TextureButton.
+
+To get started you must first set up the `TextureRegion` at the `NinePatchRect/Texture` property just like you would with a NinePatchRect. Once that is done you can start adding the textures at `Normal Texture`, `Pressed Texture`, `Hovered Texture`, `Disabled Texture` and `Focused Texture` just like you would with a Texture Button. The rest of the settings work more or less just like you'd expect with any BaseButton, except for the new sound system which we added.
+
+Just like how the Texture Button-esque texture properties would change the texture of the button depending on whether it is being pressed, hovered, focused and so on, the new `Pressed Sound`, `Hovered Sound`, `Disabled Sound`, and `Focused Sound` properties cause sounds to be played when prompted, and you get to assign those sounds yourself.
 
 ## Got Any Feedback?
 If you have any feedback, be it a bug report, a complaint, a suggestion or a request, feel free to open an issue on GitHub. All we ask is that you try to label your issue suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for. If an issue on that topic already exists, instead add on to that issue with a comment of your own.
