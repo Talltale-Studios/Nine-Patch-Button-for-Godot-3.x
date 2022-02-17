@@ -32,6 +32,8 @@ thirdparty/* linguist-vendored
 /Icon.png           export-ignore
 /icon.svg           export-ignore
 /Icon.svg           export-ignore
+/Media              export-ignore
+/Test_Project       export-ignore
 
 # Godot explicit EOL
 *.gd eol=lf
