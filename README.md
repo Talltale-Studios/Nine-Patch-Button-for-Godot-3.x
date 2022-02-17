@@ -38,6 +38,13 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 
 
 ## Changelog:
+### v2.1.0 (Upcoming)
+- Added a new custom `Pressed Hovered Texture` property.
+- Added a new custom `Pressed Focused Texture` property.
+- Added a new custom `Disabled Hovered Texture` property.
+- Added a new custom `Disabled Focused Texture` property.
+- Cleaned up the plugin's code.
+
 ### v2.0.0
 - Initial public release of the plugin on the [Godot Asset Library](https://godotengine.org/asset-library) as well as the setup of the GitHub repository and everything else that goes with it.
 
