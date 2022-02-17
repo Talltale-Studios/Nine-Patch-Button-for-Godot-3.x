@@ -23,7 +23,7 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button.
 - Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity.
 - Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity.
-- Add Texture Button-esque button texturing? It might not work... but it could be useful to have as an alternative to the already-implemented NinePatchRect-esque button texturing.
+- Add the button texturing method from the Texture Button? It could be useful to have as an alternative to the already-implemented NinePatchRect button texturing method. Since you'd then have both button texturing methods, and not just the NinePatchRect's, this might also call for a name change for the plugin?
 - Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using Texture Button-esque button texturing and NinePatchRect-esque button texturing without clogging up the Inspector. It would help make it more user-friendly, but would hugely increase the length of the plugin's script.
 - Add exported properties to custom property groups? It would help make it more user-friendly and somewhat declog the Inspector, but would also increase the length of the plugin's script.
 - Port the plugin to Godot 4, complete with a separate Asset Library page and GitHub repository. A link to the ported Godot 4 version of the plugin will be included here once it is done.
