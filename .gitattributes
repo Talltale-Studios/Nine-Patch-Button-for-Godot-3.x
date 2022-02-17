@@ -20,7 +20,7 @@ thirdparty/* linguist-vendored
 # Except for bat files, which are Windows only files
 *.bat eol=crlf
 
-# Ignore some files when exporting to a ZIP
+# Ignore some general files when exporting to a ZIP
 /.gitattributes     export-ignore
 /.gitignore         export-ignore
 /LICENSE            export-ignore
@@ -32,6 +32,7 @@ thirdparty/* linguist-vendored
 /Icon.png           export-ignore
 /icon.svg           export-ignore
 /Icon.svg           export-ignore
+# Ignore project-specific files when exporting to a ZIP
 /Media              export-ignore
 /Test_Project       export-ignore
 
