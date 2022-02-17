@@ -1,12 +1,15 @@
 # Nine Patch Button for Godot 3.x
 
+
 ## What Is This?
 This plugin adds a new type of node that combines the features of the NinePatchRect, the Button, and the TextureButton, with the NinePatchRect being used as the base. We also took the liberty to add a custom sound system to the NinePatchButton, which allows you to assign sounds for pressing it, hovering over it, attempting to press it while it is disabled, and focusing it.
 
 *Note: We've been having issues with getting text to display correctly on the NinePatchButton, so we've had to disable that feature for now. We'll revisit this at a later time. For now you could use a Label (or something similar) and add text to the button manually. If you can manage to integrate the text you want to display into the button's texture then that could work as well.*
 
+
 ## Why Did We Make This?
 The Texture Button stretches the custom textures you add to it, which is especially noticable when trying to use pixel art. The NinePatchRect doesn't have this issue, so the sensible thing to do would be to use the NinePatchRect's method to add custom textures to our buttons instead, so we combined the features of the NinePatchRect with those of the Button. The TextureButton still had some good features though, so we added some of them into the mix as well, along with a our custom sound system.
+
 
 ## Usage Guide
 Once the plugin is downloaded, installed and enabled, you can add a new NinePatchButton node to your scene and it can be used in the place of a normal Button or TextureButton.
@@ -14,6 +17,7 @@ Once the plugin is downloaded, installed and enabled, you can add a new NinePatc
 To get started you must first set up the `TextureRegion` at the `NinePatchRect/Texture` property just like you would do with a NinePatchRect. Once that is done you can start adding the textures at `Normal Texture`, `Pressed Texture`, `Hovered Texture`, `Disabled Texture` and `Focused Texture`, just like you would do with a Texture Button. The rest of the settings work more or less just like you'd expect with any BaseButton, except for the new sound system which we added.
 
 Just like how the Texture Button-esque properties would change the texture of the button depending on whether it is being pressed, hovered, focused and so on, the new `Pressed Sound`, `Hovered Sound`, `Disabled Sound`, and `Focused Sound` properties cause the sounds you assigned to those properties to be played.
+
 
 ## Got Any Feedback?
 If you have any feedback, be it a bug report, a complaint, a suggestion or a request, feel free to open an issue on GitHub. All we ask is that you try to label your issue suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for. If an issue on that topic already exists, instead add on to that issue with a comment of your own.
@@ -32,6 +36,7 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 - Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using Texture Button-esque button texturing and NinePatchRect-esque button texturing without clogging up the Inspector. It would help make it more user-friendly, but would hugely increase the length of the plugin's script.
 - Add exported properties to custom property groups? It would help make it more user-friendly and somewhat declog the Inspector, but would also increase the length of the plugin's script.
 - Port the plugin to Godot 4, complete with a separate Asset Library page and GitHub repository. A link to the ported Godot 4 version of the plugin will be included here once it is done.
+
 
 ## Changelog:
 ### v2.0.0
