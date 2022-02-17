@@ -35,7 +35,7 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 - Add the button texturing method from the Texture Button? It could be useful to have as an alternative to the already-implemented NinePatchRect button texturing method. Since you'd then have both button texturing methods, and not just the NinePatchRect's, this might also call for a name change for the plugin?
 - Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using Texture Button-esque button texturing and NinePatchRect-esque button texturing without clogging up the Inspector. It would help make it more user-friendly, but would hugely increase the length of the plugin's script.
 - Add exported properties to custom property groups? It would help make it more user-friendly and somewhat declog the Inspector, but would also increase the length of the plugin's script.
-- Port the plugin to Godot 4, complete with a separate Asset Library page and GitHub repository. A link to the ported Godot 4 version of the plugin will be included here once it is done.
+- Port the plugin to Godot 4, complete with a separate Asset Library page and GitHub repository. Links to the ported Godot 4 version of the plugin will be provided here on GitHub and on the Asset Library.
 
 
 ## Changelog:
@@ -43,12 +43,12 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 - Initial public release of the plugin on the [Godot Asset Library](https://godotengine.org/asset-library) as well as the setup of the GitHub repository and everything else that goes with it.
 
 ### v1.3.0
-- Added a new custom `Focused Sound` property, based on the Texture Button's `Focused Texture` property.
-- Added the `Focused Texture` property that originated from the Texture Button.
 - Added the `Action Mode` property that originated from the Button.
-- Fixed a typo in the names of the properties.
-- Fixed the default values of some properties that were mistakenly left undefined.
+- Added the `Focused Texture` property that originated from the Texture Button.
+- Added a new custom `Focused Sound` property, based on the Texture Button's `Focused Texture` property.
 - Fixed several bugs.
+- Fixed the default values of some properties that were mistakenly left undefined.
+- Fixed a typo in the name of one of the properties.
 - Changed the name of the NinePatchButton's icon image from `Icon.png` to `NinePatchButton.png` and its Import Preset from `Default` to `2D Pixel`.
 - Removed the deprecated `Enabled Focus Mode` property that originated from the Button. It has been superceded by the Control node's own `Focus Mode` property, and is scheduled for removal in Godot 4.
 - Cleaned up the plugin's code.
