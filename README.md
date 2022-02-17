@@ -11,9 +11,9 @@ The Texture Button stretches the custom textures you add to it, which is especia
 ## Usage Guide
 Once the plugin is downloaded, installed and enabled, you can add a new NinePatchButton node to your scene and it can be used in the place of a normal Button or TextureButton.
 
-To get started you must first set up the `TextureRegion` at the `NinePatchRect/Texture` property just like you would with a NinePatchRect. Once that is done you can start adding the textures at `Normal Texture`, `Pressed Texture`, `Hovered Texture`, `Disabled Texture` and `Focused Texture` just like you would with a Texture Button. The rest of the settings work more or less just like you'd expect with any BaseButton, except for the new sound system which we added.
+To get started you must first set up the `TextureRegion` at the `NinePatchRect/Texture` property just like you would do with a NinePatchRect. Once that is done you can start adding the textures at `Normal Texture`, `Pressed Texture`, `Hovered Texture`, `Disabled Texture` and `Focused Texture`, just like you would do with a Texture Button. The rest of the settings work more or less just like you'd expect with any BaseButton, except for the new sound system which we added.
 
-Just like how the Texture Button-esque texture properties would change the texture of the button depending on whether it is being pressed, hovered, focused and so on, the new `Pressed Sound`, `Hovered Sound`, `Disabled Sound`, and `Focused Sound` properties cause sounds to be played when prompted, and you get to assign those sounds yourself.
+Just like how the Texture Button-esque properties would change the texture of the button depending on whether it is being pressed, hovered, focused and so on, the new `Pressed Sound`, `Hovered Sound`, `Disabled Sound`, and `Focused Sound` properties cause sounds to be played, and you get to assign those sounds yourself.
 
 ## Got Any Feedback?
 If you have any feedback, be it a bug report, a complaint, a suggestion or a request, feel free to open an issue on GitHub. All we ask is that you try to label your issue suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for. If an issue on that topic already exists, instead add on to that issue with a comment of your own.
