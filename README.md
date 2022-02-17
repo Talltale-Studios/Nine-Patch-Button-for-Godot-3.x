@@ -18,6 +18,7 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 
 
 ## Future plans
+- Fix the NinePatchButton not changing to its Normal Texture if the user presses and holds the button down and then moves the mouse cursor off the button (like the base Button does).
 - Fix the text display issue and add any related properties.
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button.
 - Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity.
@@ -35,8 +36,9 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 - Added a new custom `Focused Sound` property, based on the Texture Button's `Focused Texture` property.
 - Added the `Focused Texture` property that originated from the Texture Button.
 - Added the `Action Mode` property that originated from the Button.
-- Fixed a typo in one of the properties.
+- Fixed a typo in the names of the properties.
 - Fixed the default values of some properties that were mistakenly left undefined.
+- Fixed several bugs.
 - Removed the deprecated `Enabled Focus Mode` property that originated from the Button. It has been superceded by the Control node's own `Focus Mode` property, and is scheduled for removal in Godot 4.
 - Cleaned up the plugin's code.
 
