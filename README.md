@@ -30,7 +30,7 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 
 ## Changelog:
 ### v2.0.0
-- Initial public release of the plugin on the [Asset Library](https://godotengine.org/asset-library) as well as the setup of the GitHub repository and everything else that goes with those two things.
+- Initial public release of the plugin on the [Godot Asset Library](https://godotengine.org/asset-library) as well as the setup of the GitHub repository and everything else that goes with it.
 
 ### v1.3.0
 - Added a new custom `Focused Sound` property, based on the Texture Button's `Focused Texture` property.
