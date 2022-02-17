@@ -26,6 +26,7 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 ## Future Plans
 - Fix the NinePatchButton not changing to its `Normal Texture` if the user presses and holds the button down and then moves the mouse cursor off the button (like the base Button does).
 - Fix the text display issue and add any related properties.
+- Add the ability to change the volumes of the sounds you assigned to the NinePatchButton using its new sound system.
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button.
 - Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity.
 - Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity.
