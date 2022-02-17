@@ -14,9 +14,7 @@ The Texture Button stretches the custom textures you add to it, which is especia
 ## Usage Guide
 Once the plugin is downloaded, installed and enabled, you can add a new NinePatchButton node to your scene and it can be used in the place of a normal Button or TextureButton.
 
-To get started you must first set up the `TextureRegion` at the `NinePatchRect/Texture` property just like you would do with a NinePatchRect. Once that is done you can start adding the textures at `Normal Texture`, `Pressed Texture`, `Hovered Texture`, `Disabled Texture` and `Focused Texture`, just like you would do with a Texture Button. The rest of the settings work more or less just like you'd expect with any BaseButton, except for the new sound system which we added.
-
-Just like how the Texture Button-esque properties would change the texture of the button depending on whether it is being pressed, hovered, focused and so on, the new `Pressed Sound`, `Hovered Sound`, `Disabled Sound`, and `Focused Sound` properties cause the sounds you assigned to those properties to be played.
+To get started you must first set up the `TextureRegion` at the `NinePatchRect/Texture` property just like you would do with a NinePatchRect. Once that is done you can start adding the textures of your choice for the NinePatchButton with the `Normal Texture`, `Pressed Texture`, `Hovered Texture`, `Disabled Texture`, and `Focused Texture` properties, just like you would do with a Texture Button. The rest of the settings work more or less just like you'd expect with any BaseButton, except for the lack of being able to add text to the button (a solution is being investigated). We have also added a sound system for the NinePatchButton. Just like how the Texture Button-esque properties would change the texture of the button depending on whether it is being pressed, hovered, focused and so on, the new `Pressed Sound`, `Hovered Sound`, `Disabled Sound`, and `Focused Sound` properties cause the sounds you assigned to those properties to be played.
 
 
 ## Got Any Feedback?
