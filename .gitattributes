@@ -25,10 +25,13 @@ thirdparty/* linguist-vendored
 /.gitignore         export-ignore
 /LICENSE            export-ignore
 /LICENSE.md         export-ignore
+/README             export-ignore
 /README.md          export-ignore
 /project.godot      export-ignore
 /icon.png           export-ignore
+/Icon.png           export-ignore
 /icon.svg           export-ignore
+/Icon.svg           export-ignore
 
 # Godot explicit EOL
 *.gd eol=lf
