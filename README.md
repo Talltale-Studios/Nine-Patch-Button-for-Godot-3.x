@@ -21,14 +21,22 @@ To get started you must first set load your `Normal Texture` into `Script Variab
 
 ### Script Variables
 - **Normal Texture** - Texture to display by default, when the button is not in the disabled, focused, hovered or pressed state.
-- **Pressed Texture** - Texture to display when the button has been, or is being, pressed down.
 - **Hovered Texture** - Texture to display when the mouse hovers over the button.
-- **Disabled Texture** - Texture to display when the button is disabled.
 - **Focused Texture** - Texture to display when the button has mouse or keyboard focus.
-- **Pressed Sound** - Sound to play when the button has been pressed down.
+- **Pressed Texture** - Texture to display when the button has been, or is being, pressed down.
+- **Pressed Hovered Texture (Upcoming Feature)** - Texture to display when the button has been, or is being, pressed down in conjunction with the mouse hovering over it.
+- **Pressed Hovered Texture (Upcoming Feature)** - Texture to display when the button has been, or is being, pressed down in conjunction with it having mouse or keyboard focus.
+- **Disabled Texture** - Texture to display when the button is disabled.
+- **Disabled Hovered Texture (Upcoming Feature)** - Texture to display when the button is disabled in conjunction with the mouse hovering over it.
+- **Disabled Focused Texture (Upcoming Feature)** - Texture to display when the button is disabled in conjunction with it having mouse or keyboard focus.
 - **Hovered Sound** - Sound to play when the mouse hovers over the button.
-- **Disabled Sound** - Sound to play when the button is disabled and the user attempts to press it.
 - **Focused Sound** - Sound to play when the button gains mouse or keyboard focus.
+- **Pressed Sound** - Sound to play when the button has been pressed down.
+- **Pressed Hovered Sound (Upcoming Feature)** - Sound to play when the button has been, or is being, pressed down in conjunction with the mouse hovering over it.
+- **Pressed Focused Sound (Upcoming Feature)** - Sound to play when the button has been, or is being, pressed down in conjunction with it having mouse or keyboard focus.
+- **Disabled Sound** - Sound to play when the button is disabled and the user attempts to press it.
+- **Disabled Hovered Sound (Upcoming Feature)** - Sound to play when the button is disabled in conjunction with the mouse hovering over it.
+- **Disabled Focused Sound (Upcoming Feature)** - Sound to play when the button is disabled in conjunction with it having mouse or keyboard focus.
 - **Disabled** - If `true`, the button is in the disabled state and can't be pressed or toggled.
 - **Toggle Mode** - If `true`, the button is in the toggle mode. Makes the button flip state between pressed and upressed each time it is clicked. If `false` then the button will only remain pressed as long as the button is being pressed down, and will revert to the non-pressed state as soon as the input used to press it is stopped.
 - **Shortcut In Tooltip** - If `true`, the button will add information about its shortcut in the tooltip.
