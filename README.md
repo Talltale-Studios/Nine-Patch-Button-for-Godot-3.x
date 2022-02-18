@@ -17,7 +17,9 @@ Once the plugin is downloaded, installed and enabled, you can add a new NinePatc
 To get started you must first set load your `Normal Texture` into `Script Variables/Normal Texture` (like you would with a Texture Button) and then head to `TextureRegion` in the Bottom Panel and set it up like you would with a NinePatchRect. Once that is done you can start adding the textures of your choice for the NinePatchButton with the `Pressed Texture`, `Hovered Texture`, `Disabled Texture`, and `Focused Texture` properties, just like you would do with a Texture Button. The rest of the settings work more or less just like you'd expect with any BaseButton, except for the lack of being able to add text to the button (a solution is being investigated). We have also added a sound system for the NinePatchButton. Just like how the Texture Button-esque properties would change the texture of the button depending on whether it is being pressed, hovered, focused and so on, the new `Pressed Sound`, `Hovered Sound`, `Disabled Sound`, and `Focused Sound` properties cause the sounds you assigned to those properties to be played.
 
 
-## Features List
+## Settings
+
+### Script Variables
 - **Normal Texture** - Texture to display by default, when the button is not in the disabled, focused, hovered or pressed state.
 - **Pressed Texture** - Texture to display when the button has been, or is being, pressed down.
 - **Hovered Texture** - Texture to display when the mouse hovers over the button.
@@ -35,6 +37,25 @@ To get started you must first set load your `Normal Texture` into `Script Variab
 - **Button Mask** - Binary mark to choose which mouse buttons this button will respond to.
 - **Enabled Focus Mode** - We removed this property because its tooltip states that it is deprecated and that `Control/Focus/Mode` should be used instead.
 - **Keep Pressed Outside** - If `true`, the button stays pressed when moving the cursor outside the button while pressing it. *Note: Currently this does nothing as the button currently stays pressed when moving the cursor outside the button while pressing regardless of whether or not this property is actually true. A fix is in the works.*
+- **Shortcut** - [ShortCut](https://docs.godotengine.org/en/stable/classes/class_shortcut.html) associated with the button.
+- **Button Group** - [ButtonGroup](https://docs.godotengine.org/en/stable/classes/class_buttongroup.html) associated with the button.
+
+### NinePatchRect Variables
+- **Texture** - This property is controlled by the `Normal Texture` property, which will automatically load its texture into here.
+- **Draw Center** - If `true`, draw the panel's center. Else, only draw the 9-slice's borders.
+- **Region Rect** - Rectangular region of the texture to sample from. If you're working with an atlas, use this property to define the area the 9-slice should use. All other properties are relative to this one. If the rect is empty, the NinePatchButton will use the whole texture. *Note: This property is untested.*
+
+#### Patch Margin
+- **Left** - The width of the 9-slide's left column. A margin of 16 means the 9-slice's left corners and side will have a width of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.
+- **Top** - The height of the 9-slide's left column. A margin of 16 means the 9-slice's top corners and side will have a height of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.
+- **Right** - The width of the 9-slide's left column. A margin of 16 means the 9-slice's right corners and side will have a width of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.The width of the 9-slide's left column. A margin of 16 means the 9-slice's left corners and side will have a width of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.
+- **Bottom** - The height of the 9-slide's left column. A margin of 16 means the 9-slice's bottom corners and side will have a height of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.
+
+#### Axis Stretch
+`Horizontal` stretches or tiles the center texture horizontally, and `Vertical` stretches or tiles the center texture vertically. As for the settings:
+- **Stretch** - Stretches the center texture across the NinePatchButton. This may cause the texture to be distorted.
+- **Tile** - Repeats the center texture across the NinePatchButton. This won't cause any visible distortion. The texture must be seamless for this to work without displaying artifacts between edges. *Note: Only supported when using the GLES3 renderer. When using the GLES2 renderer, this will behave like Stretch.*
+- **Tile Fit** - Repeats the center texture across the NinePatchButton, but will also stretch the texture to make sure each tile is visible in full. This may cause the texture to be distorted, but less than Stretch. The texture must be seamless for this to work without displaying artifacts between edges. *Note: Only supported when using the GLES3 renderer. When using the GLES2 renderer, this will behave like Stretch.*
 
 
 ## Got Any Feedback?
