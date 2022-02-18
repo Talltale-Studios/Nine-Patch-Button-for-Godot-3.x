@@ -27,33 +27,34 @@ To get started you must first set load your `Normal Texture` into `Script Variab
 - **Hovered Texture** - Texture to display when the mouse hovers over the button.
 - **Focused Texture** - Texture to display when the button has mouse or keyboard focus.
 - **Pressed Texture** - Texture to display when the button has been, or is being, pressed down.
-- **Pressed Hovered Texture (Upcoming Feature)** - Texture to display when the button has been, or is being, pressed down in conjunction with the mouse hovering over it.
-- **Pressed Hovered Texture (Upcoming Feature)** - Texture to display when the button has been, or is being, pressed down in conjunction with it having mouse or keyboard focus.
+- **Pressed Hovered Texture** - Texture to display when the button has been, or is being, pressed down in conjunction with the mouse hovering over it.
+- **Pressed Hovered Texture** - Texture to display when the button has been, or is being, pressed down in conjunction with it having mouse or keyboard focus.
 - **Disabled Texture** - Texture to display when the button is disabled.
-- **Disabled Hovered Texture (Upcoming Feature)** - Texture to display when the button is disabled in conjunction with the mouse hovering over it.
-- **Disabled Focused Texture (Upcoming Feature)** - Texture to display when the button is disabled in conjunction with it having mouse or keyboard focus.
-- **Hovered Sound** - Sound to play when the mouse hovers over the button.
-- **Focused Sound** - Sound to play when the button gains mouse or keyboard focus.
+- **Disabled Hovered Texture** - Texture to display when the button is disabled in conjunction with the mouse hovering over it.
+- **Disabled Focused Texture** - Texture to display when the button is disabled in conjunction with it having mouse or keyboard focus.
+- **Hover Sound** - Sound to play when the mouse hovers over the button.
+- **Focus Sound** - Sound to play when the button gains mouse or keyboard focus.
 - **Pressed Sound** - Sound to play when the button has been pressed down.
-- **Pressed Hovered Sound (Upcoming Feature)** - Sound to play when the button has been, or is being, pressed down in conjunction with the mouse hovering over it.
-- **Pressed Focused Sound (Upcoming Feature)** - Sound to play when the button has been, or is being, pressed down in conjunction with it having mouse or keyboard focus.
-- **Disabled Sound** - Sound to play when the button is disabled and the user attempts to press it.
-- **Disabled Hovered Sound (Upcoming Feature)** - Sound to play when the button is disabled in conjunction with the mouse hovering over it.
-- **Disabled Focused Sound (Upcoming Feature)** - Sound to play when the button is disabled in conjunction with it having mouse or keyboard focus.
-- **Disabled** - If `true`, the button is in the disabled state and can't be pressed or toggled.
-- **Toggle Mode** - If `true`, the button is in the toggle mode. Makes the button flip state between pressed and upressed each time it is clicked. If `false` then the button will only remain pressed as long as the button is being pressed down, and will revert to the non-pressed state as soon as the input used to press it is stopped.
-- **Shortcut In Tooltip** - If `true`, the button will add information about its shortcut in the tooltip.
-- **Pressed** - If `true`, the button is in the pressed state. Means the button is pressed down or toggled. *Note: The original button's tooltip explicitly states that the pressed state only works if the `Toggle Mode` property is true, so this should be investigated.*
+- **Pressed Released Sound** - Sound to play when the button has been released after having been pressed down.
+- **Pressed Hovered Sound** - Sound to play when the button has been, or is being, pressed down in conjunction with the mouse hovering over it.
+- **Pressed Focused Sound** - Sound to play when the button has been, or is being, pressed down in conjunction with it having mouse or keyboard focus.
+- **Disabled Pressed Sound** - Sound to play when the button is disabled and the user attempts to press it.
+- **Disabled Hovered Sound** - Sound to play when the button is disabled in conjunction with the mouse hovering over it.
+- **Disabled Focused Sound** - Sound to play when the button is disabled in conjunction with it having mouse or keyboard focus.
+- **Disabled** - If *true*, the button is in the disabled state and can't be pressed or toggled.
+- **Toggle Mode** - If *true*, the button is in the toggle mode. Makes the button flip state between pressed and unpressed each time it is clicked. If *false* then the button will only remain pressed as long as the button is being pressed down by holding the input down, and will revert to the non-pressed state as soon as the input is released.
+- **Shortcut In Tooltip** - If *true*, the button will add information about its shortcut in the tooltip.
+- **Pressed** - If *true*, the button is in the pressed state. Means the button is pressed down or toggled. *Note: The original button's tooltip explicitly states that the pressed state only works if the `Toggle Mode` property is true, so this should be investigated.*
 - **Action Mode** - Determines when the button is considered clicked.
 - **Button Mask** - Binary mark to choose which mouse buttons this button will respond to.
 - **Enabled Focus Mode** - We removed this property because its tooltip states that it is deprecated and that `Control/Focus/Mode` should be used instead.
-- **Keep Pressed Outside** - If `true`, the button stays pressed when moving the cursor outside the button while pressing it. *Note: Currently this does nothing as the button currently stays pressed when moving the cursor outside the button while pressing regardless of whether or not this property is actually true. A fix is in the works.*
+- **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it. *Note: Currently this does nothing as the button currently stays pressed when moving the cursor outside the button while pressing regardless of whether or not this property is actually true. A fix is in the works.*
 - **Shortcut** - [ShortCut](https://docs.godotengine.org/en/stable/classes/class_shortcut.html) associated with the button.
 - **Button Group** - [ButtonGroup](https://docs.godotengine.org/en/stable/classes/class_buttongroup.html) associated with the button.
 
 ### NinePatchRect Variables
 - **Texture** - This property is controlled by the `Normal Texture` property, which will automatically load its texture into here.
-- **Draw Center** - If `true`, draw the button's center texture (which is set up with `TextureRegion`). Else, only draw the 9-slice's borders.
+- **Draw Center** - If *true*, draw the button's center texture (which is set up with `TextureRegion`). Else, only draw the 9-slice's borders.
 - **Region Rect** - Rectangular region of the texture to sample from. If you're working with an atlas, use this property to define the area the 9-slice should use. All other properties are relative to this one. If the rect is empty, the NinePatchButton will use the whole texture. *Note: This property is untested.*
 
 #### Patch Margin
@@ -90,12 +91,13 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 
 
 ## Changelog:
-### v2.1.0 (Upcoming)
+### v2.1.0
 - Added a new custom `Pressed Hovered Texture` property.
 - Added a new custom `Pressed Focused Texture` property.
 - Added a new custom `Disabled Hovered Texture` property.
 - Added a new custom `Disabled Focused Texture` property.
-- Fixed many bugs.
+- Changed the name of the `Disabled Sound` property to `Disabled Pressed Sound`.
+- Fixed many bugs relating to the textures and the sound.
 - Cleaned up the plugin's code.
 
 ### v2.0.0
