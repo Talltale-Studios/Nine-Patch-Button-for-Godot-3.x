@@ -42,7 +42,7 @@ To get started you must first set load your `Normal Texture` into `Script Variab
 
 ### NinePatchRect Variables
 - **Texture** - This property is controlled by the `Normal Texture` property, which will automatically load its texture into here.
-- **Draw Center** - If `true`, draw the panel's center. Else, only draw the 9-slice's borders.
+- **Draw Center** - If `true`, draw the button's center texture (which is set up with `TextureRegion`). Else, only draw the 9-slice's borders.
 - **Region Rect** - Rectangular region of the texture to sample from. If you're working with an atlas, use this property to define the area the 9-slice should use. All other properties are relative to this one. If the rect is empty, the NinePatchButton will use the whole texture. *Note: This property is untested.*
 
 #### Patch Margin
