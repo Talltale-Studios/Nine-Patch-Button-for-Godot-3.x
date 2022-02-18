@@ -11,10 +11,30 @@ This plugin adds a new type of node that combines the features of the NinePatchR
 The Texture Button stretches the custom textures you add to it, which is especially noticable when trying to use pixel art. Luckily the NinePatchRect doesn't have this issue, so to use the NinePatchRect's method to add custom textures to our buttons instead, we combined the features of the NinePatchRect with those of the Button into a new custom node. The TextureButton still had some good features though, so we added some of them into the mix as well. And while we were at it we also added a custom sound system, which allows you to add various sounds to the button.
 
 
-## Usage Guide
+## Setup Guide
 Once the plugin is downloaded, installed and enabled, you can add a new NinePatchButton node to your scene and it can be used in the place of a normal Button or TextureButton.
 
 To get started you must first set load your `Normal Texture` into `Script Variables/Normal Texture` (like you would with a Texture Button) and then head to `TextureRegion` in the Bottom Panel and set it up like you would with a NinePatchRect. Once that is done you can start adding the textures of your choice for the NinePatchButton with the `Pressed Texture`, `Hovered Texture`, `Disabled Texture`, and `Focused Texture` properties, just like you would do with a Texture Button. The rest of the settings work more or less just like you'd expect with any BaseButton, except for the lack of being able to add text to the button (a solution is being investigated). We have also added a sound system for the NinePatchButton. Just like how the Texture Button-esque properties would change the texture of the button depending on whether it is being pressed, hovered, focused and so on, the new `Pressed Sound`, `Hovered Sound`, `Disabled Sound`, and `Focused Sound` properties cause the sounds you assigned to those properties to be played.
+
+
+## Features List
+- **Normal Texture** - Texture to display by default, when the button is not in the disabled, focused, hovered or pressed state.
+- **Pressed Texture** - Texture to display when the button has been, or is being, pressed down.
+- **Hovered Texture** - Texture to display when the mouse hovers over the button.
+- **Disabled Texture** - Texture to display when the button is disabled.
+- **Focused Texture** - Texture to display when the button has mouse or keyboard focus.
+- **Pressed Sound** - Sound to play when the button has been pressed down.
+- **Hovered Sound** - Sound to play when the mouse hovers over the button.
+- **Disabled Sound** - Sound to play when the button is disabled and the user attempts to press it.
+- **Focused Sound** - Sound to play when the button gains mouse or keyboard focus.
+- **Disabled** - If `true`, the button is in the disabled state and can't be pressed or toggled.
+- **Toggle Mode** - If `true`, the button is in the toggle mode. Makes the button flip state between pressed and upressed each time it is clicked. If `false` then the button will only remain pressed as long as the button is being pressed down, and will revert to the non-pressed state as soon as the input used to press it is stopped.
+- **Shortcut In Tooltip** - If `true`, the button will add information about its shortcut in the tooltip.
+- **Pressed** - If `true`, the button is in the pressed state. Means the button is pressed down or toggled. *Note: The original button's tooltip explicitly states that the pressed state only works if the `Toggle Mode` property is true, so this should be investigated.*
+- **Action Mode** - Determines when the button is considered clicked.
+- **Button Mask** - Binary mark to choose which mouse buttons this button will respond to.
+- **Enabled Focus Mode** - We removed this property because its tooltip states that it is deprecated and that `Control/Focus/Mode` should be used instead.
+- **Keep Pressed Outside** - If `true`, the button stays pressed when moving the cursor outside the button while pressing it. *Note: Currently this does nothing as the button currently stays pressed when moving the cursor outside the button while pressing regardless of whether or not this property is actually true. A fix is in the works.*
 
 
 ## Got Any Feedback?
@@ -24,7 +44,7 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 
 
 ## Future Plans
-- Fix the NinePatchButton not changing to its `Normal Texture` if the user presses and holds the button down and then moves the mouse cursor off the button (like the base Button does).
+- Fix the button not switching to the non-pressed state when moving the cursor outside the button while pressing it. Currently the button acts as though the `Keep Pressed Outside` property is true at all times, and thus that property is actually useless at the moment.
 - Fix the text display issue and add any related properties.
 - Add the ability to change the volumes of the sounds assigned to the NinePatchButton using its custom sound system.
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button.
