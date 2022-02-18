@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="AcceptDialog" type="AcceptDialog"]
+visible = true
+margin_right = 83.0
+margin_bottom = 58.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/dardanbujupaj.node_warnings/WarningList.gd" type="Script" id=1]
+
+[node name="WarningList" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Toolbar" type="HBoxContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 24.0
+
+[node name="WarningCount" type="Label" parent="Toolbar"]
+margin_top = 5.0
+margin_right = 71.0
+margin_bottom = 19.0
+text = "0 Warnings"
+
+[node name="Filter" type="LineEdit" parent="Toolbar"]
+margin_left = 75.0
+margin_right = 1024.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+clear_button_enabled = true
+placeholder_text = "Filter warnings"
+caret_blink = true
+caret_blink_speed = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ModifyRules" type="Button" parent="Toolbar"]
+visible = false
+margin_left = 933.0
+margin_right = 1024.0
+margin_bottom = 24.0
+text = "Modify rules"
+
+[node name="ItemList" type="ItemList" parent="."]
+margin_top = 28.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 0, 70 )
+size_flags_vertical = 3
+allow_reselect = true
+allow_rmb_select = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="text_changed" from="Toolbar/Filter" to="." method="_on_Filter_text_changed"]
+[connection signal="item_selected" from="ItemList" to="." method="_on_ItemList_item_selected"]

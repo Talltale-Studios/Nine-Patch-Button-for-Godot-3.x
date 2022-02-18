@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/confirmation_003.ogg-2171fba5544950ea2c3e1e53baacb636.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Kenney_Interface_Sounds/confirmation_003.ogg"
+dest_files=[ "res://.import/confirmation_003.ogg-2171fba5544950ea2c3e1e53baacb636.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

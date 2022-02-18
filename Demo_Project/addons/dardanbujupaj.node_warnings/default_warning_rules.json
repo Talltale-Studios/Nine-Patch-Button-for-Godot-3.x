@@ -1,0 +1,45 @@
+{
+	"RayCast2D": [
+		{
+			"property": "enabled",
+			"critical_value": false,
+			"description": "RayCasts will not collide with bodies while not enabled."
+		}
+	],
+	"RayCast": [
+		{
+			"property": "enabled",
+			"critical_value": false,
+			"description": "RayCasts will not collide with bodies while not enabled."
+		}
+	],
+	"CollisionPolygon2D": [
+		{
+			"property": "disabled",
+			"critical_value": true,
+			"description": "CollisionPolygons will not collide while disabled."
+		}
+	],
+	"CollisionPolygon": [
+		{
+			"property": "disabled",
+			"critical_value": true,
+			"description": "CollisionPolygons will not collide while disabled."
+		}
+	],
+	"CollisionShape": [
+		{
+			"property": "disabled",
+			"critical_value": true,
+			"description": "CollisionShapes will not collide while disabled."
+		}
+	],
+	"CollisionShape2D": [
+		{
+			"property": "disabled",
+			"critical_value": true,
+			"description": "CollisionShapes will not collide while disabled."
+		}
+	]
+}
+
