@@ -95,6 +95,7 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 - Added a new custom `Pressed Focused Texture` property.
 - Added a new custom `Disabled Hovered Texture` property.
 - Added a new custom `Disabled Focused Texture` property.
+- Fixed many bugs.
 - Cleaned up the plugin's code.
 
 ### v2.0.0
