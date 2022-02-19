@@ -76,7 +76,7 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 
 
 ## Future Plans
-- Fix the button not switching to the non-pressed state when moving the cursor outside the button while pressing it. Currently the button acts as though the `Keep Pressed Outside` property is set to true at all times, and thus that property is actually useless at the moment.
+- Fix the button not cancelling the button press by default when moving the mouse cursor outside the button while it is still being pressed down. Currently the button acts as though the `Keep Pressed Outside` property is set to true at all times. That property is currently useless until this is fixed.
 - Fix the text display issue and add any related properties.
 - Add the ability to change the volumes of the sounds assigned to the NinePatchButton using its custom sound system.
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button.
@@ -97,7 +97,7 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 - Added a new custom `Disabled Hovered Texture` property.
 - Added a new custom `Disabled Focused Texture` property.
 - Changed the name of the `Disabled Sound` property to `Disabled Pressed Sound`.
-- Fixed many bugs relating to the textures and the sound.
+- Fixed many bugs relating to the textures and the sounds.
 - Cleaned up the plugin's code.
 
 ### v2.0.0
