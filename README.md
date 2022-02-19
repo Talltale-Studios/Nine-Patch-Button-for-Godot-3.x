@@ -76,6 +76,7 @@ We appreciate any kind of constructive feedback you can give us as it is importa
 
 
 ## Future Plans
+- Create a larger icon (with a minimum size of 64x64, 128x128 or 256x256) for use as the icon for the plugin on the Asset Library and for the plugin's demo project.
 - Fix the button not cancelling the button press by default when moving the mouse cursor outside the button while it is still being pressed down. Currently the button acts as though the `Keep Pressed Outside` property is set to true at all times. That property is currently useless until this is fixed.
 - Fix the text display issue and add any related properties.
 - Add the ability to change the volumes of the sounds assigned to the NinePatchButton using its custom sound system.
