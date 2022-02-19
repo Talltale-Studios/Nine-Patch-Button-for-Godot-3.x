@@ -89,13 +89,32 @@ disabled_hovered_sound = ExtResource( 9 )
 disabled_focused_sound = ExtResource( 9 )
 disabled = true
 
-[node name="Reference_TextureButton" type="TextureButton" parent="."]
-visible = false
+[node name="Reference_NinePatchRect" type="NinePatchRect" parent="."]
 margin_top = 66.0
 margin_right = 250.0
 margin_bottom = 128.0
+texture = ExtResource( 12 )
+patch_margin_left = 94
+patch_margin_top = 24
+patch_margin_right = 94
+patch_margin_bottom = 24
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reference_TextureButton" type="TextureButton" parent="."]
+margin_top = 132.0
+margin_right = 250.0
+margin_bottom = 194.0
 texture_normal = ExtResource( 12 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Reference_Button" type="Button" parent="."]
+margin_left = 2.0
+margin_top = 200.0
+margin_right = 248.0
+margin_bottom = 258.0
+text = "Button"
