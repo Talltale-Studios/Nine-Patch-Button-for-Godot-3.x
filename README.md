@@ -79,7 +79,7 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 
 
 ## Links
-- Asset Library web page - https://godotengine.org/asset-library/asset/1243
+- The plugin's Asset Library web page: https://godotengine.org/asset-library/asset/1243
 
 
 ## Future Plans
