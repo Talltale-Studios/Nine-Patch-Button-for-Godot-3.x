@@ -8,7 +8,7 @@ This plugin adds a new type of node that combines the features of the NinePatchR
 
 
 ## Why Did We Make This?
-The Texture Button stretches the custom textures you add to it, which is especially noticable when trying to use pixel art. Luckily the NinePatchRect doesn't have this issue, so to use the NinePatchRect's method to add custom textures to our buttons instead, we combined the features of the NinePatchRect with those of the Button into a new custom node. The TextureButton still had some good features though, so we added some of them into the mix as well. And while we were at it we also added a custom sound system, which allows you to add various sounds to the button. Have a look at this comparison image.
+The Texture Button stretches the custom textures you add to it, which is especially noticable when trying to use pixel art. Luckily the NinePatchRect doesn't have this issue, so to use the NinePatchRect's method to add custom textures to our buttons instead, we combined the features of the NinePatchRect with those of the Button into a new custom node. The TextureButton still had some good features though, so we added some of them into the mix as well. And while we were at it we also added a custom sound system, which allows you to add various sounds to the button. Have a look at this comparison image:
 
 ![NinePatchButton versus TextureButton](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/blob/master/Media/NPB_vs_TB.PNG "NinePatchButton versus TextureButton")
 
