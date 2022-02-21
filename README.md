@@ -4,7 +4,7 @@
 ## What Is This?
 This plugin adds a new type of node that combines the features of the NinePatchRect, the Button, and the TextureButton, with the NinePatchRect being used as the base. We also took the liberty to add a custom sound system to the NinePatchButton, which allows you to assign sounds for some of its functions such as pressing it or hovering over it with your mouse cursor.
 
-*Note: We've been having issues with getting text to display correctly on the NinePatchButton, so we've had to disable that feature for now while we're working on a fix for it. For now you could use a Label (or something similar) and add text to the button manually. If you can manage to integrate the text you want to display into the button's texture then that could work as well.*
+*Note: We've been having issues with getting text to display correctly on the NinePatchButton, so we've had to disable that feature for now while we're working on a fix for it. For now, you could use a Label (or something similar) and add text to the button manually. If you can manage to integrate the text you want to display into the button's texture then that could work as well.*
 
 
 ## Why Did We Make This?
@@ -70,9 +70,7 @@ To get started you must first set load your `Normal Texture` into `Script Variab
 
 
 ## Got Any Feedback?
-If you have any feedback, be it a bug report, a complaint, a suggestion or a request, feel free to open an issue on GitHub. All we ask is that you try to label your issue suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for. If an issue on that topic already exists, instead add on to that issue with a comment of your own.
-
-We appreciate any kind of constructive feedback you can give us as it is important for us to know if something isn't working as expected or if you have any suggestions for us on how to improve the plugin.
+If you have any feedback, be it a bug report, a complaint, a suggestion or a feature request, feel free to open an issue on GitHub. All we ask is that you try to label your issue suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for. If an issue on that topic already exists, instead add on to that issue with a comment of your own. We appreciate any kind of constructive feedback you can give us.
 
 
 ## Future Plans
