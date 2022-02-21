@@ -8,21 +8,26 @@ This plugin adds a new type of node that combines the features of the NinePatchR
 
 
 ## Why Did We Make This?
-The Texture Button stretches the custom textures you add to it, which is especially noticable when trying to use pixel art. Luckily the NinePatchRect doesn't have this issue, so to use the NinePatchRect's method to add custom textures to our buttons instead, we combined the features of the NinePatchRect with those of the Button into a new custom node. The TextureButton still had some good features though, so we added some of them into the mix as well. And while we were at it we also added a custom sound system, which allows you to add various sounds to the button. Have a look at this comparison image:
+The Texture Button stretches the custom textures you add to it, which is especially noticeable when trying to use pixel art. Luckily the NinePatchRect doesn't have this issue, so to use the NinePatchRect's method to add custom textures to our buttons instead, we combined the features of the NinePatchRect with those of the Button into a new custom node. The TextureButton still had some good features though, so we added some of them into the mix as well. And while we were at it we also added a custom sound system, which allows you to add various sounds to the button. Have a look at this comparison image:
 
 ![NinePatchButton versus TextureButton](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/blob/master/Media/NPB_vs_TB.PNG "NinePatchButton versus TextureButton")
 
 
 ## Setup Guide
-Once the plugin is downloaded, installed and enabled, you can add a new NinePatchButton node to your scene and it can be used in the place of a normal Button or TextureButton.
 
-To get started you must first set load your `Normal Texture` into `Script Variables/Normal Texture` (like you would with a Texture Button) and then head to `TextureRegion` in the Bottom Panel and set it up like you would with a NinePatchRect. Once that is done you can start adding the textures of your choice for the NinePatchButton with the `Pressed Texture`, `Hovered Texture`, `Disabled Texture`, and `Focused Texture` properties, just like you would do with a Texture Button. The rest of the settings work more or less just like you'd expect by looking at their names or by looking at how they worked with the original Button. Nevertheless, all the settings/functions of the NinePatchButton is explained in detail below.
+### Download and Installation
+For a detailed guide on using the Godot Asset Library, both the web version and the Godot Editor's version, please see [this](https://docs.godotengine.org/en/latest/community/asset_library/using_assetlib.html).
+
+### NinePatchButton Setup
+Once the plugin is downloaded, installed, and enabled, you can add a new NinePatchButton node to one of your project's scenes.
+
+To get started you must first set load your chosen `Normal Texture` (the texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state) into `Script Variables/Normal Texture` in the `Inspector` and then head to `TextureRegion` in the `Bottom Panel` and set it up like you would with a NinePatchRect. Once that is done you can start adding the rest of the textures of your choice for the NinePatchButton. The rest of the settings work more or less just like you'd expect by looking at their names or by looking at how they worked with the Button, the Texture Button and the NinePatchRect. Nevertheless, all the properties of the NinePatchButton are explained in detail below.
 
 
-## Settings
+## Properties Guide
 
 ### Script Variables
-- **Normal Texture** - Texture to display by default, when the button is not in the disabled, focused, hovered or pressed state.
+- **Normal Texture** - Texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state.
 - **Hovered Texture** - Texture to display when the mouse hovers over the button.
 - **Focused Texture** - Texture to display when the button has mouse or keyboard focus.
 - **Pressed Texture** - Texture to display when the button has been, or is being, pressed down.
@@ -70,11 +75,15 @@ To get started you must first set load your `Normal Texture` into `Script Variab
 
 
 ## Got Any Feedback?
-If you have any feedback, be it a bug report, a complaint, a suggestion or a feature request, feel free to open an issue on GitHub. All we ask is that you try to label your issue suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for. If an issue on that topic already exists, instead add on to that issue with a comment of your own. We appreciate any kind of constructive feedback you can give us.
+If you have any feedback, be it a bug report, a suggestion or a feature request, feel free to [open an Issue](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/issues) on GitHub. All we ask is that you try to label your issue suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for. If an issue on that topic already exists, instead add on to that issue with a comment of your own. We appreciate any kind of constructive feedback you can give us.
+
+
+## Links
+- Asset Library web page - https://godotengine.org/asset-library/asset/1243
 
 
 ## Future Plans
-- Create a larger icon (with a minimum size of 64x64, 128x128 or 256x256) for use as the icon for the plugin on the Asset Library and for the plugin's demo project.
+- Create a larger icon (with a minimum size of 64x64, 128x128, or 256x256) for use as the icon for the plugin on the Asset Library and for the plugin's demo project.
 - Fix the button not cancelling the button press by default when moving the mouse cursor outside the button while it is still being pressed down. Currently the button acts as though the `Keep Pressed Outside` property is set to true at all times. That property is currently useless until this is fixed.
 - Fix the text display issue and add any related properties.
 - Add the ability to change the volumes of the sounds assigned to the NinePatchButton using its custom sound system.
@@ -83,7 +92,7 @@ If you have any feedback, be it a bug report, a complaint, a suggestion or a fea
 - Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity.
 - Clamp the minimum size of the NinePatchButton's textures to that of its button? The button can only be made smaller up to a certain point (this is normal), but currently the textures can be made even smaller.
 - Add the button texturing method from the Texture Button? It could be useful to have as an alternative to the already-implemented NinePatchRect button texturing method. Since you'd then have both button texturing methods, and not just the NinePatchRect's, this might also call for a name change for the plugin?
-- Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using Texture Button-esque button texturing method and the NinePatchRect-esque button texturing method without clogging up the Inspector, and would help make it more user-friendly. The downside is that it would increase the length and complexity of the plugin's script.
+- Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using the Texture Button-Esque button texturing method and the NinePatchRect-Esque button texturing method without clogging up the Inspector and would help make it more user-friendly. The downside is that it would increase the length and complexity of the plugin's script.
 - Add exported properties to custom property groups? It would help make it more user-friendly and would help organize the Inspector better, but the downside is that it would increase the length and complexity of the plugin's script.
 - Port the plugin to Godot 4, complete with a separate Asset Library page and GitHub repository. Links to the ported Godot 4 version of the plugin will be provided here on GitHub and on the Asset Library.
 
