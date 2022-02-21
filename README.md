@@ -2,7 +2,7 @@
 
 
 ## What Is This?
-This plugin adds a new type of node that combines the features of the NinePatchRect, the Button, and the TextureButton, with the NinePatchRect being used as the base. We also took the liberty to add a custom sound system to the NinePatchButton, which allows you to assign sounds for pressing it, hovering over it, attempting to press it while it is disabled, and focusing it.
+This plugin adds a new type of node that combines the features of the NinePatchRect, the Button, and the TextureButton, with the NinePatchRect being used as the base. We also took the liberty to add a custom sound system to the NinePatchButton, which allows you to assign sounds for some of its functions such as pressing it or hovering over it with your mouse cursor.
 
 *Note: We've been having issues with getting text to display correctly on the NinePatchButton, so we've had to disable that feature for now. We'll revisit this at a later time. For now you could use a Label (or something similar) and add text to the button manually. If you can manage to integrate the text you want to display into the button's texture then that could work as well.*
 
@@ -16,7 +16,7 @@ The Texture Button stretches the custom textures you add to it, which is especia
 ## Setup Guide
 Once the plugin is downloaded, installed and enabled, you can add a new NinePatchButton node to your scene and it can be used in the place of a normal Button or TextureButton.
 
-To get started you must first set load your `Normal Texture` into `Script Variables/Normal Texture` (like you would with a Texture Button) and then head to `TextureRegion` in the Bottom Panel and set it up like you would with a NinePatchRect. Once that is done you can start adding the textures of your choice for the NinePatchButton with the `Pressed Texture`, `Hovered Texture`, `Disabled Texture`, and `Focused Texture` properties, just like you would do with a Texture Button. The rest of the settings work more or less just like you'd expect with any BaseButton, except for the lack of being able to add text to the button (a solution is being investigated).
+To get started you must first set load your `Normal Texture` into `Script Variables/Normal Texture` (like you would with a Texture Button) and then head to `TextureRegion` in the Bottom Panel and set it up like you would with a NinePatchRect. Once that is done you can start adding the textures of your choice for the NinePatchButton with the `Pressed Texture`, `Hovered Texture`, `Disabled Texture`, and `Focused Texture` properties, just like you would do with a Texture Button. The rest of the settings work more or less just like you'd expect by looking at their names or by looking at how they worked with the original Button. Nevertheless, all the settings/functions of the NinePatchButton is explained in detail below.
 
 
 ## Settings
