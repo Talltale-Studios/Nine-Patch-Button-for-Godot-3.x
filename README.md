@@ -56,7 +56,7 @@ To get started you must first set load your chosen `Normal Texture` (the texture
 - **Shortcut** - [ShortCut](https://docs.godotengine.org/en/stable/classes/class_shortcut.html) associated with the button.
 - **Button Group** - [ButtonGroup](https://docs.godotengine.org/en/stable/classes/class_buttongroup.html) associated with the button.
 
-### NinePatchRect Variables
+### NinePatchRect
 - **Texture** - This property is controlled by the `Normal Texture` property, which will automatically load its texture into here.
 - **Draw Center** - If *true*, draw the button's center texture (which is set up with `TextureRegion`). Else, only draw the 9-slice's borders.
 - **Region Rect** - Rectangular region of the texture to sample from. If you're working with an atlas, use this property to define the area the 9-slice should use. All other properties are relative to this one. If the rect is empty, the NinePatchButton will use the whole texture. *Note: This property is untested.*
