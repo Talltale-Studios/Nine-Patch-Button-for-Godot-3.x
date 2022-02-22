@@ -76,11 +76,11 @@ To get started you must first set load your chosen `Normal Texture` (the texture
 - **Shortcut In Tooltip** - If *true*, the button will add information about its shortcut in the tooltip.
 - **Pressed** - If *true*, the button is in the pressed state. Means the button is pressed down or toggled. Note that `pressed` only works if `toggle mode` is set to *true*, and setting `pressed` to *true* will result in `toggled` to be emitted. If you want to change the pressed state without emitting the `toggled` signal, use the `set_pressed_no_signal()` built-in function.
 - **Action Mode** - Determines when the button is considered clicked.
-- **Button Mask** - Binary mark to choose which mouse buttons this button will respond to.
+- **Button Mask** - The binary mark to choose which mouse buttons this button will respond to.
 - **Enabled Focus Mode** - We removed this property because its tooltip states that it is deprecated and that `Control/Focus/Mode` should be used instead.
 - **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it. *Note: Currently this does nothing as the button currently stays pressed when moving the cursor outside the button while pressing regardless of whether or not this property is actually true. A fix is in the works.*
-- **Shortcut** - [ShortCut](https://docs.godotengine.org/en/stable/classes/class_shortcut.html) associated with the button.
-- **Button Group** - [ButtonGroup](https://docs.godotengine.org/en/stable/classes/class_buttongroup.html) associated with the button.
+- **Shortcut** - The [ShortCut](https://docs.godotengine.org/en/stable/classes/class_shortcut.html) associated with the button.
+- **Button Group** - The [ButtonGroup](https://docs.godotengine.org/en/stable/classes/class_buttongroup.html) associated with the button.
 
 ### NinePatchRect
 - **Texture** - This property is controlled by the `Normal Texture` property, which will automatically load its texture into here.
