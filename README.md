@@ -120,7 +120,7 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 - Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using the Texture Button-Esque button texturing method and the NinePatchRect-Esque button texturing method without clogging up the Inspector and would help make it more user-friendly. The downside is that it would increase the length and complexity of the plugin's script.
 - Add exported properties to custom property groups? It would help make it more user-friendly and would help organize the Inspector better, but the downside is that it would increase the length and complexity of the plugin's script.
 - Clamp the minimum size of the NinePatchButton's textures to that of its button? The button can only be made smaller up to a certain point (this is normal), but currently the textures can be made even smaller.
-- Remove the unused assets from the Demo Project?
+- Remove the unused assets from the Demo Project? While it can be safely assumed that we won't use most of the art assets, there are still some audio and font assets that we might use in the future.
 - Port the plugin to Godot 4, complete with a separate Asset Library page and GitHub repository. Links to the ported Godot 4 version of the plugin will be provided here on GitHub and on the Asset Library.
 
 
