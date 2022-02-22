@@ -19,7 +19,7 @@ The Texture Button stretches the custom textures you add to it, which is especia
 For a detailed guide on using the Godot Asset Library, both the web version and the Godot Editor's version, please see [this](https://docs.godotengine.org/en/latest/community/asset_library/using_assetlib.html).
 
 ### NinePatchButton Setup
-Once the plugin is downloaded, installed, and enabled, you can add a new NinePatchButton node to one of your project's scenes.
+Once the plugin is downloaded, installed, and enabled, you can add a new NinePatchButton node to one of your project's scenes. Note that the NinePatchButton should never be made the root node of a scene, as this causes issues with some of its components.
 
 To get started you must first set load your chosen `Normal Texture` (the texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state) into `Script Variables/Normal Texture` in the `Inspector` and then head to `TextureRegion` in the `Bottom Panel` and set it up like you would with a NinePatchRect. Once that is done you can start adding the rest of the textures of your choice for the NinePatchButton. The rest of the settings work more or less just like you'd expect by looking at their names or by looking at how they worked with the Button, the Texture Button and the NinePatchRect. Nevertheless, all the properties of the NinePatchButton are explained in detail below.
 
