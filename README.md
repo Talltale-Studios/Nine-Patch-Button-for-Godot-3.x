@@ -87,7 +87,7 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 - Fix the button not cancelling the button press by default when moving the mouse cursor outside the button while it is still being pressed down. Currently the button acts as though the `Keep Pressed Outside` property is set to true at all times. That property is currently useless until this is fixed.
 - Fix the text display issue and add any related properties.
 - Add a better comparison image which shows the difference between the NinePatchButton's texturing method and the TextureButton's texturing method more clearly. Perhaps a center texture could be used?
-- Add an (optional) Demo Project to the plugin's root folder which the user can install to take a closer look at the plugin's inner functions, as well as examples of how to use the NinePatchButton.
+- Add an (optional) Demo Project to the plugin's folder (or perhaps the `addons` folder?) which the user can install to take a closer look at the plugin's inner functions, as well as examples of how to use the NinePatchButton.
 - Add the ability to change the volumes of the sounds assigned to the NinePatchButton using its custom sound system.
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button.
 - Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity.
