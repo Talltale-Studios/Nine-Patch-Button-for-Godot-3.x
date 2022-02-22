@@ -29,44 +29,44 @@ To get started you must first set load your chosen `Normal Texture` (the texture
 ### Script Variables
 
 #### Button Texture Properties
-- **Normal Texture** - Texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state.
-- **Hovered Texture** - Texture to display when the mouse hovers over the button.
-- **Focused Texture** - Texture to display when the button has mouse or keyboard focus.
-- **Pressed Texture** - Texture to display when the button has been, or is being, pressed down.
-- **Pressed Hovered Texture** - Texture to display when the button has been, or is being, pressed down in conjunction with the mouse hovering over it.
-- **Pressed Hovered Texture** - Texture to display when the button has been, or is being, pressed down in conjunction with it having mouse or keyboard focus.
-- **Disabled Texture** - Texture to display when the button is disabled.
-- **Disabled Hovered Texture** - Texture to display when the button is disabled in conjunction with the mouse hovering over it.
-- **Disabled Focused Texture** - Texture to display when the button is disabled in conjunction with it having mouse or keyboard focus.
+- **Normal Texture** - The texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state.
+- **Hovered Texture** - The texture to display when the mouse hovers over the button.
+- **Focused Texture** - The texture to display when the button has mouse or keyboard focus.
+- **Pressed Texture** - The texture to display when the button has been, or is being, pressed down.
+- **Pressed Hovered Texture** - The texture to display when the button has been, or is being, pressed down in conjunction with the mouse hovering over it.
+- **Pressed Hovered Texture** - The texture to display when the button has been, or is being, pressed down in conjunction with it having mouse or keyboard focus.
+- **Disabled Texture** - The texture to display when the button is disabled.
+- **Disabled Hovered Texture** - The texture to display when the button is disabled in conjunction with the mouse hovering over it.
+- **Disabled Focused Texture** - The texture to display when the button is disabled in conjunction with it having mouse or keyboard focus.
 
 #### Button Audio Properties
 - **Hovered Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the mouse hovers over the button.
-- **Hovered Volume Db** (Upcoming) - The volume of the Hovered Sound, in dB.
-- **Hover Pitch Scale** (Upcoming) - The pitch and tempo of the Hovered Sound, as a multiplier of the audio sample's sample rate.
+- **Hovered Volume Db** - The volume of the Hovered Sound, in dB.
+- **Hover Pitch Scale** - The pitch and tempo of the Hovered Sound, as a multiplier of the audio sample's sample rate.
 - **Focused Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button gains mouse or keyboard focus.
-- **Focused Volume Db** (Upcoming) - The volume of the Focused Sound, in dB.
-- **Focused Pitch Scale** (Upcoming) - The pitch and tempo of the Focused Sound, as a multiplier of the audio sample's sample rate.
+- **Focused Volume Db** - The volume of the Focused Sound, in dB.
+- **Focused Pitch Scale** - The pitch and tempo of the Focused Sound, as a multiplier of the audio sample's sample rate.
 - **Pressed Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button has been pressed down.
-- **Pressed Volume Db** (Upcoming) - The volume of the Pressed Sound, in dB.
-- **Pressed Pitch Scale** (Upcoming) - The pitch and tempo of the Pressed Sound, as a multiplier of the audio sample's sample rate.
+- **Pressed Volume Db** - The volume of the Pressed Sound, in dB.
+- **Pressed Pitch Scale** - The pitch and tempo of the Pressed Sound, as a multiplier of the audio sample's sample rate.
 - **Pressed Released Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button has been released after having been pressed down.
-- **Pressed Released Volume Db** (Upcoming) - The volume of the Pressed Released Sound, in dB.
-- **Pressed Released Pitch Scale** (Upcoming) - The pitch and tempo of the Pressed Released Sound, as a multiplier of the audio sample's sample rate.
+- **Pressed Released Volume Db** - The volume of the Pressed Released Sound, in dB.
+- **Pressed Released Pitch Scale** - The pitch and tempo of the Pressed Released Sound, as a multiplier of the audio sample's sample rate.
 - **Pressed Hovered Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button has been, or is being, pressed down in conjunction with the mouse hovering over it.
-- **Pressed Hovered Volume Db** (Upcoming) - The volume of the Pressed Hovered Sound, in dB.
-- **Pressed Hovered Pitch Scale** (Upcoming) - The pitch and tempo of the Pressed Hovered Sound, as a multiplier of the audio sample's sample rate.
+- **Pressed Hovered Volume Db** - The volume of the Pressed Hovered Sound, in dB.
+- **Pressed Hovered Pitch Scale** - The pitch and tempo of the Pressed Hovered Sound, as a multiplier of the audio sample's sample rate.
 - **Pressed Focused Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button has been, or is being, pressed down in conjunction with it having mouse or keyboard focus.
-- **Pressed Focused Volume Db** (Upcoming) - The volume of the Pressed Focused Sound, in dB.
-- **Pressed Focused Pitch Scale** (Upcoming) - The pitch and tempo of the Pressed Focused Sound, as a multiplier of the audio sample's sample rate.
+- **Pressed Focused Volume Db** - The volume of the Pressed Focused Sound, in dB.
+- **Pressed Focused Pitch Scale** - The pitch and tempo of the Pressed Focused Sound, as a multiplier of the audio sample's sample rate.
 - **Disabled Pressed Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button is disabled and the user attempts to press it.
-- **Disabled Pressed Volume Db** (Upcoming) - The volume of the Disabled Pressed Sound, in dB.
-- **Disabled Pressed Pitch Scale** (Upcoming) - The pitch and tempo of the Disabled Pressed Sound, as a multiplier of the audio sample's sample rate.
+- **Disabled Pressed Volume Db** - The volume of the Disabled Pressed Sound, in dB.
+- **Disabled Pressed Pitch Scale** - The pitch and tempo of the Disabled Pressed Sound, as a multiplier of the audio sample's sample rate.
 - **Disabled Hovered Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button is disabled in conjunction with the mouse hovering over it.
-- **Disabled Hovered Volume Db** (Upcoming) - The volume of the Disabled Hovered Sound, in dB.
-- **Disabled Hovered Pitch Scale** (Upcoming) - The pitch and tempo of the Disabled Hovered Sound, as a multiplier of the audio sample's sample rate.
+- **Disabled Hovered Volume Db** - The volume of the Disabled Hovered Sound, in dB.
+- **Disabled Hovered Pitch Scale** - The pitch and tempo of the Disabled Hovered Sound, as a multiplier of the audio sample's sample rate.
 - **Disabled Focused Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button is disabled in conjunction with it having mouse or keyboard focus.
-- **Disabled Focused Volume Db** (Upcoming) - The volume of the Disabled Focused Sound, in dB.
-- **Disabled Focused Pitch Scale** (Upcoming) - The pitch and tempo of the Disabled Focused Sound, as a multiplier of the audio sample's sample rate.
+- **Disabled Focused Volume Db** - The volume of the Disabled Focused Sound, in dB.
+- **Disabled Focused Pitch Scale** - The pitch and tempo of the Disabled Focused Sound, as a multiplier of the audio sample's sample rate.
 - **Mix Target** - If the audio configuration has more than two speakers, this sets the target channels. With *Stereo*, the audio will be played only on the first channel. With *Surround*, the audio will be played on all surround channels. With *Center*, the audio will be played on the second channel, which is usually the center.
 - **Bus Name** - The [audio bus](https://docs.godotengine.org/en/stable/tutorials/audio/audio_buses.html) on which this audio is playing.
 
@@ -113,8 +113,6 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 - Fix the button not cancelling the button press by default when moving the mouse cursor outside the button while it is still being pressed down. Currently the button acts as though the `Keep Pressed Outside` property is set to true at all times. That property is currently useless until this is fixed.
 - Fix the text display issue and add any related properties.
 - Add a better comparison image which shows the difference between the NinePatchButton's texturing method and the TextureButton's texturing method more clearly. Perhaps a center texture could be used?
-- Add an (optional) Demo Project to the plugin's folder (or perhaps the `addons` folder?) which the user can install to take a closer look at the plugin's inner functions, as well as examples of how to use the NinePatchButton.
-- Add the ability to change the volumes of the sounds assigned to the NinePatchButton using its custom sound system.
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button.
 - Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity.
 - Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity.
@@ -127,7 +125,7 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 
 ## Changelog:
 
-### v2.2.0 (Upcoming)
+### v2.2.0
 - Added an optional `NinePatchButton Demo Project` alongside the actual plugin's root folder. Download it if you're interested in seeing the internal workings of the plugin, as well as examples of how the plugin can be used.
 - Added `Volume Db` properties, that originated from the AudioStreamPlayer, for each of the button's sounds.
 - Added `Pitch Scale` properties, that originated from the AudioStreamPlayer, for each of the button's sounds.
