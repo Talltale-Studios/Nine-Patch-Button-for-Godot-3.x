@@ -2,7 +2,7 @@
 
 
 ## What Is This?
-This plugin adds a new type of node that combines the features of the NinePatchRect, the Button, and the TextureButton, with the NinePatchRect being used as the base. We also took the liberty to add a custom sound system to the NinePatchButton, which allows you to assign sounds for some of its functions such as pressing it or hovering over it with your mouse cursor.
+This plugin adds a new type of node that combines the features of the NinePatchRect, the Button, and the TextureButton, with the NinePatchRect being used as the base. We also added a custom sound system to the NinePatchButton, which allows you to assign sounds for some of its functions such as pressing it or hovering over it with your mouse cursor.
 
 *Note: We've been having issues with getting text to display correctly on the NinePatchButton, so we've had to disable that feature for now while we're working on a fix for it. For now, you could use a Label (or something similar) and add text to the button manually. If you can manage to integrate the text you want to display into the button's texture then that could work as well.*
 
@@ -128,10 +128,11 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 ## Changelog:
 
 ### v2.2.0 (Upcoming)
+- Added an optional `NinePatchButton Demo Project` alongside the actual plugin's root folder. Download it if you're interested in seeing the internal workings of the plugin, as well as examples of how the plugin can be used.
 - Added `Volume Db` properties, that originated from the AudioStreamPlayer, for each of the button's sounds.
 - Added `Pitch Scale` properties, that originated from the AudioStreamPlayer, for each of the button's sounds.
 - Added the `Mix Target` property that originated from the AudioStreamPlayer.
-- Added a `Audio Bus Name` property that originated from the AudioStreamPlayer's `Bus` property.
+- Added the `Bus Name` property that originated from the AudioStreamPlayer's `Bus` property.
 - Cleaned up the plugin's code.
 
 ### v2.1.0
