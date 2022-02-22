@@ -41,32 +41,32 @@ To get started you must first set load your chosen `Normal Texture` (the texture
 
 #### Button Audio Properties
 - **Hovered Sound** - Sound to play when the mouse hovers over the button.
-- **Hovered Volume Db** - Volume of the Hovered Sound, in dB.
-- **Hover Pitch Scale** - The pitch and tempo of the Hovered Sound, as a multiplier of the audio sample's sample rate.
+- **Hovered Volume Db** (Upcoming) - Volume of the Hovered Sound, in dB.
+- **Hover Pitch Scale** (Upcoming) - The pitch and tempo of the Hovered Sound, as a multiplier of the audio sample's sample rate.
 - **Focused Sound** - Sound to play when the button gains mouse or keyboard focus.
-- **Focused Volume Db** - Volume of the Focused Sound, in dB.
-- **Focused Pitch Scale** - The pitch and tempo of the Focused Sound, as a multiplier of the audio sample's sample rate.
+- **Focused Volume Db** (Upcoming) - Volume of the Focused Sound, in dB.
+- **Focused Pitch Scale** (Upcoming) - The pitch and tempo of the Focused Sound, as a multiplier of the audio sample's sample rate.
 - **Pressed Sound** - Sound to play when the button has been pressed down.
-- **Pressed Volume Db** - Volume of the Pressed Sound, in dB.
-- **Pressed Pitch Scale** - The pitch and tempo of the Pressed Sound, as a multiplier of the audio sample's sample rate.
+- **Pressed Volume Db** (Upcoming) - Volume of the Pressed Sound, in dB.
+- **Pressed Pitch Scale** (Upcoming) - The pitch and tempo of the Pressed Sound, as a multiplier of the audio sample's sample rate.
 - **Pressed Released Sound** - Sound to play when the button has been released after having been pressed down.
-- **Pressed Released Volume Db** - Volume of the Pressed Released Sound, in dB.
-- **Pressed Released Pitch Scale** - The pitch and tempo of the Pressed Released Sound, as a multiplier of the audio sample's sample rate.
+- **Pressed Released Volume Db** (Upcoming) - Volume of the Pressed Released Sound, in dB.
+- **Pressed Released Pitch Scale** (Upcoming) - The pitch and tempo of the Pressed Released Sound, as a multiplier of the audio sample's sample rate.
 - **Pressed Hovered Sound** - Sound to play when the button has been, or is being, pressed down in conjunction with the mouse hovering over it.
-- **Pressed Hovered Volume Db** - Volume of the Pressed Hovered Sound, in dB.
-- **Pressed Hovered Pitch Scale** - The pitch and tempo of the Pressed Hovered Sound, as a multiplier of the audio sample's sample rate.
+- **Pressed Hovered Volume Db** (Upcoming) - Volume of the Pressed Hovered Sound, in dB.
+- **Pressed Hovered Pitch Scale** (Upcoming) - The pitch and tempo of the Pressed Hovered Sound, as a multiplier of the audio sample's sample rate.
 - **Pressed Focused Sound** - Sound to play when the button has been, or is being, pressed down in conjunction with it having mouse or keyboard focus.
-- **Pressed Focused Volume Db** - Volume of the Pressed Focused Sound, in dB.
-- **Pressed Focused Pitch Scale** - The pitch and tempo of the Pressed Focused Sound, as a multiplier of the audio sample's sample rate.
+- **Pressed Focused Volume Db** (Upcoming) - Volume of the Pressed Focused Sound, in dB.
+- **Pressed Focused Pitch Scale** (Upcoming) - The pitch and tempo of the Pressed Focused Sound, as a multiplier of the audio sample's sample rate.
 - **Disabled Pressed Sound** - Sound to play when the button is disabled and the user attempts to press it.
-- **Disabled Pressed Volume Db** - Volume of the Disabled Pressed Sound, in dB.
-- **Disabled Pressed Pitch Scale** - The pitch and tempo of the Disabled Pressed Sound, as a multiplier of the audio sample's sample rate.
+- **Disabled Pressed Volume Db** (Upcoming) - Volume of the Disabled Pressed Sound, in dB.
+- **Disabled Pressed Pitch Scale** (Upcoming) - The pitch and tempo of the Disabled Pressed Sound, as a multiplier of the audio sample's sample rate.
 - **Disabled Hovered Sound** - Sound to play when the button is disabled in conjunction with the mouse hovering over it.
-- **Disabled Hovered Volume Db** - Volume of the Disabled Hovered Sound, in dB.
-- **Disabled Hovered Pitch Scale** - The pitch and tempo of the Disabled Hovered Sound, as a multiplier of the audio sample's sample rate.
+- **Disabled Hovered Volume Db** (Upcoming) - Volume of the Disabled Hovered Sound, in dB.
+- **Disabled Hovered Pitch Scale** (Upcoming) - The pitch and tempo of the Disabled Hovered Sound, as a multiplier of the audio sample's sample rate.
 - **Disabled Focused Sound** - Sound to play when the button is disabled in conjunction with it having mouse or keyboard focus.
-- **Disabled Focused Volume Db** - Volume of the Disabled Focused Sound, in dB.
-- **Disabled Focused Pitch Scale** - The pitch and tempo of the Disabled Focused Sound, as a multiplier of the audio sample's sample rate.
+- **Disabled Focused Volume Db** (Upcoming) - Volume of the Disabled Focused Sound, in dB.
+- **Disabled Focused Pitch Scale** (Upcoming) - The pitch and tempo of the Disabled Focused Sound, as a multiplier of the audio sample's sample rate.
 
 #### BaseButton Properties
 - **Disabled** - If *true*, the button is in the disabled state and can't be pressed or toggled.
