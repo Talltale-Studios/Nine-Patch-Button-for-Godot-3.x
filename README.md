@@ -131,6 +131,7 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 - Added `Pitch Scale` properties, that originated from the AudioStreamPlayer, for each of the button's sounds.
 - Added the `Mix Target` property that originated from the AudioStreamPlayer.
 - Added the `Bus Name` property that originated from the AudioStreamPlayer's `Bus` property.
+- Added a copy of the `README.md` file from the plugin's GitHub repository to the plugin's root folder.
 - Cleaned up the plugin's code.
 
 ### v2.1.0
