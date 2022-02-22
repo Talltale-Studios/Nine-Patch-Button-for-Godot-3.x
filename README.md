@@ -27,6 +27,8 @@ To get started you must first set load your chosen `Normal Texture` (the texture
 ## Properties Guide
 
 ### Script Variables
+
+#### Button Texture Properties
 - **Normal Texture** - Texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state.
 - **Hovered Texture** - Texture to display when the mouse hovers over the button.
 - **Focused Texture** - Texture to display when the button has mouse or keyboard focus.
@@ -36,15 +38,37 @@ To get started you must first set load your chosen `Normal Texture` (the texture
 - **Disabled Texture** - Texture to display when the button is disabled.
 - **Disabled Hovered Texture** - Texture to display when the button is disabled in conjunction with the mouse hovering over it.
 - **Disabled Focused Texture** - Texture to display when the button is disabled in conjunction with it having mouse or keyboard focus.
-- **Hover Sound** - Sound to play when the mouse hovers over the button.
-- **Focus Sound** - Sound to play when the button gains mouse or keyboard focus.
+
+#### Button Audio Properties
+- **Hovered Sound** - Sound to play when the mouse hovers over the button.
+- **Hovered Volume Db** - Volume of the Hovered Sound, in dB.
+- **Hover Pitch Scale** - The pitch and tempo of the Hovered Sound, as a multiplier of the audio sample's sample rate.
+- **Focused Sound** - Sound to play when the button gains mouse or keyboard focus.
+- **Focused Volume Db** - Volume of the Focused Sound, in dB.
+- **Focused Pitch Scale** - The pitch and tempo of the Focused Sound, as a multiplier of the audio sample's sample rate.
 - **Pressed Sound** - Sound to play when the button has been pressed down.
+- **Pressed Volume Db** - Volume of the Pressed Sound, in dB.
+- **Pressed Pitch Scale** - The pitch and tempo of the Pressed Sound, as a multiplier of the audio sample's sample rate.
 - **Pressed Released Sound** - Sound to play when the button has been released after having been pressed down.
+- **Pressed Released Volume Db** - Volume of the Pressed Released Sound, in dB.
+- **Pressed Released Pitch Scale** - The pitch and tempo of the Pressed Released Sound, as a multiplier of the audio sample's sample rate.
 - **Pressed Hovered Sound** - Sound to play when the button has been, or is being, pressed down in conjunction with the mouse hovering over it.
+- **Pressed Hovered Volume Db** - Volume of the Pressed Hovered Sound, in dB.
+- **Pressed Hovered Pitch Scale** - The pitch and tempo of the Pressed Hovered Sound, as a multiplier of the audio sample's sample rate.
 - **Pressed Focused Sound** - Sound to play when the button has been, or is being, pressed down in conjunction with it having mouse or keyboard focus.
+- **Pressed Focused Volume Db** - Volume of the Pressed Focused Sound, in dB.
+- **Pressed Focused Pitch Scale** - The pitch and tempo of the Pressed Focused Sound, as a multiplier of the audio sample's sample rate.
 - **Disabled Pressed Sound** - Sound to play when the button is disabled and the user attempts to press it.
+- **Disabled Pressed Volume Db** - Volume of the Disabled Pressed Sound, in dB.
+- **Disabled Pressed Pitch Scale** - The pitch and tempo of the Disabled Pressed Sound, as a multiplier of the audio sample's sample rate.
 - **Disabled Hovered Sound** - Sound to play when the button is disabled in conjunction with the mouse hovering over it.
+- **Disabled Hovered Volume Db** - Volume of the Disabled Hovered Sound, in dB.
+- **Disabled Hovered Pitch Scale** - The pitch and tempo of the Disabled Hovered Sound, as a multiplier of the audio sample's sample rate.
 - **Disabled Focused Sound** - Sound to play when the button is disabled in conjunction with it having mouse or keyboard focus.
+- **Disabled Focused Volume Db** - Volume of the Disabled Focused Sound, in dB.
+- **Disabled Focused Pitch Scale** - The pitch and tempo of the Disabled Focused Sound, as a multiplier of the audio sample's sample rate.
+
+#### BaseButton Properties
 - **Disabled** - If *true*, the button is in the disabled state and can't be pressed or toggled.
 - **Toggle Mode** - If *true*, the button is in the toggle mode. Makes the button flip state between pressed and unpressed each time it is clicked. If *false* then the button will only remain pressed as long as the button is being pressed down by holding the input down, and will revert to the non-pressed state as soon as the input is released.
 - **Shortcut In Tooltip** - If *true*, the button will add information about its shortcut in the tooltip.
@@ -101,6 +125,13 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 
 ## Changelog:
 
+### v2.2.0 (Upcoming)
+- Added `Volume Db` properties, that originated from the AudioStreamPlayer, for each of the button's sounds.
+- Added `Pitch Scale` properties, that originated from the AudioStreamPlayer, for each of the button's sounds.
+- Added the `Mix Target` property that originated from the AudioStreamPlayer.
+- Added a `Audio Bus Name` property that originated from the AudioStreamPlayer's `Bus` property.
+- Cleaned up the plugin's code.
+
 ### v2.1.0
 - Added a new custom `Pressed Hovered Texture` property.
 - Added a new custom `Pressed Focused Texture` property.
@@ -115,7 +146,7 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 
 ### v1.3.0
 - Added the `Action Mode` property that originated from the Button.
-- Added the `Focused Texture` property that originated from the Texture Button.
+- Added the `Focused Texture` property that originated from the TextureButton.
 - Added a new custom `Focused Sound` property, based on the Texture Button's `Focused Texture` property.
 - Fixed several bugs.
 - Fixed the default values of some properties that were mistakenly left undefined.
