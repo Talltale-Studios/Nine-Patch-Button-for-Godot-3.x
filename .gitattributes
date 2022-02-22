@@ -34,7 +34,6 @@ thirdparty/* linguist-vendored
 /Icon.svg           export-ignore
 # Ignore project-specific files when exporting to a ZIP
 /Media              export-ignore
-/Test_Project       export-ignore
 
 # Godot explicit EOL
 *.gd eol=lf
