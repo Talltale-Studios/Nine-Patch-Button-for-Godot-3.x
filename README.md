@@ -67,14 +67,14 @@ To get started you must first set load your chosen `Normal Texture` (the texture
 - **Disabled Focused Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button is disabled in conjunction with it having mouse or keyboard focus.
 - **Disabled Focused Volume Db** (Upcoming) - The volume of the Disabled Focused Sound, in dB.
 - **Disabled Focused Pitch Scale** (Upcoming) - The pitch and tempo of the Disabled Focused Sound, as a multiplier of the audio sample's sample rate.
-- **Mix Target** - If the audio configuration has more than two speakers, this sets the target channels. With `Stereo`, the audio will be played only on the first channel. With `Surround`, the audio will be played on all surround channels. With `Center`, the audio will be played on the second channel, which is usually the center.
+- **Mix Target** - If the audio configuration has more than two speakers, this sets the target channels. With *Stereo*, the audio will be played only on the first channel. With *Surround*, the audio will be played on all surround channels. With *Center*, the audio will be played on the second channel, which is usually the center.
 - **Bus Name** - The [audio bus](https://docs.godotengine.org/en/stable/tutorials/audio/audio_buses.html) on which this audio is playing.
 
 #### BaseButton Properties
 - **Disabled** - If *true*, the button is in the disabled state and can't be pressed or toggled.
 - **Toggle Mode** - If *true*, the button is in the toggle mode. Makes the button flip state between pressed and unpressed each time it is clicked. If *false* then the button will only remain pressed as long as the button is being pressed down by holding the input down, and will revert to the non-pressed state as soon as the input is released.
 - **Shortcut In Tooltip** - If *true*, the button will add information about its shortcut in the tooltip.
-- **Pressed** - If *true*, the button is in the pressed state. Means the button is pressed down or toggled. *Note: The original button's tooltip explicitly states that the pressed state only works if the `Toggle Mode` property is true, so this should be investigated.*
+- **Pressed** - If *true*, the button is in the pressed state. Means the button is pressed down or toggled. Note that `pressed` only works if `toggle mode` is set to *true*, and setting `pressed` to *true* will result in `toggled` to be emitted. If you want to change the pressed state without emitting the `toggled` signal, use the `set_pressed_no_signal()` built-in function.
 - **Action Mode** - Determines when the button is considered clicked.
 - **Button Mask** - Binary mark to choose which mouse buttons this button will respond to.
 - **Enabled Focus Mode** - We removed this property because its tooltip states that it is deprecated and that `Control/Focus/Mode` should be used instead.
