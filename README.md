@@ -19,7 +19,7 @@ The Texture Button stretches the custom textures you add to it, which is especia
 For a detailed guide on using the Godot Asset Library, both the web version and the Godot Editor's version, please see [this](https://docs.godotengine.org/en/latest/community/asset_library/using_assetlib.html).
 
 ### NinePatchButton Setup
-Once the plugin is downloaded, installed, and enabled, you can add a new NinePatchButton node to one of your project's scenes.
+Once the plugin is downloaded, installed, and enabled, you can add a new NinePatchButton node to one of your project's scenes. Note that the NinePatchButton should never be made the root node of a scene, as this causes issues with some of its components.
 
 To get started you must first set load your chosen `Normal Texture` (the texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state) into `Script Variables/Normal Texture` in the `Inspector` and then head to `TextureRegion` in the `Bottom Panel` and set it up like you would with a NinePatchRect. Once that is done you can start adding the rest of the textures of your choice for the NinePatchButton. The rest of the settings work more or less just like you'd expect by looking at their names or by looking at how they worked with the Button, the Texture Button and the NinePatchRect. Nevertheless, all the properties of the NinePatchButton are explained in detail below.
 
@@ -78,14 +78,14 @@ To get started you must first set load your chosen `Normal Texture` (the texture
 - **Action Mode** - Determines when the button is considered clicked.
 - **Button Mask** - The binary mark to choose which mouse buttons this button will respond to.
 - **Enabled Focus Mode** - We removed this property because its tooltip states that it is deprecated and that `Control/Focus/Mode` should be used instead.
-- **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it. *Note: Currently this does nothing as the button currently stays pressed when moving the cursor outside the button while pressing regardless of whether or not this property is actually true. A fix is in the works.*
+- **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it. This only works if the `Toggle Mode` property is set to *false*. *Currently this property does nothing as the button currently stays pressed when moving the cursor outside the button while pressing regardless of whether or not this property is actually true. A fix is in the works.*
 - **Shortcut** - The [ShortCut](https://docs.godotengine.org/en/stable/classes/class_shortcut.html) associated with the button.
 - **Button Group** - The [ButtonGroup](https://docs.godotengine.org/en/stable/classes/class_buttongroup.html) associated with the button.
 
 ### NinePatchRect
 - **Texture** - This property is controlled by the `Normal Texture` property, which will automatically load its texture into here.
 - **Draw Center** - If *true*, draw the button's center texture (which is set up with `TextureRegion`). Else, only draw the 9-slice's borders.
-- **Region Rect** - Rectangular region of the texture to sample from. If you're working with an atlas, use this property to define the area the 9-slice should use. All other properties are relative to this one. If the rect is empty, the NinePatchButton will use the whole texture. *Note: This property is untested.*
+- **Region Rect** - Rectangular region of the texture to sample from. If you're working with an atlas, use this property to define the area the 9-slice should use. All other properties are relative to this one. If the rect is empty, the NinePatchButton will use the whole texture.
 
 #### Patch Margin
 - **Left** - The width of the 9-slide's left column. A margin of 16 means the 9-slice's left corners and side will have a width of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.
@@ -96,8 +96,8 @@ To get started you must first set load your chosen `Normal Texture` (the texture
 #### Axis Stretch
 `Horizontal` stretches or tiles the center texture horizontally, and `Vertical` stretches or tiles the center texture vertically. As for their settings:
 - **Stretch** - Stretches the center texture across the NinePatchButton. This may cause the texture to be distorted.
-- **Tile** - Repeats the center texture across the NinePatchButton. This won't cause any visible distortion. The texture must be seamless for this to work without displaying artifacts between edges. *Note: Only supported when using the GLES3 renderer. When using the GLES2 renderer, this will behave like Stretch.*
-- **Tile Fit** - Repeats the center texture across the NinePatchButton, but will also stretch the texture to make sure each tile is visible in full. This may cause the texture to be distorted, but less than Stretch. The texture must be seamless for this to work without displaying artifacts between edges. *Note: Only supported when using the GLES3 renderer. When using the GLES2 renderer, this will behave like Stretch.*
+- **Tile** - Repeats the center texture across the NinePatchButton. This won't cause any visible distortion. The texture must be seamless for this to work without displaying artifacts between edges. Note: This functionality is only supported when using the GLES3 renderer. When using the GLES2 renderer, this will behave like Stretch.
+- **Tile Fit** - Repeats the center texture across the NinePatchButton, but will also stretch the texture to make sure each tile is visible in full. This may cause the texture to be distorted, but less than Stretch. The texture must be seamless for this to work without displaying artifacts between edges. Note: This functionality is only supported when using the GLES3 renderer. When using the GLES2 renderer, this will behave like Stretch.
 
 
 ## Got Any Feedback?
@@ -109,21 +109,24 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 
 
 ## Future Plans
-- Create a larger icon (with a minimum size of 64x64, 128x128, or 256x256) for use as the icon for the plugin on the Asset Library and for the plugin's demo project.
-- Fix the button not cancelling the button press by default when moving the mouse cursor outside the button while it is still being pressed down. Currently the button acts as though the `Keep Pressed Outside` property is set to true at all times. That property is currently useless until this is fixed.
+- Create a larger icon with a size of 64x64, 128x128, or 256x256 for use as the icon for the plugin on the Asset Library and the icon for the plugin's demo project.
 - Fix the text display issue and add any related properties.
 - Add a better comparison image which shows the difference between the NinePatchButton's texturing method and the TextureButton's texturing method more clearly. Perhaps a center texture could be used?
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button.
 - Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity.
 - Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity.
-- Clamp the minimum size of the NinePatchButton's textures to that of its button? The button can only be made smaller up to a certain point (this is normal), but currently the textures can be made even smaller.
 - Add the button texturing method from the Texture Button? It could be useful to have as an alternative to the already-implemented NinePatchRect button texturing method. Since you'd then have both button texturing methods, and not just the NinePatchRect's, this might also call for a name change for the plugin?
 - Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using the Texture Button-Esque button texturing method and the NinePatchRect-Esque button texturing method without clogging up the Inspector and would help make it more user-friendly. The downside is that it would increase the length and complexity of the plugin's script.
 - Add exported properties to custom property groups? It would help make it more user-friendly and would help organize the Inspector better, but the downside is that it would increase the length and complexity of the plugin's script.
+- Remove the unused assets from the Demo Project? While it can be safely assumed that we won't use most of the art assets, there are still some audio and font assets that we might use in the future.
 - Port the plugin to Godot 4, complete with a separate Asset Library page and GitHub repository. Links to the ported Godot 4 version of the plugin will be provided here on GitHub and on the Asset Library.
 
 
 ## Changelog:
+
+### v2.3.0 (UPCOMING)
+- Fixed the button press not being cancelled when moving the mouse cursor outside the button while it is still being pressed down, if the `Toggle Mode` property is set to *false* and the `Keep Pressed Outside` property is set to *true*.
+- Cleaned up the plugin's code.
 
 ### v2.2.0
 - Added an optional `NinePatchButton Demo Project` alongside the actual plugin's root folder. Download it if you're interested in seeing the internal workings of the plugin, as well as examples of how the plugin can be used.
