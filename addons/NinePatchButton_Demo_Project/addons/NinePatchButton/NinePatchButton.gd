@@ -68,7 +68,6 @@ var hovered : bool = false
 var focused : bool = false
 var ready : bool = false
 var just_pressed : bool = false
-var fake_pressed : bool = false
 
 
 onready var button : Button
@@ -170,7 +169,7 @@ func _process(_delta : float) -> void:
 				if not pressed:
 					pressed = true
 					just_pressed = false
-			if pressed or fake_pressed:
+			if pressed:
 				if hovered:
 					self.texture = pressed_hovered_texture
 				if focused:
@@ -202,7 +201,6 @@ func _on_Button_button_down() -> void:
 			audio.pitch_scale = pressed_pitch_scale
 			audio.playing = true
 		pressed = button.pressed
-		fake_pressed = button.pressed
 		emit_signal("button_down")
 	else:
 		audio.stream = disabled_pressed_sound
@@ -218,7 +216,6 @@ func _on_Button_button_up() -> void:
 		audio.pitch_scale = pressed_released_pitch_scale
 		audio.playing = true
 		pressed = button.pressed
-		fake_pressed = button.pressed
 		emit_signal("button_up")
 
 
@@ -241,7 +238,6 @@ func _on_Button_toggled(button_pressed: bool) -> void:
 			audio.pitch_scale = pressed_released_pitch_scale
 			audio.playing = true
 		pressed = button.pressed
-		fake_pressed = button.pressed
 		emit_signal("toggled")
 	if disabled:
 		audio.stream = disabled_pressed_sound
@@ -295,5 +291,4 @@ func _on_Button_mouse_entered() -> void:
 
 func _on_Button_mouse_exited() -> void:
 	hovered = false
-	fake_pressed = false
 	emit_signal("mouse_exited")

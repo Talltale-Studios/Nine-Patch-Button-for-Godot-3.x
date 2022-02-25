@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://addons/NinePatchButton/NinePatchButton.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Graphics/Kenney_UI_Basic/red_button02.png" type="Texture" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://Assets/Graphics/Kenney_UI_Basic/blue_button04.png" type="Texture" id=11]
 [ext_resource path="res://Assets/Graphics/Kenney_UI_Basic/red_button00.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Graphics/Kenney_UI_Basic/blue_button03.png" type="Texture" id=13]
-[ext_resource path="res://Assets/Graphics/Kenney_UI_Basic/blue_button02_bitmap.png" type="BitMap" id=14]
 
 [node name="Example_NinePatchButtons" type="Control"]
 anchor_right = 1.0
@@ -45,7 +44,6 @@ pressed_focused_texture = ExtResource( 8 )
 disabled_texture = ExtResource( 12 )
 disabled_hovered_texture = ExtResource( 2 )
 disabled_focused_texture = ExtResource( 2 )
-click_mask = ExtResource( 14 )
 hovered_sound = ExtResource( 10 )
 focused_sound = ExtResource( 10 )
 pressed_sound = ExtResource( 3 )
