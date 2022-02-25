@@ -22,6 +22,7 @@ export var pressed_focused_texture : Texture
 export var disabled_texture : Texture
 export var disabled_hovered_texture : Texture
 export var disabled_focused_texture : Texture
+export var click_mask : BitMap
 export var hovered_sound : AudioStream
 export (float, -80, 24) var hovered_volume_db = 0
 export (float, 0.01, 4) var hovered_pitch_scale = 1
@@ -71,6 +72,7 @@ var fake_pressed : bool = false
 
 
 onready var button : Button
+onready var txr_button : TextureButton
 onready var audio : AudioStreamPlayer
 onready var bus = AudioServer.get_bus_index(bus_name)
 
@@ -83,14 +85,19 @@ func _ready() -> void:
 
 func instance_missing_nodes() -> void:
 	var a = Button.new()
-	var b = AudioStreamPlayer.new()
+	var b = TextureButton.new()
+	var c = AudioStreamPlayer.new()
 	add_child(a)
 	add_child(b)
+	add_child(c)
 	a.owner = self
 	b.owner = self
+	c.owner = self
 	a.name = "Button"
-	b.name = "AudioStreamPlayer"
+	b.name = "TextureButton"
+	c.name = "AudioStreamPlayer"
 	button = $Button
+	txr_button = $TextureButton
 	audio = $AudioStreamPlayer
 
 
@@ -126,7 +133,9 @@ func node_property_changer() -> void:
 	button.rect_scale.x = 0.5
 	button.rect_scale.y = 0.5
 	button.hint_tooltip = self.hint_tooltip
-	button.focus_mode = focus_mode
+	
+	# TextureButton Properties
+	txr_button.texture_click_mask = click_mask
 	
 	# AudioStreamPlayer Properties
 	audio.mix_target = mix_target
