@@ -125,6 +125,10 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 
 ## Changelog:
 
+### v2.3.0 (UPCOMING)
+- Fixed the button not going out of focus when moving the mouse cursor outside the button.
+- Cleaned up the plugin's code.
+
 ### v2.2.0
 - Added an optional `NinePatchButton Demo Project` alongside the actual plugin's root folder. Download it if you're interested in seeing the internal workings of the plugin, as well as examples of how the plugin can be used.
 - Added `Volume Db` properties, that originated from the AudioStreamPlayer, for each of the button's sounds.
