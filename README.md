@@ -128,7 +128,7 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 ### v2.3.0 (UPCOMING)
 - Fixed the button not going out of focus when moving the mouse cursor outside the button.
 - Changed the name of the Demo Project's `Example_NinePatchButtons` scene to `Usage_Examples`.
-- Removed the Demo Project's `NinePatchButton` scene, as it is actually only set up and used for short periods of time during testing, after which it has to be set up from scratch again when the next test is performed, and as such there is actually no use in keeping it around after a test.
+- Removed the Demo Project's `NinePatchButton` scene, as it is actually only set up and used for short periods at a time during testing, after which it has to be set up from scratch again when the next test is performed, and as such there is actually no use in keeping it around after a test.
 - Cleaned up the plugin's code.
 
 ### v2.2.0
