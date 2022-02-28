@@ -110,6 +110,7 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 
 ## Future Plans
 - Create a larger icon with a size of 64x64, 128x128, or 256x256 for use as the icon for the plugin on the Asset Library and the icon for the plugin's demo project.
+- Fix the button press not being cancelled when moving the mouse cursor outside the button while it is still being pressed down, if the `Keep Pressed Outside` property to *false*.
 - Fix the text display issue and add any related properties.
 - Add a better comparison image which shows the difference between the NinePatchButton's texturing method and the TextureButton's texturing method more clearly. Perhaps a center texture could be used?
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button.
@@ -123,10 +124,6 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 
 
 ## Changelog:
-
-### v2.3.0 (UPCOMING)
-- Fixed the button press not being cancelled when moving the mouse cursor outside the button while it is still being pressed down, if the `Toggle Mode` property has been set to *false* and the `Keep Pressed Outside` property to *true*.
-- Cleaned up the plugin's code.
 
 ### v2.2.0
 - Added an optional `NinePatchButton Demo Project` alongside the actual plugin's root folder. Download it if you're interested in seeing the internal workings of the plugin, as well as examples of how the plugin can be used.
