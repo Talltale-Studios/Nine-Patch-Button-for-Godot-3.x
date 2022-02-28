@@ -78,7 +78,7 @@ To get started you must first set load your chosen `Normal Texture` (the texture
 - **Action Mode** - Determines when the button is considered clicked.
 - **Button Mask** - The binary mark to choose which mouse buttons this button will respond to.
 - **Enabled Focus Mode** - We removed this property because its tooltip states that it is deprecated and that `Control/Focus/Mode` should be used instead.
-- **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it. This only works if the `Toggle Mode` property is set to *false*. *Currently this property does nothing as the button currently stays pressed when moving the cursor outside the button while pressing regardless of whether or not this property is actually true. A fix is in the works.*
+- **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it. *Currently this property is broken, and the NinePatchButton acts as though the property is set to true at all times.*
 - **Shortcut** - The [ShortCut](https://docs.godotengine.org/en/stable/classes/class_shortcut.html) associated with the button.
 - **Button Group** - The [ButtonGroup](https://docs.godotengine.org/en/stable/classes/class_buttongroup.html) associated with the button.
 
