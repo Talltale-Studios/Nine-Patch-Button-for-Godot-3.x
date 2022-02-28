@@ -125,7 +125,7 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 ## Changelog:
 
 ### v2.3.0 (UPCOMING)
-- Fixed the button press not being cancelled when moving the mouse cursor outside the button while it is still being pressed down, if the `Toggle Mode` property is set to *false* and the `Keep Pressed Outside` property is set to *true*.
+- Fixed the button press not being cancelled when moving the mouse cursor outside the button while it is still being pressed down, if the `Toggle Mode` property has been set to *false* and the `Keep Pressed Outside` property to *true*.
 - Cleaned up the plugin's code.
 
 ### v2.2.0
