@@ -21,7 +21,7 @@ For a detailed guide on using the Godot Asset Library, both the web version and 
 ### NinePatchButton Setup
 Once the plugin is downloaded, installed, and enabled, you can add a new NinePatchButton node to one of your project's scenes. Note that the NinePatchButton should never be made the root node of a scene, as this causes issues with some of its components.
 
-To get started you must first set load your chosen `Normal Texture` (the texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state) into `Script Variables/Normal Texture` in the `Inspector` and then head to `TextureRegion` in the `Bottom Panel` and set it up like you would with a NinePatchRect. Once that is done you can start adding the rest of the textures of your choice for the NinePatchButton. The rest of the settings work more or less just like you'd expect by looking at their names or by looking at how they worked with the Button, the Texture Button and the NinePatchRect. Nevertheless, all the properties of the NinePatchButton are explained in detail below.
+To get started you must first set load your chosen `Normal Texture` (the texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state) into `Script Variables/Normal Texture` in the Inspector and then head to `TextureRegion` in the Bottom Panel and set it up like you would with a NinePatchRect. Once that is done you can start adding the rest of the textures of your choice for the NinePatchButton. The rest of the settings work more or less just like you'd expect by looking at their names or by looking at how they worked with the Button, the Texture Button and the NinePatchRect. Nevertheless, all the properties of the NinePatchButton are explained in detail below.
 
 
 ## Properties Guide
@@ -68,17 +68,17 @@ To get started you must first set load your chosen `Normal Texture` (the texture
 - **Disabled Focused Volume Db** - The volume of the Disabled Focused Sound, in dB.
 - **Disabled Focused Pitch Scale** - The pitch and tempo of the Disabled Focused Sound, as a multiplier of the audio sample's sample rate.
 - **Mix Target** - If the audio configuration has more than two speakers, this sets the target channels. With *Stereo*, the audio will be played only on the first channel. With *Surround*, the audio will be played on all surround channels. With *Center*, the audio will be played on the second channel, which is usually the center.
-- **Bus Name** - The [audio bus](https://docs.godotengine.org/en/stable/tutorials/audio/audio_buses.html) on which this audio is playing.
+- **Bus Name** - The [audio bus](https://docs.godotengine.org/en/stable/tutorials/audio/audio_buses.html) on which this button's audio is playing. If the name of the audio bus is invalid or this property is unset it will default to the `Master` audio bus.
 
 #### BaseButton Properties
 - **Disabled** - If *true*, the button is in the disabled state and can't be pressed or toggled.
 - **Toggle Mode** - If *true*, the button is in the toggle mode. Makes the button flip state between pressed and unpressed each time it is clicked. If *false* then the button will only remain pressed as long as the button is being pressed down by holding the input down, and will revert to the non-pressed state as soon as the input is released.
 - **Shortcut In Tooltip** - If *true*, the button will add information about its shortcut in the tooltip.
-- **Pressed** - If *true*, the button is in the pressed state. Means the button is pressed down or toggled. Note that `pressed` only works if `toggle mode` is set to *true*, and setting `pressed` to *true* will result in `toggled` to be emitted. If you want to change the pressed state without emitting the `toggled` signal, use the `set_pressed_no_signal()` built-in function.
+- **Pressed** - If *true*, the button is in the pressed state. Means the button is pressed down or toggled. This only works if the `Toggle Mode` property is set to *true*, and setting `Pressed` to *true* will result in `toggled` to be emitted. If you want to change the pressed state without emitting the `toggled` signal, use the `set_pressed_no_signal()` built-in function.
 - **Action Mode** - Determines when the button is considered clicked.
 - **Button Mask** - The binary mark to choose which mouse buttons this button will respond to.
 - **Enabled Focus Mode** - We removed this property because its tooltip states that it is deprecated and that `Control/Focus/Mode` should be used instead.
-- **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it. This only works if the `Toggle Mode` property is set to *false*. *Currently this property does nothing as the button currently stays pressed when moving the cursor outside the button while pressing regardless of whether or not this property is actually true. A fix is in the works.*
+- **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it. *Currently this property is broken, and the NinePatchButton acts as though the property is set to true at all times.*
 - **Shortcut** - The [ShortCut](https://docs.godotengine.org/en/stable/classes/class_shortcut.html) associated with the button.
 - **Button Group** - The [ButtonGroup](https://docs.godotengine.org/en/stable/classes/class_buttongroup.html) associated with the button.
 
@@ -110,6 +110,7 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 
 ## Future Plans
 - Create a larger icon with a size of 64x64, 128x128, or 256x256 for use as the icon for the plugin on the Asset Library and the icon for the plugin's demo project.
+- Fix the button press not being cancelled when moving the mouse cursor outside the button while it is still being pressed down, if the `Keep Pressed Outside` property to *false*.
 - Fix the text display issue and add any related properties.
 - Add a better comparison image which shows the difference between the NinePatchButton's texturing method and the TextureButton's texturing method more clearly. Perhaps a center texture could be used?
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button.
@@ -125,7 +126,7 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 ## Changelog:
 
 ### v2.3.0 (UPCOMING)
-- Fixed the button press not being cancelled when moving the mouse cursor outside the button while it is still being pressed down, if the `Toggle Mode` property is set to *false* and the `Keep Pressed Outside` property is set to *true*.
+- Fixed the button not going out of focus when moving the mouse cursor outside the button.
 - Cleaned up the plugin's code.
 
 ### v2.2.0
