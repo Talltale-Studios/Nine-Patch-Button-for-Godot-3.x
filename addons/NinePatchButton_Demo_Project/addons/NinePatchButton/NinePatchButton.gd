@@ -22,7 +22,6 @@ export var pressed_focused_texture : Texture
 export var disabled_texture : Texture
 export var disabled_hovered_texture : Texture
 export var disabled_focused_texture : Texture
-export var click_mask : BitMap
 export var hovered_sound : AudioStream
 export (float, -80, 24) var hovered_volume_db = 0
 export (float, 0.01, 4) var hovered_pitch_scale = 1
@@ -68,7 +67,6 @@ var hovered : bool = false
 var focused : bool = false
 var ready : bool = false
 var just_pressed : bool = false
-
 
 onready var button : Button
 onready var txr_button : TextureButton
@@ -134,7 +132,7 @@ func node_property_changer() -> void:
 	button.hint_tooltip = self.hint_tooltip
 	
 	# TextureButton Properties
-	txr_button.texture_click_mask = click_mask
+	# Space reserved for later
 	
 	# AudioStreamPlayer Properties
 	audio.mix_target = mix_target
@@ -177,13 +175,12 @@ func _process(_delta : float) -> void:
 				if not hovered and not focused:
 					self.texture = pressed_texture
 			else:
-				if not hovered and not focused:
-					self.texture = normal_texture
 				if hovered:
 					self.texture = hovered_texture
 				if focused:
 					self.texture = focused_texture
-		
+				if not hovered and not focused:
+					self.texture = normal_texture
 		if disabled:
 			if hovered:
 				self.texture = disabled_hovered_texture
@@ -279,7 +276,7 @@ func _on_Button_mouse_entered() -> void:
 		if hovered and pressed:
 			audio.stream = pressed_hovered_sound
 			audio.volume_db = pressed_hovered_volume_db
-			audio.pitch_scale = pressed_hovered_pitch_scale
+			audio.pi1tch_scale = pressed_hovered_pitch_scale
 			audio.playing = true
 	if disabled:
 		audio.stream = disabled_hovered_sound
@@ -291,4 +288,5 @@ func _on_Button_mouse_entered() -> void:
 
 func _on_Button_mouse_exited() -> void:
 	hovered = false
+	focused = false
 	emit_signal("mouse_exited")

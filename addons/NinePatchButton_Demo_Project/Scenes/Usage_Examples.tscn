@@ -14,7 +14,7 @@
 [ext_resource path="res://Assets/Graphics/Kenney_UI_Basic/red_button00.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Graphics/Kenney_UI_Basic/blue_button03.png" type="Texture" id=13]
 
-[node name="Example_NinePatchButtons" type="Control"]
+[node name="Usage_Examples" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -53,8 +53,6 @@ pressed_focused_sound = ExtResource( 9 )
 disabled_pressed_sound = ExtResource( 7 )
 disabled_hovered_sound = ExtResource( 6 )
 disabled_focused_sound = ExtResource( 6 )
-bus_name = "Buttons"
-toggle_mode = true
 
 [node name="Disabled_NinePatchButton" type="NinePatchRect" parent="."]
 margin_left = 254.0

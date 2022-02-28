@@ -2,7 +2,7 @@
 
 [ext_resource path="res://addons/NinePatchButton/NinePatchButton.gd" type="Script" id=1]
 
-[node name="NinePatchButton" type="NinePatchRect"]
+[node name="NPB_Internals" type="NinePatchRect"]
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
