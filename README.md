@@ -68,7 +68,7 @@ To get started you must first set load your chosen `Normal Texture` (the texture
 - **Disabled Focused Volume Db** - The volume of the Disabled Focused Sound, in dB.
 - **Disabled Focused Pitch Scale** - The pitch and tempo of the Disabled Focused Sound, as a multiplier of the audio sample's sample rate.
 - **Mix Target** - If the audio configuration has more than two speakers, this sets the target channels. With *Stereo*, the audio will be played only on the first channel. With *Surround*, the audio will be played on all surround channels. With *Center*, the audio will be played on the second channel, which is usually the center.
-- **Bus Name** - The [audio bus](https://docs.godotengine.org/en/stable/tutorials/audio/audio_buses.html) on which this audio is playing.
+- **Bus Name** - The [audio bus](https://docs.godotengine.org/en/stable/tutorials/audio/audio_buses.html) on which this button's audio is playing. If the name of the audio bus is invalid or this property is unset it will default to the `Master` audio bus.
 
 #### BaseButton Properties
 - **Disabled** - If *true*, the button is in the disabled state and can't be pressed or toggled.
