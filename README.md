@@ -110,7 +110,7 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 
 ## Future Plans
 - Create a larger icon with a size of 64x64, 128x128, or 256x256 for use as the icon for the plugin on the Asset Library and the icon for the plugin's demo project.
-- Fix the button press not being cancelled when moving the mouse cursor outside the button while it is still being pressed down, if the `Keep Pressed Outside` property to *false*.
+- Fix the button press not being cancelled when moving the mouse cursor outside the button while it is still being pressed down, if the `Keep Pressed Outside` property is set to *false*.
 - Fix the text display issue and add any related properties.
 - Add a better comparison image which shows the difference between the NinePatchButton's texturing method and the TextureButton's texturing method more clearly. Perhaps a center texture could be used?
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button.
@@ -119,14 +119,17 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 - Add the button texturing method from the Texture Button? It could be useful to have as an alternative to the already-implemented NinePatchRect button texturing method. Since you'd then have both button texturing methods, and not just the NinePatchRect's, this might also call for a name change for the plugin?
 - Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using the Texture Button-Esque button texturing method and the NinePatchRect-Esque button texturing method without clogging up the Inspector and would help make it more user-friendly. The downside is that it would increase the length and complexity of the plugin's script.
 - Add exported properties to custom property groups? It would help make it more user-friendly and would help organize the Inspector better, but the downside is that it would increase the length and complexity of the plugin's script.
-- Remove the unused assets from the Demo Project? While it can be safely assumed that we won't use most of the art assets, there are still some audio and font assets that we might use in the future.
 - Port the plugin to Godot 4, complete with a separate Asset Library page and GitHub repository. Links to the ported Godot 4 version of the plugin will be provided here on GitHub and on the Asset Library.
 
 
 ## Changelog:
 
-### v2.3.0 (UPCOMING)
+### v2.3.0
 - Fixed the button not going out of focus when moving the mouse cursor outside the button.
+- Fixed a typo in the plugin's code.
+- Changed the name of the Demo Project's `Example_NinePatchButtons` scene to `Usage_Examples`.
+- Removed the Demo Project's `NinePatchButton` scene, as it is actually only set up and used for short periods at a time during testing, after which it has to be set up from scratch again when the next test is performed, and as such there is actually no use in keeping it around after a test.
+- Split all of the Demo Project's assets between two new `Optional_Assets` and `Required_Assets` folders to enable the user to more easily see which assets the Demo Project needs to run and which not.
 - Cleaned up the plugin's code.
 
 ### v2.2.0
