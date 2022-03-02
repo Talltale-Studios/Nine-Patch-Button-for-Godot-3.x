@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/blue_button02_bitmap.png-4543210ed20de2404fd93a5a4c68d18e.res"
+
+[deps]
+
+source_file="res://Required_Assets/Graphics/blue_button02_bitmap.png"
+dest_files=[ "res://.import/blue_button02_bitmap.png-4543210ed20de2404fd93a5a4c68d18e.res" ]
+
+[params]
+
+create_from=0
+threshold=0.5

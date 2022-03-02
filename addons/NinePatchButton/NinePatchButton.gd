@@ -67,10 +67,9 @@ var hovered : bool = false
 var focused : bool = false
 var ready : bool = false
 var just_pressed : bool = false
-var fake_pressed : bool = false
-
 
 onready var button : Button
+onready var txr_button : TextureButton
 onready var audio : AudioStreamPlayer
 onready var bus = AudioServer.get_bus_index(bus_name)
 
@@ -83,14 +82,19 @@ func _ready() -> void:
 
 func instance_missing_nodes() -> void:
 	var a = Button.new()
-	var b = AudioStreamPlayer.new()
+	var b = TextureButton.new()
+	var c = AudioStreamPlayer.new()
 	add_child(a)
 	add_child(b)
+	add_child(c)
 	a.owner = self
 	b.owner = self
+	c.owner = self
 	a.name = "Button"
-	b.name = "AudioStreamPlayer"
+	b.name = "TextureButton"
+	c.name = "AudioStreamPlayer"
 	button = $Button
+	txr_button = $TextureButton
 	audio = $AudioStreamPlayer
 
 
@@ -126,7 +130,9 @@ func node_property_changer() -> void:
 	button.rect_scale.x = 0.5
 	button.rect_scale.y = 0.5
 	button.hint_tooltip = self.hint_tooltip
-	button.focus_mode = focus_mode
+	
+	# TextureButton Properties
+	# Space reserved for later
 	
 	# AudioStreamPlayer Properties
 	audio.mix_target = mix_target
@@ -161,7 +167,7 @@ func _process(_delta : float) -> void:
 				if not pressed:
 					pressed = true
 					just_pressed = false
-			if pressed or fake_pressed:
+			if pressed:
 				if hovered:
 					self.texture = pressed_hovered_texture
 				if focused:
@@ -169,13 +175,12 @@ func _process(_delta : float) -> void:
 				if not hovered and not focused:
 					self.texture = pressed_texture
 			else:
-				if not hovered and not focused:
-					self.texture = normal_texture
 				if hovered:
 					self.texture = hovered_texture
 				if focused:
 					self.texture = focused_texture
-		
+				if not hovered and not focused:
+					self.texture = normal_texture
 		if disabled:
 			if hovered:
 				self.texture = disabled_hovered_texture
@@ -193,7 +198,6 @@ func _on_Button_button_down() -> void:
 			audio.pitch_scale = pressed_pitch_scale
 			audio.playing = true
 		pressed = button.pressed
-		fake_pressed = button.pressed
 		emit_signal("button_down")
 	else:
 		audio.stream = disabled_pressed_sound
@@ -209,7 +213,6 @@ func _on_Button_button_up() -> void:
 		audio.pitch_scale = pressed_released_pitch_scale
 		audio.playing = true
 		pressed = button.pressed
-		fake_pressed = button.pressed
 		emit_signal("button_up")
 
 
@@ -232,7 +235,6 @@ func _on_Button_toggled(button_pressed: bool) -> void:
 			audio.pitch_scale = pressed_released_pitch_scale
 			audio.playing = true
 		pressed = button.pressed
-		fake_pressed = button.pressed
 		emit_signal("toggled")
 	if disabled:
 		audio.stream = disabled_pressed_sound
@@ -286,5 +288,5 @@ func _on_Button_mouse_entered() -> void:
 
 func _on_Button_mouse_exited() -> void:
 	hovered = false
-	fake_pressed = false
+	focused = false
 	emit_signal("mouse_exited")

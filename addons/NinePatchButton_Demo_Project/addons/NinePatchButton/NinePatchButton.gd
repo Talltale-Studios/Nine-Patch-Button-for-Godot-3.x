@@ -276,7 +276,7 @@ func _on_Button_mouse_entered() -> void:
 		if hovered and pressed:
 			audio.stream = pressed_hovered_sound
 			audio.volume_db = pressed_hovered_volume_db
-			audio.pi1tch_scale = pressed_hovered_pitch_scale
+			audio.pitch_scale = pressed_hovered_pitch_scale
 			audio.playing = true
 	if disabled:
 		audio.stream = disabled_hovered_sound
