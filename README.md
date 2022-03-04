@@ -71,10 +71,10 @@ To get started you must first set load your chosen `Normal Texture` (the texture
 - **Bus Name** - The [audio bus](https://docs.godotengine.org/en/stable/tutorials/audio/audio_buses.html) on which this button's audio is playing. If the name of the audio bus is invalid or this property is unset it will default to the `Master` audio bus.
 
 #### BaseButton Properties
-- **Button Disabled** - If *true*, the button is in the disabled state and can't be pressed or toggled.
+- **Disabled** - If *true*, the button is in the disabled state and can't be pressed or toggled.
 - **Toggle Mode** - If *true*, the button is in the toggle mode. Makes the button flip state between pressed and unpressed each time it is clicked. If *false* then the button will only remain pressed as long as the button is being pressed down by holding the input down, and will revert to the non-pressed state as soon as the input is released.
 - **Shortcut In Tooltip** - If *true*, the button will add information about its shortcut in the tooltip.
-- **Button Pressed** - If *true*, the button is in the pressed state. Means the button is pressed down or toggled. This only works if the `Toggle Mode` property is set to *true*, and setting `Pressed` to *true* will result in `toggled` to be emitted. If you want to change the pressed state without emitting the `toggled` signal, use the `set_pressed_no_signal()` built-in function.
+- **Pressed** - If *true*, the button is in the pressed state. Means the button is pressed down or toggled. This only works if the `Toggle Mode` property is set to *true*, and setting `Pressed` to *true* will result in `toggled` to be emitted. If you want to change the pressed state without emitting the `toggled` signal, use the `set_pressed_no_signal()` built-in function.
 - **Action Mode** - Determines when the button is considered clicked.
 - **Button Mask** - The binary mark to choose which mouse buttons this button will respond to.
 - **Enabled Focus Mode** - We removed this property because its tooltip states that it is deprecated and that `Control/Focus/Mode` should be used instead.
@@ -123,9 +123,8 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 
 ## Changelog:
 
-### v2.4.0
-- Changed the name of the `Disabled` property to `Button Disabled`.
-- Changed the name of the `Pressed` property to `Button Pressed`.
+### v2.3.1
+- Fixed some assets in the Demo Project's `Optional Assets` folder having been wrongfully been swapped with some assets that belong in the `Required Assets` folder.
 - Removed the non-functional `Keep Pressed Outside` property (it will be re-added once it has been fixed)
 
 ### v2.3.0
