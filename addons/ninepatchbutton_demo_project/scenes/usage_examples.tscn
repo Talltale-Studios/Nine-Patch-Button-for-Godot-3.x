@@ -1,0 +1,91 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://addons/ninepatchbutton/ninepatchbutton.gd" type="Script" id=1]
+[ext_resource path="res://assets/graphics/blue_button_03.png" type="Texture" id=2]
+[ext_resource path="res://assets/graphics/blue_button_01.png" type="Texture" id=3]
+[ext_resource path="res://assets/audio/select_004.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/audio/confirmation_001.ogg" type="AudioStream" id=5]
+[ext_resource path="res://assets/audio/select_005.ogg" type="AudioStream" id=6]
+[ext_resource path="res://assets/graphics/blue_button_02.png" type="Texture" id=7]
+[ext_resource path="res://assets/audio/select_003.ogg" type="AudioStream" id=8]
+[ext_resource path="res://assets/audio/error_008.ogg" type="AudioStream" id=9]
+[ext_resource path="res://assets/audio/bong_001.ogg" type="AudioStream" id=10]
+[ext_resource path="res://assets/graphics/blue_button_04.png" type="Texture" id=11]
+[ext_resource path="res://assets/graphics/red_button_03.png" type="Texture" id=12]
+[ext_resource path="res://assets/graphics/red_button_01.png" type="Texture" id=13]
+
+[node name="Usage_Examples" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Enabled_NinePatchButton" type="NinePatchRect" parent="."]
+margin_right = 250.0
+margin_bottom = 62.0
+texture = ExtResource( 3 )
+patch_margin_left = 94
+patch_margin_top = 24
+patch_margin_right = 94
+patch_margin_bottom = 24
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+normal_texture = ExtResource( 3 )
+hovered_texture = ExtResource( 2 )
+focused_texture = ExtResource( 2 )
+pressed_texture = ExtResource( 7 )
+pressed_hovered_texture = ExtResource( 11 )
+pressed_focused_texture = ExtResource( 11 )
+disabled_texture = ExtResource( 13 )
+disabled_hovered_texture = ExtResource( 12 )
+disabled_focused_texture = ExtResource( 12 )
+hovered_sound = ExtResource( 8 )
+focused_sound = ExtResource( 8 )
+pressed_sound = ExtResource( 5 )
+pressed_released_sound = ExtResource( 10 )
+pressed_hovered_sound = ExtResource( 4 )
+pressed_focused_sound = ExtResource( 4 )
+disabled_pressed_sound = ExtResource( 9 )
+disabled_hovered_sound = ExtResource( 6 )
+disabled_focused_sound = ExtResource( 6 )
+bus_name = "Buttons"
+
+[node name="Disabled_NinePatchButton" type="NinePatchRect" parent="."]
+margin_left = 254.0
+margin_right = 504.0
+margin_bottom = 62.0
+texture = ExtResource( 13 )
+patch_margin_left = 94
+patch_margin_top = 24
+patch_margin_right = 94
+patch_margin_bottom = 24
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+normal_texture = ExtResource( 3 )
+hovered_texture = ExtResource( 2 )
+focused_texture = ExtResource( 2 )
+pressed_texture = ExtResource( 7 )
+pressed_hovered_texture = ExtResource( 11 )
+pressed_focused_texture = ExtResource( 11 )
+disabled_texture = ExtResource( 13 )
+disabled_hovered_texture = ExtResource( 12 )
+disabled_focused_texture = ExtResource( 12 )
+hovered_sound = ExtResource( 8 )
+focused_sound = ExtResource( 8 )
+pressed_sound = ExtResource( 5 )
+pressed_released_sound = ExtResource( 10 )
+pressed_hovered_sound = ExtResource( 4 )
+pressed_focused_sound = ExtResource( 4 )
+disabled_pressed_sound = ExtResource( 9 )
+disabled_hovered_sound = ExtResource( 6 )
+disabled_focused_sound = ExtResource( 6 )
+bus_name = "Buttons"
+disabled = true
