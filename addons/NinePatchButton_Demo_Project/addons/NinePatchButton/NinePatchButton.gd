@@ -57,16 +57,16 @@ export var shortcut_in_tooltip : bool = true
 export var pressed : bool
 export (int, "Button Press", "Button Release") var action_mode = 1
 export (int, FLAGS, "Mouse Left", "Mouse Right", "Mouse Middle") var button_mask = 1
-export var keep_pressed_outside : bool
+#export var keep_pressed_outside : bool
 export var shortcut : ShortCut
 export var group : ButtonGroup
 
 
-var flat : bool = true # This property should not be touched
+var flat : bool = true
 var hovered : bool = false
 var focused : bool = false
-var ready : bool = false
 var just_pressed : bool = false
+
 
 onready var button : Button
 onready var txr_button : TextureButton
@@ -76,10 +76,12 @@ onready var bus = AudioServer.get_bus_index(bus_name)
 
 func _ready() -> void:
 	instance_missing_nodes()
-	node_property_changer()
-	button_mask_handler()
+	connect_button_signals()
+	node_properties_changer()
 
 
+# Instance the Button, the TextureButton, and the AudioStreamPlayer nodes
+# so that their properties and signals can be used for the NinePatchButton
 func instance_missing_nodes() -> void:
 	var a = Button.new()
 	var b = TextureButton.new()
@@ -98,8 +100,8 @@ func instance_missing_nodes() -> void:
 	audio = $AudioStreamPlayer
 
 
-func node_property_changer() -> void:
-	# Button Signals
+# Connect the signals of the instanced Button to the NinePatchButton
+func connect_button_signals() -> void:
 	if not button.is_connected("button_down", self, "_on_Button_button_down"):
 		button.connect("button_down", self, "_on_Button_button_down")
 	if not button.is_connected("button_up", self, "_on_Button_button_up"):
@@ -116,33 +118,23 @@ func node_property_changer() -> void:
 		button.connect("mouse_entered", self, "_on_Button_mouse_entered")
 	if not button.is_connected("mouse_exited", self, "_on_Button_mouse_exited"):
 		button.connect("mouse_exited", self, "_on_Button_mouse_exited")
-	
+
+
+# Change the properties of the instanced nodes
+func node_properties_changer() -> void:
 	# Button Properties
-	button.flat = flat # This property should not be touched
+	button.flat = flat
 	button.shortcut_in_tooltip = shortcut_in_tooltip
 	if toggle_mode:
 		button.toggle_mode  = toggle_mode
 	button.action_mode = action_mode
-	button.keep_pressed_outside = keep_pressed_outside
+#	button.keep_pressed_outside = keep_pressed_outside
 	button.shortcut = shortcut
 	button.group = group
 	button.rect_size = self.rect_size * 2
 	button.rect_scale.x = 0.5
 	button.rect_scale.y = 0.5
 	button.hint_tooltip = self.hint_tooltip
-	
-	# TextureButton Properties
-	# Space reserved for later
-	
-	# AudioStreamPlayer Properties
-	audio.mix_target = mix_target
-	audio.bus = bus_name
-	
-	# Other Variables
-	ready = true
-
-
-func button_mask_handler() -> void:
 	if button_mask == 1:
 		button.button_mask == 1
 	if button_mask == 2:
@@ -155,39 +147,46 @@ func button_mask_handler() -> void:
 		button.button_mask == 5
 	if button_mask == 6:
 		button.button_mask == 6
+	
+	# AudioStreamPlayer Properties
+	audio.mix_target = mix_target
+	audio.bus = bus_name
 
 
 func _process(_delta : float) -> void:
-	if ready:
-		if not disabled:
-			if just_pressed:
-				if pressed:
-					pressed = false
-					just_pressed = false
-				if not pressed:
-					pressed = true
-					just_pressed = false
+	button_texture_handler()
+
+
+func button_texture_handler() -> void:
+	if not disabled:
+		if just_pressed:
 			if pressed:
-				if hovered:
-					self.texture = pressed_hovered_texture
-				if focused:
-					self.texture = pressed_focused_texture
-				if not hovered and not focused:
-					self.texture = pressed_texture
-			else:
-				if hovered:
-					self.texture = hovered_texture
-				if focused:
-					self.texture = focused_texture
-				if not hovered and not focused:
-					self.texture = normal_texture
-		if disabled:
+				pressed = false
+				just_pressed = false
+			if not pressed:
+				pressed = true
+				just_pressed = false
+		if pressed:
 			if hovered:
-				self.texture = disabled_hovered_texture
+				self.texture = pressed_hovered_texture
 			if focused:
-				self.texture = disabled_focused_texture
+				self.texture = pressed_focused_texture
 			if not hovered and not focused:
-				self.texture = disabled_texture
+				self.texture = pressed_texture
+		else:
+			if hovered:
+				self.texture = hovered_texture
+			if focused:
+				self.texture = focused_texture
+			if not hovered and not focused:
+				self.texture = normal_texture
+	if disabled:
+		if hovered:
+			self.texture = disabled_hovered_texture
+		if focused:
+			self.texture = disabled_focused_texture
+		if not hovered and not focused:
+			self.texture = disabled_texture
 
 
 func _on_Button_button_down() -> void:
