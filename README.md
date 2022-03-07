@@ -123,18 +123,18 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 
 ## Changelog:
 
-### v2.3.1
-- Fixed some assets in the Demo Project's `Optional Assets` folder having been wrongfully been swapped with some assets that belong in the `Required Assets` folder.
-- Resorted the assets in the `Required Assets` folder into new folders so it more closely resembles the `Optional Assets` folder.
-- Added some new documentation to the plugin's code.
-- Disabled the broken `Keep Pressed Outside` property. It will be re-added once it has been fixed.
+### v2.4.0
+- Added new documentation to the plugin's scripts.
+- Moved some assets that were mistakenly put in the `Optional Assets` folder to the `Required Assets` folder.
+- Removed the `Optional Assets` folder and renamed the `Required Assets` folder to `Assets`.
+- Disabled the `Keep Pressed Outside` property. It is currently broken and will be re-enabled once it has been fixed.
 - Cleaned up the plugin's code.
 
 ### v2.3.0
 - Fixed the button not going out of focus when moving the mouse cursor outside the button.
 - Fixed a typo in the plugin's code.
 - Changed the name of the Demo Project's `Example_NinePatchButtons` scene to `Usage_Examples`.
-- Removed the Demo Project's `NinePatchButton` scene, as it is actually only set up and used for short periods at a time during testing, after which it has to be set up from scratch again when the next test is performed, and as such there is actually no use in keeping it around after a test.
+- Removed the Demo Project's `NinePatchButton` scene, as it is actually only set up and used for short periods at a time during testing, after which it has to be set up from scratch again when the next test is to be performed, and as such there is actually no use in keeping it around after the test has been performed.
 - Split all of the Demo Project's assets between two new `Optional_Assets` and `Required_Assets` folders to enable the user to more easily see which assets the Demo Project needs to run and which not.
 - Cleaned up the plugin's code.
 
