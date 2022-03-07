@@ -78,7 +78,7 @@ To get started you must first set load your chosen `Normal Texture` (the texture
 - **Action Mode** - Determines when the button is considered clicked.
 - **Button Mask** - The binary mark to choose which mouse buttons this button will respond to.
 - **Enabled Focus Mode** - We removed this property because its tooltip states that it is deprecated and that `Control/Focus/Mode` should be used instead.
-- **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it. *Currently this property is broken, and the NinePatchButton acts as though the property is set to true at all times.*
+- **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it. *This property is currently broken and has temporarily been disabled until it can be fixed.*
 - **Shortcut** - The [ShortCut](https://docs.godotengine.org/en/stable/classes/class_shortcut.html) associated with the button.
 - **Button Group** - The [ButtonGroup](https://docs.godotengine.org/en/stable/classes/class_buttongroup.html) associated with the button.
 
@@ -119,16 +119,24 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 - Add the button texturing method from the Texture Button? It could be useful to have as an alternative to the already-implemented NinePatchRect button texturing method. Since you'd then have both button texturing methods, and not just the NinePatchRect's, this might also call for a name change for the plugin?
 - Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using the Texture Button-Esque button texturing method and the NinePatchRect-Esque button texturing method without clogging up the Inspector and would help make it more user-friendly. The downside is that it would increase the length and complexity of the plugin's script.
 - Add exported properties to custom property groups? It would help make it more user-friendly and would help organize the Inspector better, but the downside is that it would increase the length and complexity of the plugin's script.
-- Port the plugin to Godot 4, complete with a separate Asset Library page and GitHub repository. Links to the ported Godot 4 version of the plugin will be provided here on GitHub and on the Asset Library.
 
 
 ## Changelog:
+
+### v2.4.0
+- Added new documentation to the plugin's scripts.
+- Changed the names of the Demo Project's and the NinePatchButton's folders and files to use snake_case.
+- Moved some of the Demo Project's assets that were mistakenly put in the `Optional Assets` folder into the `Required Assets` folder.
+- Renamed some of the Demo Project's assets to make more sense within the scope of the project.
+- Removed the Demo Project's `Optional Assets` folder and renamed the `Required Assets` folder to `Assets`.
+- Disabled the `Keep Pressed Outside` property. It is currently broken and will be re-enabled once it has been fixed.
+- Cleaned up the plugin's code.
 
 ### v2.3.0
 - Fixed the button not going out of focus when moving the mouse cursor outside the button.
 - Fixed a typo in the plugin's code.
 - Changed the name of the Demo Project's `Example_NinePatchButtons` scene to `Usage_Examples`.
-- Removed the Demo Project's `NinePatchButton` scene, as it is actually only set up and used for short periods at a time during testing, after which it has to be set up from scratch again when the next test is performed, and as such there is actually no use in keeping it around after a test.
+- Removed the Demo Project's `NinePatchButton` scene, as it is actually only set up and used for short periods at a time during testing, after which it has to be set up from scratch again when the next test is to be performed, and as such there is actually no use in keeping it around after the test has been performed.
 - Split all of the Demo Project's assets between two new `Optional_Assets` and `Required_Assets` folders to enable the user to more easily see which assets the Demo Project needs to run and which not.
 - Cleaned up the plugin's code.
 
