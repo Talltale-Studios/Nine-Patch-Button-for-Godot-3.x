@@ -125,7 +125,10 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 
 ### v2.3.1
 - Fixed some assets in the Demo Project's `Optional Assets` folder having been wrongfully been swapped with some assets that belong in the `Required Assets` folder.
+- Resorted the assets in the `Required Assets` folder into new folders so it more closely resembles the `Optional Assets` folder.
+- Added some new documentation to the plugin's code.
 - Disabled the broken `Keep Pressed Outside` property. It will be re-added once it has been fixed.
+- Cleaned up the plugin's code.
 
 ### v2.3.0
 - Fixed the button not going out of focus when moving the mouse cursor outside the button.
