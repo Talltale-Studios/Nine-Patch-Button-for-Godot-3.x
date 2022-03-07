@@ -125,8 +125,10 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 
 ### v2.4.0
 - Added new documentation to the plugin's scripts.
-- Moved some assets that were mistakenly put in the `Optional Assets` folder to the `Required Assets` folder.
-- Removed the `Optional Assets` folder and renamed the `Required Assets` folder to `Assets`.
+- Changed the names of the Demo Project's and the NinePatchButton's folders and files to use snake_case.
+- Moved some of the Demo Project's assets that were mistakenly put in the `Optional Assets` folder into the `Required Assets` folder.
+- Renamed some of the Demo Project's assets to make more sense within the scope of the project.
+- Removed the Demo Project's `Optional Assets` folder and renamed the `Required Assets` folder to `Assets`.
 - Disabled the `Keep Pressed Outside` property. It is currently broken and will be re-enabled once it has been fixed.
 - Cleaned up the plugin's code.
 
