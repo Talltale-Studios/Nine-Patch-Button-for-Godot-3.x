@@ -16,7 +16,7 @@ The Texture Button stretches the custom textures you add to it, which is especia
 ## Setup Guide
 
 ### Download and Installation
-For a detailed guide on using the Godot Asset Library, both the one on the web and the one on the Godot Editor, please see [here](https://docs.godotengine.org/en/latest/community/asset_library/using_assetlib.html).
+For a detailed guide on using the Godot Asset Library, both the one on the [web](https://godotengine.org/asset-library/asset) and the one in the Godot Editor, please see [here](https://docs.godotengine.org/en/latest/community/asset_library/using_assetlib.html).
 
 ### NinePatchButton Setup
 Once the plugin has been downloaded, installed, and enabled, you can add a new NinePatchButton node to one of your project's scenes. Note that the NinePatchButton should never be made the root node of a scene as this causes issues with some of its components, instead make it the child of some other node such as a Control node.
