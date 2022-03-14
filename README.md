@@ -4,8 +4,6 @@
 ## What Is This?
 This plugin adds a new type of node that combines the features of the NinePatchRect, the Button, and the TextureButton, with the NinePatchRect being used as the base. We also added a custom sound system to the NinePatchButton, which allows you to assign sounds for some of its functions such as pressing it or hovering over it.
 
-*Note: We've been having issues with getting text to display correctly on the NinePatchButton, so we've had to disable that feature for now while we're working on a fix for it. For now, you could use a Label (or something similar) and add text to the button manually. If you can manage to integrate the text you want to display into the button's texture then that could work as well.*
-
 
 ## Why Did We Make This?
 The Texture Button stretches the custom textures you add to it, which is especially noticeable when trying to use pixel art. Luckily the NinePatchRect doesn't have this issue, so to use the NinePatchRect's method to add custom textures to our buttons instead, we combined the features of the NinePatchRect with those of the Button into a new custom node. The TextureButton still had some good features though, so we added some of them into the mix as well. And while we were at it we also added a custom sound system, which allows you to add various sounds to the button. Have a look at this comparison image to see the difference between the NinePatchButton's texturing method and the TextureButton's texturing method:
@@ -22,6 +20,8 @@ For a detailed guide on using the Godot Asset Library, both the one on the [web]
 Once the plugin has been downloaded, installed, and enabled, you can add a new NinePatchButton node to one of your project's scenes. Note that the NinePatchButton should never be made the root node of a scene as this causes issues with some of its components, instead make it the child of some other node such as a Control node.
 
 To get started using your new NinePatchButton node you must first load your chosen `Normal Texture` (the texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state) into `Script Variables/Normal Texture` in the Inspector panel and then head to `TextureRegion` in the Bottom Panel and set it up like you would with a NinePatchRect. Once that is done you can start adding the rest of the textures of your choice for the NinePatchButton using the properties underneath `Normal Texture`. The rest of the settings work more or less just like you'd expect by looking at their names or by looking at how they worked with the Button, the Texture Button and the NinePatchRect. Nevertheless, all the properties of the NinePatchButton are explained in detail below.
+
+### Text On Your Buttons
 
 
 ## Properties Guide
@@ -116,12 +116,16 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button (by default the click mask is rectangular, and with a texture that is, say, circular, the click mask will not line up as it should with the texture of the button).
 - Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity.
 - Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity.
-- Add the button texturing method from the Texture Button? It could be useful to have as an alternative to the already-implemented NinePatchRect button texturing method. Since you'd then have both button texturing methods and not just the NinePatchRect's. This might also call for a name change for the plugin if it is implemented.
 - Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using the Texture Button-Esque button texturing method and the NinePatchRect-Esque button texturing method without clogging up the Inspector and would help make it more user-friendly. The downside is that it would increase the length and complexity of the plugin's script.
 - Add exported properties to custom property groups? It would help make it more user-friendly and would help organize the Inspector better, but the downside is that it would increase the length and complexity of the plugin's script.
 
 
 ## Changelog:
+
+### v2.4.1 (UPCOMING)
+- Fixed the button not going out of focus when moving the mouse cursor outside the button (for real this time).
+- Fixed the name of the root node of the Demo Project's `usage_examples` scene not being in snake_case.
+- Improved the `usage_examples` scene with new art that showcases how to put text on the NinePatchButton through its textures, added better textures, and also increased the size of the buttons to make them more visible.
 
 ### v2.4.0
 - Added new documentation to the plugin's scripts.
