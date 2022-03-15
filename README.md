@@ -21,8 +21,8 @@ Once the plugin has been downloaded, installed, and enabled, you can add a new N
 
 To get started using your new NinePatchButton node you must first load your chosen `Normal Texture` (the texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state) into `Script Variables/Normal Texture` in the Inspector panel and then head to `TextureRegion` in the Bottom Panel and set it up like you would with a NinePatchRect. Once that is done you can start adding the rest of the textures of your choice for the NinePatchButton using the properties underneath `Normal Texture`. The rest of the settings work more or less just like you'd expect by looking at their names or by looking at how they worked with the Button, the Texture Button and the NinePatchRect. Nevertheless, all the properties of the NinePatchButton are explained in detail below.
 
-### Text On Your Buttons
-There are two easy methods which you can use to add text to your NinePatchButtons.
+### Text On Your NinePatchButtons
+There are two easy methods you can use to add text to your NinePatchButtons.
 
 The first method is to put the text on the textures of your buttons while editing the textures. It is adviseable that you also make the text light up alongside the button on its various "hovered" and "focused" textures.
 
