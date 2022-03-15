@@ -129,9 +129,9 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 ## Changelog:
 
 ### v2.4.1 (UPCOMING)
-- Fixed the button not going out of focus when moving the mouse cursor outside the button (for real this time).
+- Fixed the button not still not properly going out of focus when moving the mouse cursor outside the button.
 - Fixed the name of the root node of the Demo Project's `usage_examples` scene not being in snake_case.
-- Improved the Demo Project's `usage_examples` scene by adding new art and new NinePatchButtons that shows how it looks when you add text through use of its textures (instead of a Label or RichTextLabel) and also increased the size of the NinePatchButtons to make them more visible.
+- Improved the Demo Project's `usage_examples` scene with new art and new NinePatchButtons that show what it looks when you add text to the button through use of its textures (instead of a Label or RichTextLabel), and also increased the sizes of the NinePatchButtons to make them more visible.
 
 ### v2.4.0
 - Added new documentation to the plugin's scripts.
@@ -160,24 +160,24 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 - Cleaned up the plugin's code.
 
 ### v2.1.0
+- Fixed many bugs relating to the plugin's textures and sounds.
 - Added a new custom `Pressed Hovered Texture` property.
 - Added a new custom `Pressed Focused Texture` property.
 - Added a new custom `Disabled Hovered Texture` property.
 - Added a new custom `Disabled Focused Texture` property.
 - Changed the name of the `Disabled Sound` property to `Disabled Pressed Sound`.
-- Fixed many bugs relating to the textures and the sounds.
 - Cleaned up the plugin's code.
 
 ### v2.0.0
 - Initial public release of the plugin on the [Godot Asset Library](https://godotengine.org/asset-library) as well as the setup of the GitHub repository and everything else that goes with it.
 
 ### v1.3.0
-- Added the `Action Mode` property that originated from the Button.
-- Added the `Focused Texture` property that originated from the TextureButton.
-- Added a new custom `Focused Sound` property, based on the Texture Button's `Focused Texture` property.
 - Fixed several bugs.
 - Fixed the default values of some properties that were mistakenly left undefined.
 - Fixed a typo in the name of one of the properties.
+- Added the `Action Mode` property that originated from the Button.
+- Added the `Focused Texture` property that originated from the TextureButton.
+- Added a new custom `Focused Sound` property, based on the Texture Button's `Focused Texture` property.
 - Changed the name of the NinePatchButton's icon image from `Icon.png` to `NinePatchButton.png` and its Import Preset from `Default` to `2D Pixel`.
 - Removed the deprecated `Enabled Focus Mode` property that originated from the Button. It has been superceded by the Control node's own `Focus Mode` property, and is scheduled for removal in Godot 4.
 - Cleaned up the plugin's code.
