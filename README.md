@@ -117,7 +117,7 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 - Create a larger icon with a size of 64x64, 128x128, or 256x256 for use as the icon for the plugin on the Asset Library and the icon for the plugin's demo project.
 - Fix the button press not being cancelled when moving the mouse cursor outside the button while it is still being pressed down, if the `Keep Pressed Outside` property is set to *false*.
 - Fix the text display issue and add any related properties.
-- Fix the instanced Button becoming visible (on the duplicated NinePatchButton) if you Duplicate (shortcut: Control + D) a NinePatchButton.
+- Fix the instanced Button becoming visible on the duplicated NinePatchButton while in the editor if you Duplicate (shortcut: Control + D) a NinePatchButton. Note that it is still invisible while running the scene, but according to its code it shouldn't be visible in the editor under any circumstances while the `flat` variable is true, which it is.
 - Remove the "focus indicator" - the thin line that gets drawn around the button when it is in focus, as the button's textures can already convey this.
 - Add a better comparison image which shows the difference between the NinePatchButton's texturing method and the TextureButton's texturing method more clearly. Perhaps a center texture could be used to show how it stretches when using the TextureButton?
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button (by default the click mask is rectangular, and with a texture that is, say, circular, the click mask will not line up as it should with the texture of the button).
