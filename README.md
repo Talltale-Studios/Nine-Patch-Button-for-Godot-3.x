@@ -116,16 +116,15 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button (by default the click mask is rectangular, and with a texture that is, say, circular, the click mask will not line up as it should with the texture of the button).
 - Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity.
 - Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity.
-- Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using the Texture Button-Esque button texturing method and the NinePatchRect-Esque button texturing method without clogging up the Inspector and would help make it more user-friendly. The downside is that it would increase the length and complexity of the plugin's script.
-- Add exported properties to custom property groups? It would help make it more user-friendly and would help organize the Inspector better, but the downside is that it would increase the length and complexity of the plugin's script.
+- Add the exported properties to custom property groups. This would help make the NinePatchButton's Inspector more user-friendly and would help organize the properties better.
 
 
 ## Changelog:
 
-### v2.4.1 (UPCOMING)
+### v2.5.0 (UPCOMING)
 - Fixed the button not going out of focus when moving the mouse cursor outside the button (for real this time).
 - Fixed the name of the root node of the Demo Project's `usage_examples` scene not being in snake_case.
-- Improved the `usage_examples` scene with new art that showcases how to put text on the NinePatchButton through its textures, added better textures, and also increased the size of the buttons to make them more visible.
+- Improved the Demo Project's `usage_examples` scene by adding new art that show how to add text through its textures and also increased the size of the NinePatchButtons to make them more visible.
 
 ### v2.4.0
 - Added new documentation to the plugin's scripts.
