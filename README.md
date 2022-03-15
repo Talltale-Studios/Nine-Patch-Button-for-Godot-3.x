@@ -126,7 +126,7 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 ### v2.4.1 (UPCOMING)
 - Fixed the button not going out of focus when moving the mouse cursor outside the button (for real this time).
 - Fixed the name of the root node of the Demo Project's `usage_examples` scene not being in snake_case.
-- Improved the Demo Project's `usage_examples` scene by adding new art and a new NinePatchButton that shows how it looks when you add text through its textures (instead of a Label or RichTextLabel) and also increased the size of the NinePatchButtons to make them more visible.
+- Improved the Demo Project's `usage_examples` scene by adding new art and new NinePatchButtons that shows how it looks when you add text through use of its textures (instead of a Label or RichTextLabel) and also increased the size of the NinePatchButtons to make them more visible.
 
 ### v2.4.0
 - Added new documentation to the plugin's scripts.
