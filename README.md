@@ -2,11 +2,11 @@
 
 
 ## What Is This?
-This plugin adds a new type of node that combines the features of the NinePatchRect, the Button, and the TextureButton, with the NinePatchRect being used as the base. We also added a custom sound system to the NinePatchButton, which allows you to assign sounds for some of its functions such as pressing it or hovering over it.
+This plugin adds a new type of node that combines the features of the NinePatchRect, the Button, and the TextureButton, with the NinePatchRect being used as the base. We also added a customizeable sound system to the NinePatchButton, which allows you to assign sounds for some of its functions such as pressing it or hovering over it.
 
 
 ## Why Did We Make This?
-The Texture Button stretches the custom textures you add to it, which is especially noticeable when trying to use pixel art. Luckily the NinePatchRect doesn't have this issue, so to use the NinePatchRect's method to add custom textures to our buttons instead, we combined the features of the NinePatchRect with those of the Button into a new custom node. The TextureButton still had some good features though, so we added some of them into the mix as well. And while we were at it we also added a custom sound system, which allows you to add various sounds to the button. Have a look at this comparison image to see the difference between the NinePatchButton's texturing method and the TextureButton's texturing method:
+The Texture Button stretches the custom textures you add to it, which is especially noticeable when trying to use pixel art. Luckily the NinePatchRect doesn't have this issue when you use it in a specific way, so we combined the features of the NinePatchRect with those of the Button and created a new custom node. While the NinePatchRect can avoid this issue it can also still be used similarly to how the TextureButton works, so there is always the option to use a method closer to that of the TextureButton if we so wish. The TextureButton still had some good features though, so we added some of them into the mix as well, such as its customizable, button animation system. We also added a few features of our own design, such as a customizeable sound system, which allows you to add various sounds to the button. Have a look at this comparison image to see the difference between the NinePatchButton's texturing method and the TextureButton's texturing method:
 
 ![Texturing Comparison](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/blob/master/media/texturing_comparison.png "Texturing Comparison")
 
