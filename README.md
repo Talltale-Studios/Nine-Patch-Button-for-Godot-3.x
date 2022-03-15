@@ -2,7 +2,7 @@
 
 
 ## What Is This?
-This plugin adds a new type of node that combines the features of the NinePatchRect, the Button, and the TextureButton, with the NinePatchRect being used as the base. We also added a customizeable sound system to the NinePatchButton, which allows you to assign sounds for some of its functions such as pressing it or hovering over it.
+This plugin adds a new type of node that combines the features of the NinePatchRect, the Button, and the TextureButton, with the NinePatchRect being used as the base. We also added a customizeable sound system, which allows you to assign sounds for some of its functions such as pressing it or hovering over it.
 
 
 ## Why Did We Make This?
