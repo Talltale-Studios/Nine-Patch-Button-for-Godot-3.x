@@ -6,7 +6,7 @@ This plugin adds a new type of node that combines the features of the NinePatchR
 
 
 ## Why Did We Make This?
-The Texture Button stretches the custom textures you add to it, which is especially noticeable when trying to use pixel art. Luckily the NinePatchRect doesn't have this issue when you use it in a specific way, so we combined the features of the NinePatchRect with those of the Button and created a new custom node. While the NinePatchRect can avoid this issue it can also still be used similarly to how the TextureButton works, so there is always the option to use a method closer to that of the TextureButton if we so wish. The TextureButton still had some good features though, so we added some of them into the mix as well, such as its customizable, button animation system. We also added a few features of our own design, such as a customizeable sound system, which allows you to add various sounds to the button. Have a look at this comparison image to see the difference between the NinePatchButton's texturing method and the TextureButton's texturing method:
+The Texture Button stretches the custom textures you add to it, which is especially noticeable when trying to use pixel art. Luckily the NinePatchRect doesn't have this issue when you use it in a specific way, so we combined the features of the NinePatchRect with those of the Button and created a new custom node. While the NinePatchRect can avoid this issue it can also still be used similarly to how the TextureButton works, so there is always the option to use a method closer to that of the TextureButton if we so wish. The TextureButton still had some good features though, so we added some of them into the mix as well, such as its customizeable button animation system. We also added a few features of our own design, such as a customizeable sound system, which allows you to assign sounds for some of its functions such as pressing it or hovering over it. Have a look at this comparison image to see the difference between the NinePatchButton's texturing method and the TextureButton's texturing method:
 
 ![Texturing Comparison](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/blob/master/media/texturing_comparison.png "Texturing Comparison")
 
@@ -22,6 +22,11 @@ Once the plugin has been downloaded, installed, and enabled, you can add a new N
 To get started using your new NinePatchButton node you must first load your chosen `Normal Texture` (the texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state) into `Script Variables/Normal Texture` in the Inspector panel and then head to `TextureRegion` in the Bottom Panel and set it up like you would with a NinePatchRect. Once that is done you can start adding the rest of the textures of your choice for the NinePatchButton using the properties underneath `Normal Texture`. The rest of the settings work more or less just like you'd expect by looking at their names or by looking at how they worked with the Button, the Texture Button and the NinePatchRect. Nevertheless, all the properties of the NinePatchButton are explained in detail below.
 
 ### Text On Your Buttons
+There are two easy methods which you can use to add text to your NinePatchButtons.
+
+The first method is to put the text on the textures of your buttons while editing the textures. It is adviseable that you also make the text light up alongside the button on its various "hovered" and "focused" textures.
+
+The second method is to use a Label or a RichTextLabel. In order to do use this method you must create a Label or RichTextLabel, preferrably as a child to your button, and resize it so its size is identical to that of the button. Next you start adding text and make sure the text is alligned to the center of the Label. Lastly, to customize the text itself, head on over to `Control/Theme Overrides` where you can change various properties such as the font that is to be used for the text, as well as the font's size, its color, whether it should have an outline or a shadow, and much more.
 
 
 ## Properties Guide
