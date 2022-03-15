@@ -112,6 +112,8 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 - Create a larger icon with a size of 64x64, 128x128, or 256x256 for use as the icon for the plugin on the Asset Library and the icon for the plugin's demo project.
 - Fix the button press not being cancelled when moving the mouse cursor outside the button while it is still being pressed down, if the `Keep Pressed Outside` property is set to *false*.
 - Fix the text display issue and add any related properties.
+- Fix the instanced Button (which is used to inherit properties from) becoming visible on the duplicated NinePatchButton if you Duplicate (shortcut: Control + D) the NinePatchButton.
+- Remove the "focus indicator" - the thin line that gets drawn around the button when it is in focus, as the button's textures can already convey this.
 - Add a better comparison image which shows the difference between the NinePatchButton's texturing method and the TextureButton's texturing method more clearly. Perhaps a center texture could be used to show how it stretches when using the TextureButton?
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button (by default the click mask is rectangular, and with a texture that is, say, circular, the click mask will not line up as it should with the texture of the button).
 - Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity.
@@ -121,10 +123,10 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 
 ## Changelog:
 
-### v2.5.0 (UPCOMING)
+### v2.4.1 (UPCOMING)
 - Fixed the button not going out of focus when moving the mouse cursor outside the button (for real this time).
 - Fixed the name of the root node of the Demo Project's `usage_examples` scene not being in snake_case.
-- Improved the Demo Project's `usage_examples` scene by adding new art that show how to add text through its textures and also increased the size of the NinePatchButtons to make them more visible.
+- Improved the Demo Project's `usage_examples` scene by adding new art and a new NinePatchButton that shows how it looks when you add text through its textures (instead of a Label or RichTextLabel) and also increased the size of the NinePatchButtons to make them more visible.
 
 ### v2.4.0
 - Added new documentation to the plugin's scripts.
