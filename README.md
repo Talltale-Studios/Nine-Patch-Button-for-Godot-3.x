@@ -112,28 +112,26 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 
 
 ## Links
-- The plugin's Asset Library web page: https://godotengine.org/asset-library/asset/1243
+- The plugin's Asset Library web page: https://godotengine.org/asset-library/asset/1243 *Note that it takes time before any update or change goes through on the Asset Library. Check [here](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/releases/latest) for the latest version before you check on the Asset Library.*
 
 
 ## Future Plans
-- Create a larger icon with a size of 64x64, 128x128, or 256x256 for use as the icon for the plugin on the Asset Library and the icon for the plugin's demo project.
 - Fix the button press not being cancelled when moving the mouse cursor outside the button while it is still being pressed down, if the `Keep Pressed Outside` property is set to *false*.
-- Fix the text display issue and add any related properties.
 - Fix the instanced Button becoming visible on the duplicated NinePatchButton while in the editor if you Duplicate (shortcut: Control + D) a NinePatchButton. Note that it is still invisible while running the scene, but according to its code it shouldn't be visible in the editor under any circumstances while the `flat` variable is true, which it is.
-- Remove the "focus indicator" - the thin line that gets drawn around the button when it is in focus, as the button's textures can already convey this.
-- Add a better comparison image which shows the difference between the NinePatchButton's texturing method and the TextureButton's texturing method more clearly. Perhaps a center texture could be used to show how it stretches when using the TextureButton?
+- Add a larger icon with a size of 64x64, 128x128, or 256x256 for use as the icon for the plugin on the Asset Library and the icon for the plugin's Demo Project.
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button (by default the click mask is rectangular, and with a texture that is, say, circular, the click mask will not line up as it should with the texture of the button).
 - Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity.
 - Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity.
-- Add the exported properties to custom property groups. This would help make the NinePatchButton's Inspector more user-friendly and would help organize the properties better.
+- Add the exported properties to custom property groups. This would help make the NinePatchButton's Inspector more user-friendly and organize the properties better.
 
 
 ## Changelog:
 
 ### v2.4.1 (UPCOMING)
-- Fixed the button not still not properly going out of focus when moving the mouse cursor outside the button.
+- Fixed the NinePatchButton not still not properly going out of focus when moving the mouse cursor outside the button.
 - Fixed a case mismatch error with the plugin's `plugin.gd` script.
 - Fixed the name of the root node of the Demo Project's `usage_examples` scene not being in snake_case.
+- Added a custom theme for the plugin which has no focus indicator. This custom theme will be loaded automatically in the `ready()` function, and the user can change it to their liking.
 - Improved the Demo Project's `usage_examples` scene with new art and new NinePatchButtons that show what it looks when you add text to the button through use of its textures (instead of a Label or RichTextLabel), and also increased the sizes of the NinePatchButtons to make them more visible.
 
 ### v2.4.0
@@ -146,7 +144,7 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 - Cleaned up the plugin's code.
 
 ### v2.3.0
-- Fixed the button not going out of focus when moving the mouse cursor outside the button.
+- Fixed the NinePatchButton not going out of focus when moving the mouse cursor outside the button.
 - Fixed a typo in the plugin's code.
 - Changed the name of the Demo Project's `Example_NinePatchButtons` scene to `Usage_Examples`.
 - Removed the Demo Project's `NinePatchButton` scene, as it is actually only set up and used for short periods at a time during testing, after which it has to be set up from scratch again when the next test is to be performed, and as such, there is actually no use in keeping it around after the test has been performed.
