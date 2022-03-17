@@ -134,7 +134,7 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 - Fixed the NinePatchButton not still not properly going out of focus when moving the mouse cursor outside the button.
 - Fixed a case mismatch error with the plugin's `plugin.gd` script.
 - Fixed the name of the root node of the Demo Project's `usage_examples` scene not being in snake_case.
-- Added a custom theme for the plugin which has no focus indicator. This custom theme will be loaded automatically in the `ready()` function, and the user can change it to their liking.
+- Added a custom theme for the plugin which has no focus indicator, and a new `Theme Path` property that points to it. This custom theme will be loaded automatically in the `ready()` function, and the user can change it to their liking.
 - Improved the Demo Project's `usage_examples` scene with new art and new NinePatchButtons that show what it looks when you add text to the button through use of its textures (instead of a Label or RichTextLabel), and also increased the sizes of the NinePatchButtons to make them more visible.
 
 ### v2.4.0
