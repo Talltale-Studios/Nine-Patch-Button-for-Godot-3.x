@@ -60,6 +60,7 @@ export (int, FLAGS, "Mouse Left", "Mouse Right", "Mouse Middle") var button_mask
 #export var keep_pressed_outside : bool
 export var shortcut : ShortCut
 export var group : ButtonGroup
+export(String, FILE) var theme_path = "res://addons/ninepatchbutton/custom_theme.tres"
 
 
 var flat : bool = true
@@ -75,6 +76,7 @@ onready var bus = AudioServer.get_bus_index(bus_name)
 
 
 func _ready() -> void:
+	theme = load(theme_path)
 	instance_missing_nodes()
 	connect_button_signals()
 	node_properties_changer()
@@ -120,7 +122,7 @@ func connect_button_signals() -> void:
 		button.connect("mouse_exited", self, "_on_Button_mouse_exited")
 
 
-# Change the properties of the instanced nodes
+# Change the properties of the instanced nodes so they're fit for use
 func node_properties_changer() -> void:
 	# Button Properties
 	button.flat = flat
@@ -157,6 +159,7 @@ func _process(_delta : float) -> void:
 	button_texture_handler()
 
 
+# Handle the textures of the NinePatchButton
 func button_texture_handler() -> void:
 	if not disabled:
 		if just_pressed:
@@ -288,4 +291,5 @@ func _on_Button_mouse_entered() -> void:
 func _on_Button_mouse_exited() -> void:
 	hovered = false
 	focused = false
+	button.release_focus()
 	emit_signal("mouse_exited")
