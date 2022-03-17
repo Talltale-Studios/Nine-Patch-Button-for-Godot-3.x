@@ -1,35 +1,67 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://addons/ninepatchbutton/ninepatchbutton.gd" type="Script" id=1]
-[ext_resource path="res://assets/graphics/blue_button_03.png" type="Texture" id=2]
-[ext_resource path="res://assets/graphics/blue_button_01.png" type="Texture" id=3]
+[ext_resource path="res://assets/graphics/buttons/enabled_text_button_03.png" type="Texture" id=2]
+[ext_resource path="res://assets/graphics/buttons/enabled_text_button_01.png" type="Texture" id=3]
 [ext_resource path="res://assets/audio/select_004.ogg" type="AudioStream" id=4]
 [ext_resource path="res://assets/audio/confirmation_001.ogg" type="AudioStream" id=5]
 [ext_resource path="res://assets/audio/select_005.ogg" type="AudioStream" id=6]
-[ext_resource path="res://assets/graphics/blue_button_02.png" type="Texture" id=7]
+[ext_resource path="res://assets/graphics/buttons/enabled_text_button_02.png" type="Texture" id=7]
 [ext_resource path="res://assets/audio/select_003.ogg" type="AudioStream" id=8]
 [ext_resource path="res://assets/audio/error_008.ogg" type="AudioStream" id=9]
 [ext_resource path="res://assets/audio/bong_001.ogg" type="AudioStream" id=10]
-[ext_resource path="res://assets/graphics/blue_button_04.png" type="Texture" id=11]
-[ext_resource path="res://assets/graphics/red_button_03.png" type="Texture" id=12]
-[ext_resource path="res://assets/graphics/red_button_01.png" type="Texture" id=13]
+[ext_resource path="res://assets/graphics/buttons/enabled_text_button_04.png" type="Texture" id=11]
+[ext_resource path="res://assets/graphics/buttons/disabled_text_button_03.png" type="Texture" id=12]
+[ext_resource path="res://assets/graphics/buttons/disabled_text_button_01.png" type="Texture" id=13]
+[ext_resource path="res://addons/ninepatchbutton/custom_theme.tres" type="Theme" id=14]
+[ext_resource path="res://assets/graphics/buttons/enabled_blank_button_01.png" type="Texture" id=15]
+[ext_resource path="res://assets/graphics/buttons/disabled_blank_button_03.png" type="Texture" id=16]
+[ext_resource path="res://assets/graphics/buttons/enabled_blank_button_02.png" type="Texture" id=17]
+[ext_resource path="res://assets/graphics/buttons/enabled_blank_button_04.png" type="Texture" id=18]
+[ext_resource path="res://assets/graphics/buttons/disabled_blank_button_01.png" type="Texture" id=19]
+[ext_resource path="res://assets/graphics/buttons/enabled_blank_button_03.png" type="Texture" id=20]
 
-[node name="Usage_Examples" type="Control"]
+[node name="usage_examples" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Enabled_NinePatchButton" type="NinePatchRect" parent="."]
-margin_right = 250.0
-margin_bottom = 62.0
+[node name="Enabled_Blank_Button" type="NinePatchRect" parent="."]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 505.0
+margin_bottom = 135.0
+theme = ExtResource( 14 )
+texture = ExtResource( 15 )
+script = ExtResource( 1 )
+normal_texture = ExtResource( 15 )
+hovered_texture = ExtResource( 20 )
+focused_texture = ExtResource( 20 )
+pressed_texture = ExtResource( 17 )
+pressed_hovered_texture = ExtResource( 18 )
+pressed_focused_texture = ExtResource( 18 )
+disabled_texture = ExtResource( 19 )
+disabled_hovered_texture = ExtResource( 16 )
+disabled_focused_texture = ExtResource( 16 )
+hovered_sound = ExtResource( 8 )
+focused_sound = ExtResource( 8 )
+pressed_sound = ExtResource( 5 )
+pressed_released_sound = ExtResource( 10 )
+pressed_hovered_sound = ExtResource( 4 )
+pressed_focused_sound = ExtResource( 4 )
+disabled_pressed_sound = ExtResource( 9 )
+disabled_hovered_sound = ExtResource( 6 )
+disabled_focused_sound = ExtResource( 6 )
+bus_name = "Buttons"
+
+[node name="Enabled_Text_Button" type="NinePatchRect" parent="."]
+margin_left = 519.0
+margin_top = 13.0
+margin_right = 1011.0
+margin_bottom = 135.0
+rect_pivot_offset = Vector2( 201, -29 )
+theme = ExtResource( 14 )
 texture = ExtResource( 3 )
-patch_margin_left = 94
-patch_margin_top = 24
-patch_margin_right = 94
-patch_margin_bottom = 24
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -54,19 +86,51 @@ disabled_pressed_sound = ExtResource( 9 )
 disabled_hovered_sound = ExtResource( 6 )
 disabled_focused_sound = ExtResource( 6 )
 bus_name = "Buttons"
+toggle_mode = true
 
-[node name="Disabled_NinePatchButton" type="NinePatchRect" parent="."]
-margin_left = 254.0
-margin_right = 504.0
-margin_bottom = 62.0
-texture = ExtResource( 13 )
-patch_margin_left = 94
-patch_margin_top = 24
-patch_margin_right = 94
-patch_margin_bottom = 24
+[node name="Disabled_Blank_Button" type="NinePatchRect" parent="."]
+margin_left = 13.0
+margin_top = 149.0
+margin_right = 505.0
+margin_bottom = 271.0
+theme = ExtResource( 14 )
+texture = ExtResource( 19 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+normal_texture = ExtResource( 15 )
+hovered_texture = ExtResource( 20 )
+focused_texture = ExtResource( 20 )
+pressed_texture = ExtResource( 17 )
+pressed_hovered_texture = ExtResource( 18 )
+pressed_focused_texture = ExtResource( 18 )
+disabled_texture = ExtResource( 19 )
+disabled_hovered_texture = ExtResource( 16 )
+disabled_focused_texture = ExtResource( 16 )
+hovered_sound = ExtResource( 8 )
+focused_sound = ExtResource( 8 )
+pressed_sound = ExtResource( 5 )
+pressed_released_sound = ExtResource( 10 )
+pressed_hovered_sound = ExtResource( 4 )
+pressed_focused_sound = ExtResource( 4 )
+disabled_pressed_sound = ExtResource( 9 )
+disabled_hovered_sound = ExtResource( 6 )
+disabled_focused_sound = ExtResource( 6 )
+bus_name = "Buttons"
+disabled = true
+
+[node name="Disabled_Text_Button" type="NinePatchRect" parent="."]
+margin_left = 519.0
+margin_top = 149.0
+margin_right = 1011.0
+margin_bottom = 271.0
+rect_pivot_offset = Vector2( 201, -29 )
+theme = ExtResource( 14 )
+texture = ExtResource( 13 )
+script = ExtResource( 1 )
+__meta__ = {
 "_editor_description_": ""
 }
 normal_texture = ExtResource( 3 )
@@ -89,3 +153,4 @@ disabled_hovered_sound = ExtResource( 6 )
 disabled_focused_sound = ExtResource( 6 )
 bus_name = "Buttons"
 disabled = true
+toggle_mode = true

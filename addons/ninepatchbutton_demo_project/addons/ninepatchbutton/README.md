@@ -2,26 +2,35 @@
 
 
 ## What Is This?
-This plugin adds a new type of node that combines the features of the NinePatchRect, the Button, and the TextureButton, with the NinePatchRect being used as the base. We also added a custom sound system to the NinePatchButton, which allows you to assign sounds for some of its functions such as pressing it or hovering over it.
-
-*Note: We've been having issues with getting text to display correctly on the NinePatchButton, so we've had to disable that feature for now while we're working on a fix for it. For now, you could use a Label (or something similar) and add text to the button manually. If you can manage to integrate the text you want to display into the button's texture then that could work as well.*
+This plugin adds a new type of node that combines the features of the NinePatchRect, the Button, and the TextureButton, with the NinePatchRect being used as the base. We also added a customizeable sound system, which allows you to assign sounds for some of its functions such as pressing it or hovering over it.
 
 
 ## Why Did We Make This?
-The Texture Button stretches the custom textures you add to it, which is especially noticeable when trying to use pixel art. Luckily the NinePatchRect doesn't have this issue, so to use the NinePatchRect's method to add custom textures to our buttons instead, we combined the features of the NinePatchRect with those of the Button into a new custom node. The TextureButton still had some good features though, so we added some of them into the mix as well. And while we were at it we also added a custom sound system, which allows you to add various sounds to the button. Have a look at this comparison image:
+The TextureButton stretches the custom textures you add to it, which is especially noticeable when trying to use pixel art. Luckily the NinePatchRect doesn't have this issue when you use it in a specific way, so we combined the features of the NinePatchRect with those of the TextureButton and the Button and created a new custom node. And while the NinePatchRect can avoid this issue when you use it in a specific way, it can also still be used similarly to how the TextureButton works.
 
-![NinePatchButton versus TextureButton](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/blob/master/Media/NPB_vs_TB.PNG "NinePatchButton versus TextureButton")
+The TextureButton still had some other good features, such as its customizeable button animation system, so we added them to the NinePatchButton as well. We also added a few features of our own design, such as a customizeable sound system which allows you to assign sounds for some of its functions such as pressing it or hovering over it.
+
+Have a look at this comparison image to see the difference between the NinePatchButton's texturing method and the TextureButton's texturing method:
+
+![Texturing Comparison](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/blob/master/media/texturing_comparison.png "Texturing Comparison")
 
 
 ## Setup Guide
 
 ### Download and Installation
-For a detailed guide on using the Godot Asset Library, both the web version and the Godot Editor's version, please see [this](https://docs.godotengine.org/en/latest/community/asset_library/using_assetlib.html).
+For a detailed guide on using the Godot Asset Library, both the one on the [web](https://godotengine.org/asset-library/asset) and the one in the Godot Editor, please see [here](https://docs.godotengine.org/en/latest/community/asset_library/using_assetlib.html).
 
 ### NinePatchButton Setup
-Once the plugin is downloaded, installed, and enabled, you can add a new NinePatchButton node to one of your project's scenes. Note that the NinePatchButton should never be made the root node of a scene, as this causes issues with some of its components.
+Once the plugin has been downloaded, installed, and enabled, you can add a new NinePatchButton node to one of your project's scenes. Note that the NinePatchButton should never be made the root node of a scene as this causes issues with some of its components, instead make it the child of some other node such as a Control node.
 
-To get started you must first set load your chosen `Normal Texture` (the texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state) into `Script Variables/Normal Texture` in the Inspector and then head to `TextureRegion` in the Bottom Panel and set it up like you would with a NinePatchRect. Once that is done you can start adding the rest of the textures of your choice for the NinePatchButton. The rest of the settings work more or less just like you'd expect by looking at their names or by looking at how they worked with the Button, the Texture Button and the NinePatchRect. Nevertheless, all the properties of the NinePatchButton are explained in detail below.
+To get started using your new NinePatchButton node you must first load your chosen `Normal Texture` (the texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state) into `Script Variables/Normal Texture` in the Inspector panel and then head to `TextureRegion` in the Bottom Panel and set it up like you would with a NinePatchRect. Once that is done you can start adding the rest of the textures of your choice for the NinePatchButton using the properties underneath `Normal Texture`. The rest of the settings work more or less just like you'd expect by looking at their names or by looking at how they worked with the Button, the Texture Button and the NinePatchRect. Nevertheless, all the properties of the NinePatchButton are explained in detail below.
+
+### Text On Your NinePatchButtons
+There are two easy methods you can use to add text to your NinePatchButtons.
+
+The first method is to put the text on the textures of your buttons while editing the textures. It is adviseable that you also make the text light up alongside the button on its various "hovered" and "focused" textures.
+
+The second method is to use a Label or a RichTextLabel. In order to do use this method you must create a Label or RichTextLabel, preferrably as a child to your button, and resize it so its size is identical to that of the button. Next you start adding text and make sure the text is alligned to the center of the Label. Lastly, to customize the text itself, head on over to `Control/Theme Overrides` where you can change various properties such as the font that is to be used for the text, as well as the font's size, its color, whether it should have an outline or a shadow, and much more.
 
 
 ## Properties Guide
@@ -78,9 +87,10 @@ To get started you must first set load your chosen `Normal Texture` (the texture
 - **Action Mode** - Determines when the button is considered clicked.
 - **Button Mask** - The binary mark to choose which mouse buttons this button will respond to.
 - **Enabled Focus Mode** - We removed this property because its tooltip states that it is deprecated and that `Control/Focus/Mode` should be used instead.
-- **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it. *Currently this property is broken, and the NinePatchButton acts as though the property is set to true at all times.*
+- **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it. *This property is currently broken and has been disabled until it can be fixed.*
 - **Shortcut** - The [ShortCut](https://docs.godotengine.org/en/stable/classes/class_shortcut.html) associated with the button.
-- **Button Group** - The [ButtonGroup](https://docs.godotengine.org/en/stable/classes/class_buttongroup.html) associated with the button.
+- **Group** - The [ButtonGroup](https://docs.godotengine.org/en/stable/classes/class_buttongroup.html) associated with the button.
+- **Theme Path** - The file path of the custom theme that should be used for the button.
 
 ### NinePatchRect
 - **Texture** - This property is controlled by the `Normal Texture` property, which will automatically load its texture into here.
@@ -101,34 +111,47 @@ To get started you must first set load your chosen `Normal Texture` (the texture
 
 
 ## Got Any Feedback?
-If you have any feedback, be it a bug report, a suggestion or a feature request, feel free to [open an Issue](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/issues) on GitHub. All we ask is that you try to label your issue suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for. If an issue on that topic already exists, instead add on to that issue with a comment of your own. We appreciate any kind of constructive feedback you can give us.
+If you have any feedback, be it a bug report, a suggestion, or a feature request, feel free to [open an Issue](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/issues) on GitHub. All we ask is that you try to label your issue suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for, although it's fine if you don't. If an issue about a specific topic already exists, or the topic is already mentioned in the README's "Future Plans" section, please do not create a new issue (although you may post a comment to an older issue about that topic if such an issue already exists). We will greatly appreciate any kind of constructive feedback you can give us.
 
 
 ## Links
-- The plugin's Asset Library web page: https://godotengine.org/asset-library/asset/1243
+- The plugin's Asset Library web page: https://godotengine.org/asset-library/asset/1243 - *Note that it takes time before any update or change goes through on the Asset Library. Check [here](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/releases/latest) for the latest version before you check on the Asset Library.*
 
 
 ## Future Plans
-- Create a larger icon with a size of 64x64, 128x128, or 256x256 for use as the icon for the plugin on the Asset Library and the icon for the plugin's demo project.
 - Fix the button press not being cancelled when moving the mouse cursor outside the button while it is still being pressed down, if the `Keep Pressed Outside` property is set to *false*.
-- Fix the text display issue and add any related properties.
-- Add a better comparison image which shows the difference between the NinePatchButton's texturing method and the TextureButton's texturing method more clearly. Perhaps a center texture could be used?
-- Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button.
+- Fix the instanced Button becoming visible on the duplicated NinePatchButton while in the editor if you Duplicate (shortcut: Control + D) a NinePatchButton. Note that it is still invisible while running the scene, but according to its code it shouldn't be visible in the editor under any circumstances while the `flat` variable is true, which it is.
+- Add a larger icon with a size of 64x64, 128x128, or 256x256 for use as the icon for the plugin on the Asset Library and the icon for the plugin's Demo Project.
+- Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button (by default the click mask is rectangular, and with a texture that is, say, circular, the click mask will not line up as it should with the texture of the button).
 - Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity.
 - Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity.
-- Add the button texturing method from the Texture Button? It could be useful to have as an alternative to the already-implemented NinePatchRect button texturing method. Since you'd then have both button texturing methods, and not just the NinePatchRect's, this might also call for a name change for the plugin?
-- Add [Conditional Export Properties](http://kehomsforge.com/tutorials/single/gdConditionalProperty)? It could be used for giving the option between using the Texture Button-Esque button texturing method and the NinePatchRect-Esque button texturing method without clogging up the Inspector and would help make it more user-friendly. The downside is that it would increase the length and complexity of the plugin's script.
-- Add exported properties to custom property groups? It would help make it more user-friendly and would help organize the Inspector better, but the downside is that it would increase the length and complexity of the plugin's script.
-- Port the plugin to Godot 4, complete with a separate Asset Library page and GitHub repository. Links to the ported Godot 4 version of the plugin will be provided here on GitHub and on the Asset Library.
+- Add the exported properties to custom property groups. This would help make the NinePatchButton's Inspector more user-friendly and organize the properties better.
 
 
 ## Changelog:
 
+### v2.5.0
+- Fixed the NinePatchButton not still not properly going out of focus when moving the mouse cursor outside the button.
+- Fixed a case mismatch error with the plugin's `plugin.gd` script.
+- Fixed the name of the root node of the Demo Project's `usage_examples` scene not being in snake_case.
+- Added a custom theme for the plugin which has no focus indicator and a new `Theme Path` property that points to it. This custom theme will be loaded automatically in the `ready()` function, and the user can change it to their liking.
+- Improved the Demo Project's `usage_examples` scene with new art and new NinePatchButtons that show what it looks when you add text to the button through the use of its textures (instead of a Label or RichTextLabel), and also increased the sizes of the NinePatchButtons to make them more visible.
+- Cleaned up unused assets.
+
+### v2.4.0
+- Added new documentation to the plugin's scripts.
+- Changed the names of the Demo Project's and the NinePatchButton's folders and files to use snake_case.
+- Moved some of the Demo Project's assets that were mistakenly put in the `Optional Assets` folder into the `Required Assets` folder.
+- Renamed some of the Demo Project's assets to make more sense within the scope of the project.
+- Removed the Demo Project's `Optional Assets` folder and renamed the `Required Assets` folder to `Assets`.
+- Disabled the `Keep Pressed Outside` property. It is currently broken and will be re-enabled once it has been fixed.
+- Cleaned up the plugin's code.
+
 ### v2.3.0
-- Fixed the button not going out of focus when moving the mouse cursor outside the button.
+- Fixed the NinePatchButton not going out of focus when moving the mouse cursor outside the button.
 - Fixed a typo in the plugin's code.
 - Changed the name of the Demo Project's `Example_NinePatchButtons` scene to `Usage_Examples`.
-- Removed the Demo Project's `NinePatchButton` scene, as it is actually only set up and used for short periods at a time during testing, after which it has to be set up from scratch again when the next test is performed, and as such there is actually no use in keeping it around after a test.
+- Removed the Demo Project's `NinePatchButton` scene, as it is actually only set up and used for short periods at a time during testing, after which it has to be set up from scratch again when the next test is to be performed, and as such, there is actually no use in keeping it around after the test has been performed.
 - Split all of the Demo Project's assets between two new `Optional_Assets` and `Required_Assets` folders to enable the user to more easily see which assets the Demo Project needs to run and which not.
 - Cleaned up the plugin's code.
 
@@ -142,24 +165,24 @@ If you have any feedback, be it a bug report, a suggestion or a feature request,
 - Cleaned up the plugin's code.
 
 ### v2.1.0
+- Fixed many bugs relating to the plugin's textures and sounds.
 - Added a new custom `Pressed Hovered Texture` property.
 - Added a new custom `Pressed Focused Texture` property.
 - Added a new custom `Disabled Hovered Texture` property.
 - Added a new custom `Disabled Focused Texture` property.
 - Changed the name of the `Disabled Sound` property to `Disabled Pressed Sound`.
-- Fixed many bugs relating to the textures and the sounds.
 - Cleaned up the plugin's code.
 
 ### v2.0.0
 - Initial public release of the plugin on the [Godot Asset Library](https://godotengine.org/asset-library) as well as the setup of the GitHub repository and everything else that goes with it.
 
 ### v1.3.0
-- Added the `Action Mode` property that originated from the Button.
-- Added the `Focused Texture` property that originated from the TextureButton.
-- Added a new custom `Focused Sound` property, based on the Texture Button's `Focused Texture` property.
 - Fixed several bugs.
 - Fixed the default values of some properties that were mistakenly left undefined.
 - Fixed a typo in the name of one of the properties.
+- Added the `Action Mode` property that originated from the Button.
+- Added the `Focused Texture` property that originated from the TextureButton.
+- Added a new custom `Focused Sound` property, based on the Texture Button's `Focused Texture` property.
 - Changed the name of the NinePatchButton's icon image from `Icon.png` to `NinePatchButton.png` and its Import Preset from `Default` to `2D Pixel`.
 - Removed the deprecated `Enabled Focus Mode` property that originated from the Button. It has been superceded by the Control node's own `Focus Mode` property, and is scheduled for removal in Godot 4.
 - Cleaned up the plugin's code.
