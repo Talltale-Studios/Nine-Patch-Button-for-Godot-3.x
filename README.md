@@ -89,7 +89,8 @@ The second method is to use a Label or a RichTextLabel. In order to do use this 
 - **Enabled Focus Mode** - We removed this property because its tooltip states that it is deprecated and that `Control/Focus/Mode` should be used instead.
 - **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it. *This property is currently broken and has been disabled until it can be fixed.*
 - **Shortcut** - The [ShortCut](https://docs.godotengine.org/en/stable/classes/class_shortcut.html) associated with the button.
-- **Button Group** - The [ButtonGroup](https://docs.godotengine.org/en/stable/classes/class_buttongroup.html) associated with the button.
+- **Group** - The [ButtonGroup](https://docs.godotengine.org/en/stable/classes/class_buttongroup.html) associated with the button.
+- **Theme Path (UPCOMING)** - The file path of the custom theme that should be used for the button.
 
 ### NinePatchRect
 - **Texture** - This property is controlled by the `Normal Texture` property, which will automatically load its texture into here.
