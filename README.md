@@ -8,7 +8,9 @@ This plugin adds a new type of node that combines the features of the NinePatchR
 ## Why Did We Make This?
 The Texture Button stretches the custom textures you add to it, which is especially noticeable when trying to use pixel art. Luckily the NinePatchRect doesn't have this issue when you use it in a specific way, so we combined the features of the NinePatchRect with those of the Button and created a new custom node. While the NinePatchRect can avoid this issue it can also still be used similarly to how the TextureButton works, so there is always the option to use a method closer to that of the TextureButton if we so wish. 
 
-The TextureButton still had some other good features, such as its customizeable button animation system, so we added them to the NinePatchButton as well. We also added a few features of our own design, such as a customizeable sound system which allows you to assign sounds for some of its functions such as pressing it or hovering over it. Have a look at this comparison image to see the difference between the NinePatchButton's texturing method and the TextureButton's texturing method:
+The TextureButton still had some other good features, such as its customizeable button animation system, so we added them to the NinePatchButton as well. We also added a few features of our own design, such as a customizeable sound system which allows you to assign sounds for some of its functions such as pressing it or hovering over it.
+
+Have a look at this comparison image to see the difference between the NinePatchButton's texturing method and the TextureButton's texturing method:
 
 ![Texturing Comparison](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/blob/master/media/texturing_comparison.png "Texturing Comparison")
 
@@ -112,7 +114,7 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 
 
 ## Links
-- The plugin's Asset Library web page: https://godotengine.org/asset-library/asset/1243 *Note that it takes time before any update or change goes through on the Asset Library. Check [here](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/releases/latest) for the latest version before you check on the Asset Library.*
+- The plugin's Asset Library web page: https://godotengine.org/asset-library/asset/1243 - *Note that it takes time before any update or change goes through on the Asset Library. Check [here](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/releases/latest) for the latest version before you check on the Asset Library.*
 
 
 ## Future Plans
