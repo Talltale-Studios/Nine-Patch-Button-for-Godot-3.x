@@ -6,7 +6,7 @@ This plugin adds a new type of node that combines the features of the NinePatchR
 
 
 ## Why Did We Make This?
-The Texture Button stretches the custom textures you add to it, which is especially noticeable when trying to use pixel art. Luckily the NinePatchRect doesn't have this issue when you use it in a specific way, so we combined the features of the NinePatchRect with those of the Button and created a new custom node. While the NinePatchRect can avoid this issue it can also still be used similarly to how the TextureButton works, so there is always the option to use a method closer to that of the TextureButton if we so wish. 
+The TextureButton stretches the custom textures you add to it, which is especially noticeable when trying to use pixel art. Luckily the NinePatchRect doesn't have this issue when you use it in a specific way, so we combined the features of the NinePatchRect with those of the TextureButton and the Button and created a new custom node. And while the NinePatchRect can avoid this issue when you use it in a specific way, it can also still be used similarly to how the TextureButton works.
 
 The TextureButton still had some other good features, such as its customizeable button animation system, so we added them to the NinePatchButton as well. We also added a few features of our own design, such as a customizeable sound system which allows you to assign sounds for some of its functions such as pressing it or hovering over it.
 
