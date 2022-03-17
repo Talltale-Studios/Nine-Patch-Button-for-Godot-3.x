@@ -129,7 +129,7 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 
 ## Changelog:
 
-### v2.4.1 (UPCOMING)
+### v2.5.0 (UPCOMING)
 - Fixed the NinePatchButton not still not properly going out of focus when moving the mouse cursor outside the button.
 - Fixed a case mismatch error with the plugin's `plugin.gd` script.
 - Fixed the name of the root node of the Demo Project's `usage_examples` scene not being in snake_case.
