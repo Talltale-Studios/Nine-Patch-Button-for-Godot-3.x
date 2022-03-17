@@ -17,7 +17,7 @@ config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/NinePatchButton/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/NinePatchButton/plugin.cfg", "res://addons/ninepatchbutton/plugin.cfg" )
 
 [importer_defaults]
 
