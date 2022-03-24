@@ -111,7 +111,7 @@ The second method is to use a Label or a RichTextLabel. In order to do use this 
 
 
 ## Got Any Feedback?
-If you have any feedback, be it a bug report, a suggestion, or a feature request, feel free to [open an Issue](https://github.com/Talltale-Studios/Nine-Patch-Button-for-Godot-3.x/issues) on GitHub. All we ask is that you try to label your issue suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for, although it's fine if you don't. If an issue about a specific topic already exists, or the topic is already mentioned in the README's "Future Plans" section, please do not create a new issue (although you may post a comment to an older issue about that topic if such an issue already exists). We will greatly appreciate any kind of constructive feedback you can give us.
+If you have any feedback, be it a bug report, a suggestion, or a feature request, feel free to [open an issue](https://github.com/Talltale-Studios/Nine-Patch-Button-for-Godot-3.x/issues) on GitHub. All we ask is that you try to label your issues suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for. If an issue about a specific topic already exists, please do not create a new issue (although you may post a comment to an older issue about that topic if such an issue already exists). We will greatly appreciate any kind of constructive feedback you can give us.
 
 
 ## Links
