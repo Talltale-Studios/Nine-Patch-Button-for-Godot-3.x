@@ -131,7 +131,7 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 ## Changelog:
 
 ### v2.5.1
-- Changed all instances of "Jurubu Entertainment" to "Talltale Studios". Talltale Studios is now officially the new name of our organization.
+- Changed all instances of "Jurubu Entertainment" in the plugin's files and on the plugin's GitHub repository to "Talltale Studios". Talltale Studios is now officially the new name of our organization.
 
 
 ### v2.5.0
