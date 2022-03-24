@@ -2,17 +2,17 @@
 
 
 ## What Is This?
-This plugin adds a new type of node that combines the features of the NinePatchRect, the Button, and the TextureButton, with the NinePatchRect being used as the base. We also added a customizeable sound system, which allows you to assign sounds for some of its functions such as pressing it or hovering over it.
+This plugin adds a new type of node that combines the features of the NinePatchRect, the Button, and the TextureButton, with the NinePatchRect being used as the base. We also added a customizable sound system, which allows you to assign sounds for some of its functions such as pressing it or hovering over it.
 
 
 ## Why Did We Make This?
 The TextureButton stretches the custom textures you add to it, which is especially noticeable when trying to use pixel art. Luckily the NinePatchRect doesn't have this issue when you use it in a specific way, so we combined the features of the NinePatchRect with those of the TextureButton and the Button and created a new custom node. And while the NinePatchRect can avoid this issue when you use it in a specific way, it can also still be used similarly to how the TextureButton works.
 
-The TextureButton still had some other good features, such as its customizeable button animation system, so we added them to the NinePatchButton as well. We also added a few features of our own design, such as a customizeable sound system which allows you to assign sounds for some of its functions such as pressing it or hovering over it.
+The TextureButton still had some other good features, such as its customizable button animation system, so we added them to the NinePatchButton as well. We also added a few features of our own design, such as a customizable sound system that allows you to assign sounds for some of its functions such as pressing it or hovering over it.
 
 Have a look at this comparison image to see the difference between the NinePatchButton's texturing method and the TextureButton's texturing method:
 
-![Texturing Comparison](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/blob/master/media/texturing_comparison.png "Texturing Comparison")
+![Texturing Comparison](https://github.com/Talltale-Studios/Nine-Patch-Button-for-Godot-3.x/blob/master/media/texturing_comparison.png "Texturing Comparison")
 
 
 ## Setup Guide
@@ -23,14 +23,14 @@ For a detailed guide on using the Godot Asset Library, both the one on the [web]
 ### NinePatchButton Setup
 Once the plugin has been downloaded, installed, and enabled, you can add a new NinePatchButton node to one of your project's scenes. Note that the NinePatchButton should never be made the root node of a scene as this causes issues with some of its components, instead make it the child of some other node such as a Control node.
 
-To get started using your new NinePatchButton node you must first load your chosen `Normal Texture` (the texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state) into `Script Variables/Normal Texture` in the Inspector panel and then head to `TextureRegion` in the Bottom Panel and set it up like you would with a NinePatchRect. Once that is done you can start adding the rest of the textures of your choice for the NinePatchButton using the properties underneath `Normal Texture`. The rest of the settings work more or less just like you'd expect by looking at their names or by looking at how they worked with the Button, the Texture Button and the NinePatchRect. Nevertheless, all the properties of the NinePatchButton are explained in detail below.
+To get started using your new NinePatchButton node you must first load your chosen `Normal Texture` (the texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state) into `Script Variables/Normal Texture` in the Inspector panel and then head to `TextureRegion` in the Bottom Panel and set it up like you would with a NinePatchRect. Once that is done you can start adding the rest of the textures of your choice for the NinePatchButton using the properties underneath `Normal Texture`. The rest of the settings work more or less just like you'd expect by looking at their names or by looking at how they worked with the Button, the Texture Button, and the NinePatchRect. Nevertheless, all the properties of the NinePatchButton are explained in detail below.
 
 ### Text On Your NinePatchButtons
 There are two easy methods you can use to add text to your NinePatchButtons.
 
-The first method is to put the text on the textures of your buttons while editing the textures. It is adviseable that you also make the text light up alongside the button on its various "hovered" and "focused" textures.
+The first method is to put the text on the textures of your buttons while editing the textures. It is advisable that you also make the text light up alongside the button on its various "hovered" and "focused" textures.
 
-The second method is to use a Label or a RichTextLabel. In order to do use this method you must create a Label or RichTextLabel, preferrably as a child to your button, and resize it so its size is identical to that of the button. Next you start adding text and make sure the text is alligned to the center of the Label. Lastly, to customize the text itself, head on over to `Control/Theme Overrides` where you can change various properties such as the font that is to be used for the text, as well as the font's size, its color, whether it should have an outline or a shadow, and much more.
+The second method is to use a Label or a RichTextLabel. In order to do use this method, you must create a Label or RichTextLabel, preferably as a child to your button, and resize it so its size is identical to that of the button. Next, you start adding text and make sure the text is aligned to the center of the Label. Lastly, to customize the text itself, head on over to `Control/Theme Overrides` where you can change various properties such as the font that is to be used for the text, as well as the font's size, its color, whether it should have an outline or a shadow, and much more.
 
 
 ## Properties Guide
@@ -61,10 +61,10 @@ The second method is to use a Label or a RichTextLabel. In order to do use this 
 - **Pressed Released Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button has been released after having been pressed down.
 - **Pressed Released Volume Db** - The volume of the Pressed Released Sound, in dB.
 - **Pressed Released Pitch Scale** - The pitch and tempo of the Pressed Released Sound, as a multiplier of the audio sample's sample rate.
-- **Pressed Hovered Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button has been, or is being, pressed down in conjunction with the mouse hovering over it.
+- **Pressed Hovered Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button has been or is being, pressed down in conjunction with the mouse hovering over it.
 - **Pressed Hovered Volume Db** - The volume of the Pressed Hovered Sound, in dB.
 - **Pressed Hovered Pitch Scale** - The pitch and tempo of the Pressed Hovered Sound, as a multiplier of the audio sample's sample rate.
-- **Pressed Focused Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button has been, or is being, pressed down in conjunction with it having mouse or keyboard focus.
+- **Pressed Focused Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button has been or is being, pressed down in conjunction with it having mouse or keyboard focus.
 - **Pressed Focused Volume Db** - The volume of the Pressed Focused Sound, in dB.
 - **Pressed Focused Pitch Scale** - The pitch and tempo of the Pressed Focused Sound, as a multiplier of the audio sample's sample rate.
 - **Disabled Pressed Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button is disabled and the user attempts to press it.
@@ -100,7 +100,7 @@ The second method is to use a Label or a RichTextLabel. In order to do use this 
 #### Patch Margin
 - **Left** - The width of the 9-slide's left column. A margin of 16 means the 9-slice's left corners and side will have a width of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.
 - **Top** - The height of the 9-slide's left column. A margin of 16 means the 9-slice's top corners and side will have a height of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.
-- **Right** - The width of the 9-slide's left column. A margin of 16 means the 9-slice's right corners and side will have a width of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.The width of the 9-slide's left column. A margin of 16 means the 9-slice's left corners and side will have a width of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.
+- **Right** - The width of the 9-slide's left column. A margin of 16 means the 9-slice's right corners and side will have a width of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders. The width of the 9-slide's left column. A margin of 16 means the 9-slice's left corners and side will have a width of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.
 - **Bottom** - The height of the 9-slide's left column. A margin of 16 means the 9-slice's bottom corners and side will have a height of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.
 
 #### Axis Stretch
@@ -111,15 +111,15 @@ The second method is to use a Label or a RichTextLabel. In order to do use this 
 
 
 ## Got Any Feedback?
-If you have any feedback, be it a bug report, a suggestion, or a feature request, feel free to [open an Issue](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/issues) on GitHub. All we ask is that you try to label your issue suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for, although it's fine if you don't. If an issue about a specific topic already exists, or the topic is already mentioned in the README's "Future Plans" section, please do not create a new issue (although you may post a comment to an older issue about that topic if such an issue already exists). We will greatly appreciate any kind of constructive feedback you can give us.
+If you have any feedback, be it a bug report, a suggestion, or a feature request, feel free to [open an issue](https://github.com/Talltale-Studios/Nine-Patch-Button-for-Godot-3.x/issues) on GitHub. All we ask is that you try to label your issues suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for. If an issue about a specific topic already exists, please do not create a new issue (although you may post a comment to an older issue about that topic if such an issue already exists). We will greatly appreciate any kind of constructive feedback you can give us.
 
 
 ## Links
-- The plugin's Asset Library web page: https://godotengine.org/asset-library/asset/1243 - *Note that it takes time before any update or change goes through on the Asset Library. Check [here](https://github.com/Jurubu-Entertainment/Nine-Patch-Button-for-Godot-3.x/releases/latest) for the latest version before you check on the Asset Library.*
+- The plugin's Asset Library page: https://godotengine.org/asset-library/asset/1243 (*Note that it takes time before any update or change goes through on the Asset Library. Check [here](https://github.com/Talltale-Studios/Nine-Patch-Button-for-Godot-3.x/releases/latest) for the latest version of the plugin before you check on the Asset Library.*)
 
 
 ## Future Plans
-- Fix the button press not being cancelled when moving the mouse cursor outside the button while it is still being pressed down, if the `Keep Pressed Outside` property is set to *false*.
+- Fix the button press not being cancelled when moving the mouse cursor outside the button while it is still being pressed down and the `Keep Pressed Outside` property is set to *false*.
 - Fix the instanced Button becoming visible on the duplicated NinePatchButton while in the editor if you Duplicate (shortcut: Control + D) a NinePatchButton. Note that it is still invisible while running the scene, but according to its code it shouldn't be visible in the editor under any circumstances while the `flat` variable is true, which it is.
 - Add a larger icon with a size of 64x64, 128x128, or 256x256 for use as the icon for the plugin on the Asset Library and the icon for the plugin's Demo Project.
 - Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button (by default the click mask is rectangular, and with a texture that is, say, circular, the click mask will not line up as it should with the texture of the button).
@@ -129,6 +129,10 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 
 
 ## Changelog:
+
+### v2.5.1
+- Changed all references to "Jurubu Entertainment" in the plugin's files to "Talltale Studios". Talltale Studios is now officially the new name of our organization.
+- Cleaned up `.bak` backup files.
 
 ### v2.5.0
 - Fixed the NinePatchButton not still not properly going out of focus when moving the mouse cursor outside the button.
@@ -184,7 +188,7 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 - Added the `Focused Texture` property that originated from the TextureButton.
 - Added a new custom `Focused Sound` property, based on the Texture Button's `Focused Texture` property.
 - Changed the name of the NinePatchButton's icon image from `Icon.png` to `NinePatchButton.png` and its Import Preset from `Default` to `2D Pixel`.
-- Removed the deprecated `Enabled Focus Mode` property that originated from the Button. It has been superceded by the Control node's own `Focus Mode` property, and is scheduled for removal in Godot 4.
+- Removed the deprecated `Enabled Focus Mode` property that originated from the Button. It has been superseded by the Control node's own `Focus Mode` property and is scheduled for removal in Godot 4.
 - Cleaned up the plugin's code.
 
 ### v1.2.1
