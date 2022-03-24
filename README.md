@@ -115,7 +115,7 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 
 
 ## Links
-- The plugin's Asset Library web page: https://godotengine.org/asset-library/asset/1243 - *Note that it takes time before any update or change goes through on the Asset Library. Check [here](https://github.com/Talltale-Studios/Nine-Patch-Button-for-Godot-3.x/releases/latest) for the latest version before you check on the Asset Library.*
+- The plugin's Asset Library page: https://godotengine.org/asset-library/asset/1243 (*Note that it takes time before any update or change goes through on the Asset Library. Check [here](https://github.com/Talltale-Studios/Nine-Patch-Button-for-Godot-3.x/releases/latest) for the latest version of the plugin before you check on the Asset Library.*)
 
 
 ## Future Plans
