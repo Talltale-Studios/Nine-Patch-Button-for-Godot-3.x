@@ -133,7 +133,6 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 ### v2.5.1
 - Changed all references to "Jurubu Entertainment" in the plugin's files to "Talltale Studios". Talltale Studios is now officially the new name of our organization.
 
-
 ### v2.5.0
 - Fixed the NinePatchButton not still not properly going out of focus when moving the mouse cursor outside the button.
 - Fixed a case mismatch error with the plugin's `plugin.gd` script.
