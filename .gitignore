@@ -4,7 +4,7 @@
 # Godot auto generated files
 *.gen.*
 .import/
-**/frontend/media/**
+*media/
 export.cfg
 export_presets.cfg
 
