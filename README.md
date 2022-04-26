@@ -111,7 +111,7 @@ The second method is to use a Label or a RichTextLabel. In order to do use this 
 
 
 ## Got Any Feedback?
-If you have any feedback, be it a bug report, a suggestion, or a feature request, feel free to [open an issue](https://github.com/Talltale-Studios/Nine-Patch-Button-for-Godot-3.x/issues) on GitHub. All we ask is that you try to label your issues suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for. If an issue about a specific topic already exists, please do not create a new issue (although you may post a comment to an older issue about that topic if such an issue already exists). We will greatly appreciate any kind of constructive feedback you can give us.
+If you have any feedback, be it a bug report, a suggestion, or a feature request, feel free to [open an issue](https://github.com/Talltale-Studios/Nine-Patch-Button-for-Godot-3.x/issues) on GitHub. All we ask is that you try to label your issues suitably with the provided labels and that you try to prevent posting an issue about a topic that an issue already exists for. If an open issue about a specific topic already exists please do not create a new issue; instead please post a comment to that issue. If a closed issue about that topic already exists and the issue has still not been resolved, unless otherwise specified in that old closed issue, you may open a new issue about the topic. We will greatly appreciate any kind of constructive feedback you can give us.
 
 
 ## Links
@@ -132,7 +132,8 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 
 ## v2.6.0
 - Fixed the `Action Mode` property not working as intended, especially in regards to the button's sounds.
-- Changed the demo project into a demo scene. It being a self-contained project caused its own instance of the NinePatchButton to show up on the project it is installed in's `Plugins` tab as well. And it being changed to a scene instead of a full project is just much more elegant.
+- Changed the demo project into a demo scene. It being a self-contained project caused its own instance of the NinePatchButton to show up on the project it is installed in's `Plugins` tab as well. And it being changed to a scene instead of a full project is just much more elegant and user-friendly.
+- Improved and cleaned up the plugin's code.
 
 ### v2.5.1
 - Changed all references to "Jurubu Entertainment" in the plugin's files to "Talltale Studios". Talltale Studios is now officially the new name of our organization.
