@@ -131,6 +131,7 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 ## Changelog:
 
 ## v2.6.0
+- Fixed the `Action Mode` property not working as intended, especially in regards to the button's sounds.
 - Changed the demo project into a demo scene. It being a self-contained project caused its own instance of the NinePatchButton to show up on the project it is installed in's `Plugins` tab as well. And it being changed to a scene instead of a full project is just much more elegant.
 
 ### v2.5.1
@@ -142,24 +143,24 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 - Fixed a case mismatch error with the plugin's `plugin.gd` script.
 - Fixed the name of the root node of the Demo Project's `usage_examples` scene not being in snake_case.
 - Added a custom theme for the plugin which has no focus indicator and a new `Theme Path` property that points to it. This custom theme will be loaded automatically in the `ready()` function, and the user can change it to their liking.
-- Improved the Demo Project's `usage_examples` scene with new art and new NinePatchButtons that show what it looks when you add text to the button through the use of its textures (instead of a Label or RichTextLabel), and also increased the sizes of the NinePatchButtons to make them more visible.
+- Improved the demo project's `usage_examples` scene with new art and new NinePatchButtons that show what it looks when you add text to the button through the use of its textures (instead of a Label or RichTextLabel), and also increased the sizes of the NinePatchButtons to make them more visible.
 - Cleaned up unused assets.
 
 ### v2.4.0
 - Added new documentation to the plugin's scripts.
-- Changed the names of the Demo Project's and the NinePatchButton's folders and files to use snake_case.
-- Moved some of the Demo Project's assets that were mistakenly put in the `Optional Assets` folder into the `Required Assets` folder.
-- Renamed some of the Demo Project's assets to make more sense within the scope of the project.
-- Removed the Demo Project's `Optional Assets` folder and renamed the `Required Assets` folder to `Assets`.
+- Changed the names of the demo project's and the NinePatchButton's folders and files to use snake_case.
+- Moved some of the demo project's assets that were mistakenly put in the `Optional Assets` folder into the `Required Assets` folder.
+- Renamed some of the demo project's assets to make more sense within the scope of the project.
+- Removed the demo project's `Optional Assets` folder and renamed the `Required Assets` folder to `Assets`.
 - Disabled the `Keep Pressed Outside` property. It is currently broken and will be re-enabled once it has been fixed.
 - Cleaned up the plugin's code.
 
 ### v2.3.0
 - Fixed the NinePatchButton not going out of focus when moving the mouse cursor outside the button.
 - Fixed a typo in the plugin's code.
-- Changed the name of the Demo Project's `Example_NinePatchButtons` scene to `Usage_Examples`.
-- Removed the Demo Project's `NinePatchButton` scene, as it is actually only set up and used for short periods at a time during testing, after which it has to be set up from scratch again when the next test is to be performed, and as such, there is actually no use in keeping it around after the test has been performed.
-- Split all of the Demo Project's assets between two new `Optional_Assets` and `Required_Assets` folders to enable the user to more easily see which assets the Demo Project needs to run and which not.
+- Changed the name of the demo project's `Example_NinePatchButtons` scene to `Usage_Examples`.
+- Removed the demo project's `NinePatchButton` scene, as it is actually only set up and used for short periods at a time during testing, after which it has to be set up from scratch again when the next test is to be performed, and as such, there is actually no use in keeping it around after the test has been performed.
+- Split all of the demo project's assets between two new `Optional_Assets` and `Required_Assets` folders to enable the user to more easily see which assets the Demo Project needs to run and which not.
 - Cleaned up the plugin's code.
 
 ### v2.2.0
