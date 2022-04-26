@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/confirmation_001.ogg-2b679ff12abdb9a4f724524e03f61076.oggstr"
+
+[deps]
+
+source_file="res://addons/ninepatchbutton_demo/assets/audio/confirmation_001.ogg"
+dest_files=[ "res://.import/confirmation_001.ogg-2b679ff12abdb9a4f724524e03f61076.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/select_004.ogg-def21bc68537e27c709c84feca15943f.oggstr"
+
+[deps]
+
+source_file="res://addons/ninepatchbutton_demo/assets/audio/select_004.ogg"
+dest_files=[ "res://.import/select_004.ogg-def21bc68537e27c709c84feca15943f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
