@@ -130,6 +130,9 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 
 ## Changelog:
 
+## v2.6.0
+- Changed the demo project into a demo scene. It being a self-contained project caused its own instance of the NinePatchButton to show up on the project it is installed in's `Plugins` tab as well. And it being changed to a scene instead of a full project is just much more elegant.
+
 ### v2.5.1
 - Changed all references to "Jurubu Entertainment" in the plugin's files to "Talltale Studios". Talltale Studios is now officially the new name of our organization.
 - Cleaned up `.bak` backup files.
