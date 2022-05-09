@@ -2,227 +2,198 @@
 
 [ext_resource path="res://addons/ninepatchbutton/ninepatchbutton.gd" type="Script" id=1]
 [ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/disabled_blank_button_01.png" type="Texture" id=2]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/enabled_blank_button_02.png" type="Texture" id=3]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/enabled_blank_button_03.png" type="Texture" id=4]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/enabled_blank_button_04.png" type="Texture" id=5]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/audio/select_005.ogg" type="AudioStream" id=6]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/disabled_text_button_03.png" type="Texture" id=7]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/enabled_text_button_01.png" type="Texture" id=8]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/disabled_text_button_01.png" type="Texture" id=9]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/audio/error_008.ogg" type="AudioStream" id=10]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/audio/bong_001.ogg" type="AudioStream" id=11]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/enabled_text_button_03.png" type="Texture" id=12]
-[ext_resource path="res://addons/ninepatchbutton/custom_theme.tres" type="Theme" id=13]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/enabled_text_button_04.png" type="Texture" id=14]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/disabled_blank_button_03.png" type="Texture" id=15]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/audio/confirmation_001.ogg" type="AudioStream" id=16]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/audio/select_003.ogg" type="AudioStream" id=17]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/audio/select_004.ogg" type="AudioStream" id=18]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/enabled_blank_button_01.png" type="Texture" id=19]
-[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/enabled_text_button_02.png" type="Texture" id=20]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/audio/select_005.ogg" type="AudioStream" id=3]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/audio/confirmation_001.ogg" type="AudioStream" id=4]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/audio/error_008.ogg" type="AudioStream" id=5]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/audio/bong_001.ogg" type="AudioStream" id=6]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/disabled_blank_button_03.png" type="Texture" id=7]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/disabled_blank_button_02.png" type="Texture" id=8]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/enabled_blank_button_02.png" type="Texture" id=9]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/enabled_blank_button_03.png" type="Texture" id=10]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/buttons/enabled_blank_button_01.png" type="Texture" id=11]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/audio/select_003.ogg" type="AudioStream" id=12]
 
-[node name="demo" type="Control"]
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 190, 48 )
+margin_left = 90.0
+margin_right = 90.0
+margin_top = 20.0
+margin_bottom = 18.0
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 190, 48 )
+margin_left = 90.0
+margin_right = 90.0
+margin_top = 20.0
+margin_bottom = 18.0
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 190, 48 )
+margin_left = 90.0
+margin_right = 90.0
+margin_top = 20.0
+margin_bottom = 18.0
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 190, 48 )
+margin_left = 90.0
+margin_right = 90.0
+margin_top = 20.0
+margin_bottom = 18.0
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 190, 48 )
+margin_left = 90.0
+margin_right = 90.0
+margin_top = 20.0
+margin_bottom = 18.0
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 190, 48 )
+margin_left = 90.0
+margin_right = 90.0
+margin_top = 20.0
+margin_bottom = 18.0
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 190, 48 )
+margin_left = 90.0
+margin_right = 90.0
+margin_top = 20.0
+margin_bottom = 18.0
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 190, 48 )
+margin_left = 90.0
+margin_right = 90.0
+margin_top = 20.0
+margin_bottom = 18.0
+
+[node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-mouse_filter = 2
 
-[node name="Enabled_Blank_Button" type="NinePatchRect" parent="."]
-margin_left = 13.0
-margin_top = 13.0
-margin_right = 505.0
-margin_bottom = 135.0
-theme = ExtResource( 13 )
-texture = ExtResource( 19 )
+[node name="Button" type="Button" parent="."]
+margin_right = 499.0
+margin_bottom = 83.0
+focus_mode = 0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+enabled_focus_mode = 0
+text = "Toggle = false"
 script = ExtResource( 1 )
-normal_texture = ExtResource( 19 )
-hovered_texture = ExtResource( 4 )
-focused_texture = ExtResource( 4 )
-pressed_texture = ExtResource( 3 )
-pressed_hovered_texture = ExtResource( 5 )
-pressed_focused_texture = ExtResource( 5 )
-disabled_texture = ExtResource( 2 )
-disabled_hovered_texture = ExtResource( 15 )
-disabled_focused_texture = ExtResource( 15 )
-hovered_sound = ExtResource( 17 )
-hovered_volume_db = 0
-hovered_pitch_scale = 1
-focused_sound = ExtResource( 17 )
-focused_volume_db = 0
-focused_pitch_scale = 1
-pressed_sound = ExtResource( 16 )
-pressed_volume_db = 0
-pressed_pitch_scale = 1
-pressed_released_sound = ExtResource( 11 )
-pressed_released_volume_db = 0
-pressed_released_pitch_scale = 1
-pressed_hovered_sound = ExtResource( 18 )
-pressed_hovered_volume_db = 0
-pressed_hovered_pitch_scale = 1
-pressed_focused_sound = ExtResource( 18 )
-pressed_focused_volume_db = 0
-pressed_focused_pitch_scale = 1
-disabled_pressed_sound = ExtResource( 10 )
-disabled_pressed_volume_db = 0
-disabled_pressed_pitch_scale = 1
-disabled_hovered_sound = ExtResource( 6 )
-disabled_hovered_volume_db = 0
-disabled_hovered_pitch_scale = 1
-disabled_focused_sound = ExtResource( 6 )
-disabled_focused_volume_db = 0
-disabled_focused_pitch_scale = 1
-bus_name = "Buttons"
+enabled_normal = SubResource( 4 )
+enabled_hover = SubResource( 1 )
+enabled_focus = SubResource( 3 )
+enabled_pressed = SubResource( 2 )
+disabled_normal = SubResource( 8 )
+disabled_hover = SubResource( 5 )
+disabled_focus = SubResource( 7 )
+disabled_pressed = SubResource( 6 )
+enabled_pressed_sound = ExtResource( 4 )
+enabled_hover_sound = ExtResource( 3 )
+enabled_focus_sound = ExtResource( 3 )
+disabled_pressed_sound = ExtResource( 5 )
+disabled_hover_sound = ExtResource( 12 )
+disabled_focus_sound = ExtResource( 6 )
 
-[node name="Enabled_Text_Button" type="NinePatchRect" parent="."]
-margin_left = 519.0
-margin_top = 13.0
-margin_right = 1011.0
-margin_bottom = 135.0
-rect_pivot_offset = Vector2( 201, -29 )
-theme = ExtResource( 13 )
-texture = ExtResource( 8 )
+[node name="Button2" type="Button" parent="."]
+anchor_left = 0.977
+anchor_right = 0.977
+margin_left = -499.448
+margin_right = -0.447998
+margin_bottom = 83.0
+focus_mode = 0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+enabled_focus_mode = 0
+text = "Toggle = true"
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
-normal_texture = ExtResource( 8 )
-hovered_texture = ExtResource( 12 )
-focused_texture = ExtResource( 12 )
-pressed_texture = ExtResource( 20 )
-pressed_hovered_texture = ExtResource( 14 )
-pressed_focused_texture = ExtResource( 14 )
-disabled_texture = ExtResource( 9 )
-disabled_hovered_texture = ExtResource( 7 )
-disabled_focused_texture = ExtResource( 7 )
-hovered_sound = ExtResource( 17 )
-hovered_volume_db = 0
-hovered_pitch_scale = 1
-focused_sound = ExtResource( 17 )
-focused_volume_db = 0
-focused_pitch_scale = 1
-pressed_sound = ExtResource( 16 )
-pressed_volume_db = 0
-pressed_pitch_scale = 1
-pressed_released_sound = ExtResource( 11 )
-pressed_released_volume_db = 0
-pressed_released_pitch_scale = 1
-pressed_hovered_sound = ExtResource( 18 )
-pressed_hovered_volume_db = 0
-pressed_hovered_pitch_scale = 1
-pressed_focused_sound = ExtResource( 18 )
-pressed_focused_volume_db = 0
-pressed_focused_pitch_scale = 1
-disabled_pressed_sound = ExtResource( 10 )
-disabled_pressed_volume_db = 0
-disabled_pressed_pitch_scale = 1
-disabled_hovered_sound = ExtResource( 6 )
-disabled_hovered_volume_db = 0
-disabled_hovered_pitch_scale = 1
-disabled_focused_sound = ExtResource( 6 )
-disabled_focused_volume_db = 0
-disabled_focused_pitch_scale = 1
-bus_name = "Buttons"
+enabled_normal = SubResource( 4 )
+enabled_hover = SubResource( 1 )
+enabled_focus = SubResource( 3 )
+enabled_pressed = SubResource( 2 )
+disabled_normal = SubResource( 8 )
+disabled_hover = SubResource( 5 )
+disabled_focus = SubResource( 7 )
+disabled_pressed = SubResource( 6 )
+enabled_pressed_sound = ExtResource( 4 )
+enabled_hover_sound = ExtResource( 3 )
+enabled_focus_sound = ExtResource( 3 )
+disabled_pressed_sound = ExtResource( 5 )
+disabled_hover_sound = ExtResource( 6 )
+disabled_focus_sound = ExtResource( 6 )
+
+[node name="Button3" type="Button" parent="."]
+margin_top = 85.0
+margin_right = 499.0
+margin_bottom = 168.0
+focus_mode = 0
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+enabled_focus_mode = 0
+text = "is_disabled = true|toggle = false"
+script = ExtResource( 1 )
+is_disabled = true
+enabled_normal = SubResource( 4 )
+enabled_hover = SubResource( 1 )
+enabled_focus = SubResource( 3 )
+enabled_pressed = SubResource( 2 )
+disabled_normal = SubResource( 8 )
+disabled_hover = SubResource( 5 )
+disabled_focus = SubResource( 7 )
+disabled_pressed = SubResource( 6 )
+enabled_pressed_sound = ExtResource( 4 )
+enabled_hover_sound = ExtResource( 3 )
+enabled_focus_sound = ExtResource( 3 )
+disabled_pressed_sound = ExtResource( 5 )
+disabled_hover_sound = ExtResource( 12 )
+disabled_focus_sound = ExtResource( 6 )
+
+[node name="Button4" type="Button" parent="."]
+anchor_left = 0.977
+anchor_right = 0.977
+margin_left = -499.448
+margin_top = 85.0
+margin_right = -0.447998
+margin_bottom = 168.0
+focus_mode = 0
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
 toggle_mode = true
-
-[node name="Disabled_Blank_Button" type="NinePatchRect" parent="."]
-margin_left = 13.0
-margin_top = 149.0
-margin_right = 505.0
-margin_bottom = 271.0
-theme = ExtResource( 13 )
-texture = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "is_disabled = true|toggle = true"
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
-normal_texture = ExtResource( 19 )
-hovered_texture = ExtResource( 4 )
-focused_texture = ExtResource( 4 )
-pressed_texture = ExtResource( 3 )
-pressed_hovered_texture = ExtResource( 5 )
-pressed_focused_texture = ExtResource( 5 )
-disabled_texture = ExtResource( 2 )
-disabled_hovered_texture = ExtResource( 15 )
-disabled_focused_texture = ExtResource( 15 )
-hovered_sound = ExtResource( 17 )
-hovered_volume_db = 0
-hovered_pitch_scale = 1
-focused_sound = ExtResource( 17 )
-focused_volume_db = 0
-focused_pitch_scale = 1
-pressed_sound = ExtResource( 16 )
-pressed_volume_db = 0
-pressed_pitch_scale = 1
-pressed_released_sound = ExtResource( 11 )
-pressed_released_volume_db = 0
-pressed_released_pitch_scale = 1
-pressed_hovered_sound = ExtResource( 18 )
-pressed_hovered_volume_db = 0
-pressed_hovered_pitch_scale = 1
-pressed_focused_sound = ExtResource( 18 )
-pressed_focused_volume_db = 0
-pressed_focused_pitch_scale = 1
-disabled_pressed_sound = ExtResource( 10 )
-disabled_pressed_volume_db = 0
-disabled_pressed_pitch_scale = 1
-disabled_hovered_sound = ExtResource( 6 )
-disabled_hovered_volume_db = 0
-disabled_hovered_pitch_scale = 1
-disabled_focused_sound = ExtResource( 6 )
-disabled_focused_volume_db = 0
-disabled_focused_pitch_scale = 1
-bus_name = "Buttons"
-disabled = true
+is_disabled = true
+enabled_normal = SubResource( 4 )
+enabled_hover = SubResource( 1 )
+enabled_focus = SubResource( 3 )
+enabled_pressed = SubResource( 2 )
+disabled_normal = SubResource( 8 )
+disabled_hover = SubResource( 5 )
+disabled_focus = SubResource( 7 )
+disabled_pressed = SubResource( 6 )
+enabled_pressed_sound = ExtResource( 4 )
+enabled_hover_sound = ExtResource( 3 )
+enabled_focus_sound = ExtResource( 3 )
+disabled_pressed_sound = ExtResource( 5 )
+disabled_hover_sound = ExtResource( 6 )
+disabled_focus_sound = ExtResource( 6 )
 
-[node name="Disabled_Text_Button" type="NinePatchRect" parent="."]
-margin_left = 519.0
-margin_top = 149.0
-margin_right = 1011.0
-margin_bottom = 271.0
-rect_pivot_offset = Vector2( 201, -29 )
-theme = ExtResource( 13 )
-texture = ExtResource( 9 )
-script = ExtResource( 1 )
-__meta__ = {
-"_editor_description_": ""
-}
-normal_texture = ExtResource( 8 )
-hovered_texture = ExtResource( 12 )
-focused_texture = ExtResource( 12 )
-pressed_texture = ExtResource( 20 )
-pressed_hovered_texture = ExtResource( 14 )
-pressed_focused_texture = ExtResource( 14 )
-disabled_texture = ExtResource( 9 )
-disabled_hovered_texture = ExtResource( 7 )
-disabled_focused_texture = ExtResource( 7 )
-hovered_sound = ExtResource( 17 )
-hovered_volume_db = 0
-hovered_pitch_scale = 1
-focused_sound = ExtResource( 17 )
-focused_volume_db = 0
-focused_pitch_scale = 1
-pressed_sound = ExtResource( 16 )
-pressed_volume_db = 0
-pressed_pitch_scale = 1
-pressed_released_sound = ExtResource( 11 )
-pressed_released_volume_db = 0
-pressed_released_pitch_scale = 1
-pressed_hovered_sound = ExtResource( 18 )
-pressed_hovered_volume_db = 0
-pressed_hovered_pitch_scale = 1
-pressed_focused_sound = ExtResource( 18 )
-pressed_focused_volume_db = 0
-pressed_focused_pitch_scale = 1
-disabled_pressed_sound = ExtResource( 10 )
-disabled_pressed_volume_db = 0
-disabled_pressed_pitch_scale = 1
-disabled_hovered_sound = ExtResource( 6 )
-disabled_hovered_volume_db = 0
-disabled_hovered_pitch_scale = 1
-disabled_focused_sound = ExtResource( 6 )
-disabled_focused_volume_db = 0
-disabled_focused_pitch_scale = 1
-bus_name = "Buttons"
-disabled = true
-toggle_mode = true
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

@@ -12,12 +12,11 @@ config_version=4
 
 config/name="NinePatchButton Development"
 config/description="A project is for testing and developing the NinePatchButton (for Godot 3.x) plugin."
-run/main_scene="res://addons/ninepatchbutton_demo/demo.tscn"
 config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/NinePatchButton/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/ninepatchbutton/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/ninepatchbutton/plugin.cfg" )
 
 [importer_defaults]
 
