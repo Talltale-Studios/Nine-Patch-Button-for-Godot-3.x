@@ -122,7 +122,7 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 ## Changelog:
 
 ## v3.0.0
-- Rearchitectured and refactored all of the plugin's code. The plugin now uses a Button node as its base, and retextures itself using [Themes](https://docs.godotengine.org/en/stable/classes/class_theme.html) that are inherited from the Control node. This fixes many bugs the plugin previously had and greatly improves how the plugin functions, as well as its ease of use. This also means all of the variables from the NinePatchRect and the previously-instanced Button are now gone as they are redundant.
+- Rearchitectured and refactored all of the plugin's code. The plugin now uses a Button node as its base, and retextures itself using `Theme Overrides`. This fixes many bugs the plugin previously had and greatly improves how the plugin functions, as well as its ease of use. This also means all of the variables from the NinePatchRect and the previously-instanced Button are now gone as they are redundant.
 - Sorted most of the button's custom properties into fitting categories in the Inspector.
 - Fixed the `Action Mode` property not working as intended, especially in regards to the button's sounds.
 - Changed the demo project into a demo scene. It being a self-contained project caused its own instance of the NinePatchButton to show up on the project it is installed in's `Plugins` tab as well. And it being changed to a scene instead of a full project is just much more elegant and user-friendly.
