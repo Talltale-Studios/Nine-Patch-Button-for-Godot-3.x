@@ -56,6 +56,7 @@ The second method is to use a Label or a RichTextLabel. In order to do use this 
 - **Hovered Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the mouse hovers over the button.
 - **Hovered Volume Db** - The volume of the Hovered Sound, in dB.
 - **Hover Pitch Scale** - The pitch and tempo of the Hovered Sound, as a multiplier of the audio sample's sample rate.
+
 - **Focused Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button gains mouse or keyboard focus.
 - **Focused Volume Db** - The volume of the Focused Sound, in dB.
 - **Focused Pitch Scale** - The pitch and tempo of the Focused Sound, as a multiplier of the audio sample's sample rate.
