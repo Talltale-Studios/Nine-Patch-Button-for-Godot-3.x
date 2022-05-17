@@ -38,15 +38,19 @@ The second method is to use a Label or a RichTextLabel. In order to do use this 
 ### Script Variables
 
 #### Button Texture Properties
-- **Normal Texture** - The texture to display by default, when the button is not in the disabled, focused, hovered, or pressed state.
-- **Hovered Texture** - The texture to display when the mouse hovers over the button.
-- **Focused Texture** - The texture to display when the button has mouse or keyboard focus.
-- **Pressed Texture** - The texture to display when the button has been, or is being, pressed down.
-- **Pressed Hovered Texture** - The texture to display when the button has been, or is being, pressed down in conjunction with the mouse hovering over it.
-- **Pressed Hovered Texture** - The texture to display when the button has been, or is being, pressed down in conjunction with it having mouse or keyboard focus.
-- **Disabled Texture** - The texture to display when the button is disabled.
-- **Disabled Hovered Texture** - The texture to display when the button is disabled in conjunction with the mouse hovering over it.
-- **Disabled Focused Texture** - The texture to display when the button is disabled in conjunction with it having mouse or keyboard focus.
+- **Enabled Normal Texture** - The texture to display when the button is enabled and is not in the focused, hovered, or pressed state.
+- **Enabled Hover Texture** - The texture to display when the button is enabled in conjunction with the mouse hovering over it.
+- **Enabled Focus Texture** - The texture to display when the button is enabled in conjunction with it having mouse or keyboard focus.
+- **Enabled Pressed Texture** - The texture to display when the button is enabled in conjunction with it being, or having been, pressed down.
+- **Enabled Pressed Hover Texture** - The texture to display when the button is enabled in conjunction with it being, or having been, pressed down and with the mouse hovering over it.
+- **Enabled Pressed Focus Texture** - The texture to display when the button is enabled in conjunction with it being, or having been, pressed down with it having mouse or keyboard focus.
+
+- **Disabled Normal Texture** - The texture to display when the button is disabled and is not in the hovered, focused, or pressed state.
+- **Disabled Hover Texture** - The texture to display when the button is disabled in conjunction with the mouse hovering over it.
+- **Disabled Focus Texture** - The texture to display when the button is disabled in conjunction with it having mouse or keyboard focus.
+- **Disabled Pressed Texture** - The texture to display when the button is disabled in conjunction with it being, or having been, pressed down.
+- **Disabled Pressed Hover Texture** - The texture to display when the button is disabled in conjunction with it being, or having been, pressed down and with the mouse hovering over it.
+- **Disabled Pressed Focus Texture** - The texture to display when the button is disabled in conjunction with it being, or having been, pressed down with it having mouse or keyboard focus.
 
 #### Button Audio Properties
 - **Hovered Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the mouse hovers over the button.
@@ -55,59 +59,49 @@ The second method is to use a Label or a RichTextLabel. In order to do use this 
 - **Focused Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button gains mouse or keyboard focus.
 - **Focused Volume Db** - The volume of the Focused Sound, in dB.
 - **Focused Pitch Scale** - The pitch and tempo of the Focused Sound, as a multiplier of the audio sample's sample rate.
+
 - **Pressed Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button has been pressed down.
 - **Pressed Volume Db** - The volume of the Pressed Sound, in dB.
 - **Pressed Pitch Scale** - The pitch and tempo of the Pressed Sound, as a multiplier of the audio sample's sample rate.
+
 - **Pressed Released Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button has been released after having been pressed down.
 - **Pressed Released Volume Db** - The volume of the Pressed Released Sound, in dB.
 - **Pressed Released Pitch Scale** - The pitch and tempo of the Pressed Released Sound, as a multiplier of the audio sample's sample rate.
+
 - **Pressed Hovered Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button has been or is being, pressed down in conjunction with the mouse hovering over it.
 - **Pressed Hovered Volume Db** - The volume of the Pressed Hovered Sound, in dB.
 - **Pressed Hovered Pitch Scale** - The pitch and tempo of the Pressed Hovered Sound, as a multiplier of the audio sample's sample rate.
+
 - **Pressed Focused Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button has been or is being, pressed down in conjunction with it having mouse or keyboard focus.
 - **Pressed Focused Volume Db** - The volume of the Pressed Focused Sound, in dB.
 - **Pressed Focused Pitch Scale** - The pitch and tempo of the Pressed Focused Sound, as a multiplier of the audio sample's sample rate.
+
 - **Disabled Pressed Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button is disabled and the user attempts to press it.
 - **Disabled Pressed Volume Db** - The volume of the Disabled Pressed Sound, in dB.
 - **Disabled Pressed Pitch Scale** - The pitch and tempo of the Disabled Pressed Sound, as a multiplier of the audio sample's sample rate.
+
 - **Disabled Hovered Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button is disabled in conjunction with the mouse hovering over it.
 - **Disabled Hovered Volume Db** - The volume of the Disabled Hovered Sound, in dB.
 - **Disabled Hovered Pitch Scale** - The pitch and tempo of the Disabled Hovered Sound, as a multiplier of the audio sample's sample rate.
+
 - **Disabled Focused Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button is disabled in conjunction with it having mouse or keyboard focus.
 - **Disabled Focused Volume Db** - The volume of the Disabled Focused Sound, in dB.
 - **Disabled Focused Pitch Scale** - The pitch and tempo of the Disabled Focused Sound, as a multiplier of the audio sample's sample rate.
+
 - **Mix Target** - If the audio configuration has more than two speakers, this sets the target channels. With *Stereo*, the audio will be played only on the first channel. With *Surround*, the audio will be played on all surround channels. With *Center*, the audio will be played on the second channel, which is usually the center.
 - **Bus Name** - The [audio bus](https://docs.godotengine.org/en/stable/tutorials/audio/audio_buses.html) on which this button's audio is playing. If the name of the audio bus is invalid or this property is unset it will default to the `Master` audio bus.
 
 #### BaseButton Properties
-- **Disabled** - If *true*, the button is in the disabled state and can't be pressed or toggled.
+- **Disabled** - If *true*, the button is in the disabled state and can't be pressed or toggled. *Note: This also disables all input events, meaning texture and sound handling gets disabled as well. In the event of this property being set to true, the plugin will use the texture provided by the `Disabled Normal` as a fallback. To prevent this, use the plugin's custom `Is Disabled` property instead.*
 - **Toggle Mode** - If *true*, the button is in the toggle mode. Makes the button flip state between pressed and unpressed each time it is clicked. If *false* then the button will only remain pressed as long as the button is being pressed down by holding the input down, and will revert to the non-pressed state as soon as the input is released.
 - **Shortcut In Tooltip** - If *true*, the button will add information about its shortcut in the tooltip.
-- **Pressed** - If *true*, the button is in the pressed state. Means the button is pressed down or toggled. This only works if the `Toggle Mode` property is set to *true*, and setting `Pressed` to *true* will result in `toggled` to be emitted. If you want to change the pressed state without emitting the `toggled` signal, use the `set_pressed_no_signal()` built-in function.
+- **Pressed** - If *true*, the button is in the pressed state. Means the button is pressed down or toggled. Only works if the `Toggle Mode` property is set to *true*. *Note: Setting the `Pressed` property to *true* will result in the `toggled` signal to be emitted. If you want to change the pressed state without emitting the `toggled` signal, use the `set_pressed_no_signal()` built-in function.
 - **Action Mode** - Determines when the button is considered clicked.
 - **Button Mask** - The binary mark to choose which mouse buttons this button will respond to.
-- **Enabled Focus Mode** - We removed this property because its tooltip states that it is deprecated and that `Control/Focus/Mode` should be used instead.
-- **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it. *This property is currently broken and has been disabled until it can be fixed.*
+- **Enabled Focus Mode** - This property has been deprecated due to redundancy and will be removed in Godot 4.0. This property no longer has any effect when set. Please use the `Control/Focus/Mode` property instead.
+- **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it.
 - **Shortcut** - The [ShortCut](https://docs.godotengine.org/en/stable/classes/class_shortcut.html) associated with the button.
 - **Group** - The [ButtonGroup](https://docs.godotengine.org/en/stable/classes/class_buttongroup.html) associated with the button.
-- **Theme Path** - The file path of the custom theme that should be used for the button.
-
-### NinePatchRect
-- **Texture** - This property is controlled by the `Normal Texture` property, which will automatically load its texture into here.
-- **Draw Center** - If *true*, draw the button's center texture (which is set up with `TextureRegion`). Else, only draw the 9-slice's borders.
-- **Region Rect** - Rectangular region of the texture to sample from. If you're working with an atlas, use this property to define the area the 9-slice should use. All other properties are relative to this one. If the rect is empty, the NinePatchButton will use the whole texture.
-
-#### Patch Margin
-- **Left** - The width of the 9-slide's left column. A margin of 16 means the 9-slice's left corners and side will have a width of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.
-- **Top** - The height of the 9-slide's left column. A margin of 16 means the 9-slice's top corners and side will have a height of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.
-- **Right** - The width of the 9-slide's left column. A margin of 16 means the 9-slice's right corners and side will have a width of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders. The width of the 9-slide's left column. A margin of 16 means the 9-slice's left corners and side will have a width of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.
-- **Bottom** - The height of the 9-slide's left column. A margin of 16 means the 9-slice's bottom corners and side will have a height of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.
-
-#### Axis Stretch
-`Horizontal` stretches or tiles the center texture horizontally, and `Vertical` stretches or tiles the center texture vertically. As for their settings:
-- **Stretch** - Stretches the center texture across the NinePatchButton. This may cause the texture to be distorted.
-- **Tile** - Repeats the center texture across the NinePatchButton. This won't cause any visible distortion. The texture must be seamless for this to work without displaying artifacts between edges. Note: This functionality is only supported when using the GLES3 renderer. When using the GLES2 renderer, this will behave like Stretch.
-- **Tile Fit** - Repeats the center texture across the NinePatchButton, but will also stretch the texture to make sure each tile is visible in full. This may cause the texture to be distorted, but less than Stretch. The texture must be seamless for this to work without displaying artifacts between edges. Note: This functionality is only supported when using the GLES3 renderer. When using the GLES2 renderer, this will behave like Stretch.
 
 
 ## Got Any Feedback?
@@ -119,21 +113,19 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 
 
 ## Future Plans
-- Fix the button press not being cancelled when moving the mouse cursor outside the button while it is still being pressed down and the `Keep Pressed Outside` property is set to *false*.
-- Fix the instanced Button becoming visible on the duplicated NinePatchButton while in the editor if you Duplicate (shortcut: Control + D) a NinePatchButton. Note that it is still invisible while running the scene, but according to its code it shouldn't be visible in the editor under any circumstances while the `flat` variable is true, which it is.
-- Add a larger icon with a size of 64x64, 128x128, or 256x256 for use as the icon for the plugin on the Asset Library and the icon for the plugin's Demo Project.
-- Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button (by default the click mask is rectangular, and with a texture that is, say, circular, the click mask will not line up as it should with the texture of the button).
+- Add a larger icon for the plugin to be displayed in the Asset Library with a size of 64x64, 128x128, or 256x256.
+- Add the `Click Mask` property from the Texture Button to enable the user to set up their own click masks to fit their custom textures for the button. By default the click mask is rectangular and with a texture that is, say, circular, the click mask will not line up as it should with the texture of the button.
 - Add the `Flip H` property from the Texture Button, renamed to `Texture Flip H` for clarity.
 - Add the `Flip V` property from the Texture Button, renamed to `Texture Flip V` for clarity.
-- Add the exported properties to custom property groups. This would help make the NinePatchButton's Inspector more user-friendly and organize the properties better.
+- Add the exported properties to custom property groups. This would help organize the NinePatchButton's properties in the Inspector and make it more user-friendly.
 
 
 ## Changelog:
 
-## v2.6.0
+## v3.0.0
+- Rearchitectured and refactored all of the plugin's code. The plugin now uses a Button node as its base, and retextures itself using [Themes](https://docs.godotengine.org/en/stable/classes/class_theme.html) that are inherited from the Control node. This fixes many bugs the plugin previously had and greatly improves how the plugin functions, as well as its ease of use.
 - Fixed the `Action Mode` property not working as intended, especially in regards to the button's sounds.
 - Changed the demo project into a demo scene. It being a self-contained project caused its own instance of the NinePatchButton to show up on the project it is installed in's `Plugins` tab as well. And it being changed to a scene instead of a full project is just much more elegant and user-friendly.
-- Improved and cleaned up the plugin's code.
 
 ### v2.5.1
 - Changed all references to "Jurubu Entertainment" in the plugin's files to "Talltale Studios". Talltale Studios is now officially the new name of our organization.
