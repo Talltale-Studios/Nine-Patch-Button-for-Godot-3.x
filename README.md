@@ -2,7 +2,7 @@
 
 
 ## What Is This?
-This plugin adds a new type of node that combines the features of the NinePatchRect, the Button, and the TextureButton, with the NinePatchRect being used as the base. We also added a customizable sound system, which allows you to assign sounds for some of its functions such as pressing it or hovering over it.
+This plugin adds a new type of Button that 
 
 
 ## Why Did We Make This?
@@ -36,23 +36,28 @@ The second method is to use a Label or a RichTextLabel. In order to do use this 
 ## Properties Guide
 
 ### Script Variables
+- **Is Disabled** - If *true* the button is in the disabled state. It can still be clicked, toggled, hovered and focused to use the corresponding **Disabled Textures** and **Disabled Audio**.
+- **Mix Target** - If the audio configuration has more than two speakers, this sets the target channels. With *Stereo*, the audio will be played only on the first channel. With *Surround*, the audio will be played on all surround channels. With *Center*, the audio will be played on the second channel, which is usually the center.
+- **Bus Name** - The [audio bus](https://docs.godotengine.org/en/stable/tutorials/audio/audio_buses.html) on which this button's audio is playing. If the name of the audio bus is invalid or this property is unset it will default to the `Master` audio bus.
 
-#### Button Texture Properties
-- **Enabled Normal Texture** - The texture to display when the button is enabled and is not in the focused, hovered, or pressed state.
-- **Enabled Hover Texture** - The texture to display when the button is enabled in conjunction with the mouse hovering over it.
-- **Enabled Focus Texture** - The texture to display when the button is enabled in conjunction with it having mouse or keyboard focus.
-- **Enabled Pressed Texture** - The texture to display when the button is enabled in conjunction with it being, or having been, pressed down.
-- **Enabled Pressed Hover Texture** - The texture to display when the button is enabled in conjunction with it being, or having been, pressed down and with the mouse hovering over it.
-- **Enabled Pressed Focus Texture** - The texture to display when the button is enabled in conjunction with it being, or having been, pressed down with it having mouse or keyboard focus.
 
-- **Disabled Normal Texture** - The texture to display when the button is disabled and is not in the hovered, focused, or pressed state.
-- **Disabled Hover Texture** - The texture to display when the button is disabled in conjunction with the mouse hovering over it.
-- **Disabled Focus Texture** - The texture to display when the button is disabled in conjunction with it having mouse or keyboard focus.
-- **Disabled Pressed Texture** - The texture to display when the button is disabled in conjunction with it being, or having been, pressed down.
-- **Disabled Pressed Hover Texture** - The texture to display when the button is disabled in conjunction with it being, or having been, pressed down and with the mouse hovering over it.
-- **Disabled Pressed Focus Texture** - The texture to display when the button is disabled in conjunction with it being, or having been, pressed down with it having mouse or keyboard focus.
+#### Enabled Textures
+- **Enabled Normal Texture** - The [StyleBox](https://docs.godotengine.org/en/stable/classes/class_stylebox.html) used when the button is enabled and is not being hovered or pressed.
+- **Enabled Normal Hover Texture** - The [StyleBox](https://docs.godotengine.org/en/stable/classes/class_stylebox.html) used for the button's custom hover style when it is enabled and is being hovered, but is not being pressed.
+- **Enabled Normal Focus Texture** - The [StyleBox](https://docs.godotengine.org/en/stable/classes/class_stylebox.html) used for the button's custom focus style when it is enabled and is focused, but is not being pressed. This custom style is displayed over the other custom styles, so using [StyleBoxEmpty](https://docs.godotengine.org/en/stable/classes/class_styleboxempty.html) will just disable the focus visual effect.
+- **Enabled Pressed Texture** - The [StyleBox](https://docs.godotengine.org/en/stable/classes/class_stylebox.html) used for the button's custom pressed style when it is enabled and is being pressed.
+- **Enabled Pressed Hover Texture** - The [StyleBox](https://docs.godotengine.org/en/stable/classes/class_stylebox.html) used for the button's custom hover style when it enabled and is being pressed and hovered.
+- **Enabled Pressed Focus Texture** - The [StyleBox](https://docs.godotengine.org/en/stable/classes/class_stylebox.html) used for the button's custom focus style when it is enabled and is being pressed and focused.
 
-#### Button Audio Properties
+#### Disabled Textures
+- **Disabled Normal Texture** - The [StyleBox](https://docs.godotengine.org/en/stable/classes/class_stylebox.html) used when the button is disabled and is not being hovered or pressed.
+- **Disabled Normal Hover Texture** - The [StyleBox](https://docs.godotengine.org/en/stable/classes/class_stylebox.html) used for the button's custom hover style when it is enabled and is being hovered, but is not being pressed.
+- **Disabled Normal Focus Texture** - The [StyleBox](https://docs.godotengine.org/en/stable/classes/class_stylebox.html) used for the button's custom focus style when it is disabled and is focused, but is not being pressed. This custom style is displayed over the other custom styles, so using [StyleBoxEmpty](https://docs.godotengine.org/en/stable/classes/class_styleboxempty.html) will just disable the focus visual effect.
+- **Disabled Pressed Texture** - The [StyleBox](https://docs.godotengine.org/en/stable/classes/class_stylebox.html) used for the button's custom pressed style when it is disabled and is being pressed.
+- **Disabled Pressed Hover Texture** - The [StyleBox](https://docs.godotengine.org/en/stable/classes/class_stylebox.html) used for the button's custom hover style when it enabled and is being pressed and hovered.
+- **Disabled Pressed Focus Texture** - The [StyleBox](https://docs.godotengine.org/en/stable/classes/class_stylebox.html) used for the button's custom focus style when it is disabled and is being pressed and focused.
+
+#### Enabled Audio
 - **Hovered Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the mouse hovers over the button.
 - **Hovered Volume Db** - The volume of the Hovered Sound, in dB.
 - **Hover Pitch Scale** - The pitch and tempo of the Hovered Sound, as a multiplier of the audio sample's sample rate.
@@ -77,6 +82,7 @@ The second method is to use a Label or a RichTextLabel. In order to do use this 
 - **Pressed Focused Volume Db** - The volume of the Pressed Focused Sound, in dB.
 - **Pressed Focused Pitch Scale** - The pitch and tempo of the Pressed Focused Sound, as a multiplier of the audio sample's sample rate.
 
+#### Disabled Audio
 - **Disabled Pressed Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button is disabled and the user attempts to press it.
 - **Disabled Pressed Volume Db** - The volume of the Disabled Pressed Sound, in dB.
 - **Disabled Pressed Pitch Scale** - The pitch and tempo of the Disabled Pressed Sound, as a multiplier of the audio sample's sample rate.
@@ -88,21 +94,6 @@ The second method is to use a Label or a RichTextLabel. In order to do use this 
 - **Disabled Focused Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button is disabled in conjunction with it having mouse or keyboard focus.
 - **Disabled Focused Volume Db** - The volume of the Disabled Focused Sound, in dB.
 - **Disabled Focused Pitch Scale** - The pitch and tempo of the Disabled Focused Sound, as a multiplier of the audio sample's sample rate.
-
-- **Mix Target** - If the audio configuration has more than two speakers, this sets the target channels. With *Stereo*, the audio will be played only on the first channel. With *Surround*, the audio will be played on all surround channels. With *Center*, the audio will be played on the second channel, which is usually the center.
-- **Bus Name** - The [audio bus](https://docs.godotengine.org/en/stable/tutorials/audio/audio_buses.html) on which this button's audio is playing. If the name of the audio bus is invalid or this property is unset it will default to the `Master` audio bus.
-
-#### BaseButton Properties
-- **Disabled** - If *true*, the button is in the disabled state and can't be pressed or toggled. *Note: This also disables all input events, meaning texture and sound handling gets disabled as well. In the event of this property being set to true, the plugin will use the texture provided by the `Disabled Normal` as a fallback. To prevent this, use the plugin's custom `Is Disabled` property instead.*
-- **Toggle Mode** - If *true*, the button is in the toggle mode. Makes the button flip state between pressed and unpressed each time it is clicked. If *false* then the button will only remain pressed as long as the button is being pressed down by holding the input down, and will revert to the non-pressed state as soon as the input is released.
-- **Shortcut In Tooltip** - If *true*, the button will add information about its shortcut in the tooltip.
-- **Pressed** - If *true*, the button is in the pressed state. Means the button is pressed down or toggled. Only works if the `Toggle Mode` property is set to *true*. *Note: Setting the `Pressed` property to *true* will result in the `toggled` signal to be emitted. If you want to change the pressed state without emitting the `toggled` signal, use the `set_pressed_no_signal()` built-in function.
-- **Action Mode** - Determines when the button is considered clicked.
-- **Button Mask** - The binary mark to choose which mouse buttons this button will respond to.
-- **Enabled Focus Mode** - This property has been deprecated due to redundancy and will be removed in Godot 4.0. This property no longer has any effect when set. Please use the `Control/Focus/Mode` property instead.
-- **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it.
-- **Shortcut** - The [ShortCut](https://docs.godotengine.org/en/stable/classes/class_shortcut.html) associated with the button.
-- **Group** - The [ButtonGroup](https://docs.godotengine.org/en/stable/classes/class_buttongroup.html) associated with the button.
 
 
 ## Got Any Feedback?
@@ -125,8 +116,10 @@ If you have any feedback, be it a bug report, a suggestion, or a feature request
 ## v3.0.0
 - Rearchitectured and refactored all of the plugin's code. The plugin now uses a Button node as its base, and retextures itself using `Theme Overrides`. This fixes many bugs the plugin previously had and greatly improves how the plugin functions, as well as its ease of use. This also means all of the variables from the NinePatchRect and the previously-instanced Button are now gone as they are redundant.
 - Sorted most of the button's custom properties into fitting categories in the Inspector.
-- Fixed the `Action Mode` property not working as intended, especially in regards to the button's sounds.
-- Changed the demo project into a demo scene. It being a self-contained project caused its own instance of the NinePatchButton to show up on the project it is installed in's `Plugins` tab as well. And it being changed to a scene instead of a full project is just much more elegant and user-friendly.
+- Added several missing features related to the textures and sounds that were supposed to be in already.
+- Added several new features related to the textures and sounds.
+- Fixed the `Action Mode` property not working as intended in regards to the button's sounds.
+- Changed the demo project into a demo scene. It being a self-contained project caused its own instance of the NinePatchButton to show up on the project it is installed in's `Plugins` tab as well. And it being changed to a scene instead of a full project is much more elegant and user-friendly.
 
 ### v2.5.1
 - Changed all references to "Jurubu Entertainment" in the plugin's files to "Talltale Studios". Talltale Studios is now officially the new name of our organization.
