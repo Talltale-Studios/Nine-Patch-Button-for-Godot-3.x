@@ -12,6 +12,7 @@ config_version=4
 
 config/name="NinePatchButton Development"
 config/description="A project is for testing and developing the NinePatchButton (for Godot 3.x) plugin."
+run/main_scene="res://addons/ninepatchbutton_demo/demo.tscn"
 config/icon="res://icon.png"
 
 [editor_plugins]

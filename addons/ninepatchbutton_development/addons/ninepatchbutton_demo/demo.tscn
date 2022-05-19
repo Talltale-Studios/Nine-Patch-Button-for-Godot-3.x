@@ -1,26 +1,99 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://addons/ninepatchbutton/ninepatchbutton.gd" type="Script" id=1]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/blue_button_03.png" type="Texture" id=2]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/blue_button_01.png" type="Texture" id=3]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/blue_button_04.png" type="Texture" id=4]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/blue_button_02.png" type="Texture" id=5]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/red_button_01.png" type="Texture" id=6]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/red_button_03.png" type="Texture" id=7]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/red_button_02.png" type="Texture" id=8]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/graphics/red_button_04.png" type="Texture" id=9]
+[ext_resource path="res://addons/ninepatchbutton_demo/assets/audio/error_008.ogg" type="AudioStream" id=10]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 190, 49 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 190, 45 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 190, 49 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 190, 49 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 190, 45 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 190, 45 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 190, 49 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 190, 49 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 190, 49 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 190, 45 )
+
+[sub_resource type="StyleBoxTexture" id=13]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 190, 45 )
+
+[sub_resource type="StyleBoxTexture" id=14]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 190, 45 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+__meta__ = {
+"_edit_horizontal_guides_": [ 16.0, 104.0, 120.0, 208.0 ],
+"_edit_vertical_guides_": [ 16.0, 504.0, 520.0, 1008.0 ]
+}
 
-[node name="Button" type="Button" parent="."]
-margin_right = 499.0
-margin_bottom = 83.0
-focus_mode = 0
-enabled_focus_mode = 0
-text = "Toggle = false"
+[node name="Button1" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 504.0
+margin_bottom = 104.0
+focus_neighbour_right = NodePath("../Button2")
+focus_neighbour_bottom = NodePath("../Button3")
+focus_mode = 1
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/normal = SubResource( 4 )
+text = "Hover Focus Mode = None"
 script = ExtResource( 1 )
-enabled_normal_texture = null
-enabled_hover_texture = null
-enabled_focus_texture = null
-enabled_pressed_texture = null
-disabled_normal_texture = null
-disabled_hover_texture = null
-disabled_focus_texture = null
-disabled_pressed_texture = null
+can_hover_while_pressed = true
+enabled_normal_texture = SubResource( 4 )
+enabled_normal_hover_texture = SubResource( 1 )
+enabled_normal_focus_texture = SubResource( 8 )
+enabled_pressed_texture = SubResource( 2 )
+enabled_pressed_hover_texture = SubResource( 5 )
+enabled_pressed_focus_texture = SubResource( 9 )
+disabled_normal_texture = SubResource( 7 )
+disabled_normal_hover_texture = SubResource( 10 )
+disabled_normal_focus_texture = SubResource( 11 )
+disabled_pressed_texture = SubResource( 12 )
+disabled_pressed_hover_texture = SubResource( 13 )
+disabled_pressed_focus_texture = SubResource( 14 )
 enabled_hover_sound = null
 enabled_hover_volume_db = 0.0
 enabled_hover_pitch_scale = 1.0
@@ -36,6 +109,9 @@ enabled_pressed_hover_pitch_scale = 1.0
 enabled_pressed_focus_sound = null
 enabled_pressed_focus_volume_db = 0.0
 enabled_pressed_focus_pitch_scale = 1.0
+enabled_pressed_release_sound = null
+enabled_pressed_release_volume_db = 0.0
+enabled_pressed_release_pitch_scale = 1.0
 disabled_hover_sound = null
 disabled_hover_volume_db = 0.0
 disabled_hover_pitch_scale = 1.0
@@ -53,23 +129,35 @@ disabled_pressed_focus_volume_db = 0.0
 disabled_pressed_focus_pitch_scale = 1.0
 
 [node name="Button2" type="Button" parent="."]
-anchor_left = 0.977
-anchor_right = 0.977
-margin_left = -499.448
-margin_right = -0.447998
-margin_bottom = 83.0
-focus_mode = 0
-enabled_focus_mode = 0
-text = "Toggle = true"
+margin_left = 520.0
+margin_top = 16.0
+margin_right = 1008.0
+margin_bottom = 104.0
+focus_neighbour_left = NodePath("../Button1")
+focus_neighbour_bottom = NodePath("../Button4")
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/normal = SubResource( 4 )
+toggle_mode = true
+text = "Hover Focus Mode = None"
 script = ExtResource( 1 )
-enabled_normal_texture = null
-enabled_hover_texture = null
-enabled_focus_texture = null
-enabled_pressed_texture = null
-disabled_normal_texture = null
-disabled_hover_texture = null
-disabled_focus_texture = null
-disabled_pressed_texture = null
+__meta__ = {
+"_editor_description_": ""
+}
+can_hover_while_pressed = true
+enabled_normal_texture = SubResource( 4 )
+enabled_normal_hover_texture = SubResource( 1 )
+enabled_normal_focus_texture = SubResource( 8 )
+enabled_pressed_texture = SubResource( 2 )
+enabled_pressed_hover_texture = SubResource( 5 )
+enabled_pressed_focus_texture = SubResource( 9 )
+disabled_normal_texture = SubResource( 7 )
+disabled_normal_hover_texture = SubResource( 10 )
+disabled_normal_focus_texture = SubResource( 11 )
+disabled_pressed_texture = SubResource( 12 )
+disabled_pressed_hover_texture = SubResource( 13 )
+disabled_pressed_focus_texture = SubResource( 14 )
 enabled_hover_sound = null
 enabled_hover_volume_db = 0.0
 enabled_hover_pitch_scale = 1.0
@@ -85,6 +173,9 @@ enabled_pressed_hover_pitch_scale = 1.0
 enabled_pressed_focus_sound = null
 enabled_pressed_focus_volume_db = 0.0
 enabled_pressed_focus_pitch_scale = 1.0
+enabled_pressed_release_sound = null
+enabled_pressed_release_volume_db = 0.0
+enabled_pressed_release_pitch_scale = 1.0
 disabled_hover_sound = null
 disabled_hover_volume_db = 0.0
 disabled_hover_pitch_scale = 1.0
@@ -102,22 +193,36 @@ disabled_pressed_focus_volume_db = 0.0
 disabled_pressed_focus_pitch_scale = 1.0
 
 [node name="Button3" type="Button" parent="."]
-margin_top = 85.0
-margin_right = 499.0
-margin_bottom = 168.0
-focus_mode = 0
-enabled_focus_mode = 0
-text = "is_disabled = true|toggle = false"
+margin_left = 16.0
+margin_top = 120.0
+margin_right = 504.0
+margin_bottom = 208.0
+focus_neighbour_top = NodePath("../Button1")
+focus_neighbour_right = NodePath("../Button4")
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/focus = SubResource( 14 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 7 )
+text = "Hover Focus Mode = None"
 script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
 is_disabled = true
-enabled_normal_texture = null
-enabled_hover_texture = null
-enabled_focus_texture = null
-enabled_pressed_texture = null
-disabled_normal_texture = null
-disabled_hover_texture = null
-disabled_focus_texture = null
-disabled_pressed_texture = null
+can_hover_while_pressed = true
+enabled_normal_texture = SubResource( 4 )
+enabled_normal_hover_texture = SubResource( 1 )
+enabled_normal_focus_texture = SubResource( 8 )
+enabled_pressed_texture = SubResource( 2 )
+enabled_pressed_hover_texture = SubResource( 5 )
+enabled_pressed_focus_texture = SubResource( 9 )
+disabled_normal_texture = SubResource( 7 )
+disabled_normal_hover_texture = SubResource( 10 )
+disabled_normal_focus_texture = SubResource( 11 )
+disabled_pressed_texture = SubResource( 12 )
+disabled_pressed_hover_texture = SubResource( 13 )
+disabled_pressed_focus_texture = SubResource( 14 )
 enabled_hover_sound = null
 enabled_hover_volume_db = 0.0
 enabled_hover_pitch_scale = 1.0
@@ -133,6 +238,9 @@ enabled_pressed_hover_pitch_scale = 1.0
 enabled_pressed_focus_sound = null
 enabled_pressed_focus_volume_db = 0.0
 enabled_pressed_focus_pitch_scale = 1.0
+enabled_pressed_release_sound = null
+enabled_pressed_release_volume_db = 0.0
+enabled_pressed_release_pitch_scale = 1.0
 disabled_hover_sound = null
 disabled_hover_volume_db = 0.0
 disabled_hover_pitch_scale = 1.0
@@ -150,26 +258,38 @@ disabled_pressed_focus_volume_db = 0.0
 disabled_pressed_focus_pitch_scale = 1.0
 
 [node name="Button4" type="Button" parent="."]
-anchor_left = 0.977
-anchor_right = 0.977
-margin_left = -499.448
-margin_top = 85.0
-margin_right = -0.447998
-margin_bottom = 168.0
-focus_mode = 0
+margin_left = 520.0
+margin_top = 121.0
+margin_right = 1008.0
+margin_bottom = 209.0
+focus_neighbour_left = NodePath("../Button3")
+focus_neighbour_top = NodePath("../Button2")
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 7 )
 toggle_mode = true
-enabled_focus_mode = 0
-text = "is_disabled = true|toggle = true"
+pressed = true
+text = "Hover Focus Mode = None"
 script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
 is_disabled = true
-enabled_normal_texture = null
-enabled_hover_texture = null
-enabled_focus_texture = null
-enabled_pressed_texture = null
-disabled_normal_texture = null
-disabled_hover_texture = null
-disabled_focus_texture = null
-disabled_pressed_texture = null
+can_hover_while_pressed = true
+enabled_normal_texture = SubResource( 4 )
+enabled_normal_hover_texture = SubResource( 1 )
+enabled_normal_focus_texture = SubResource( 8 )
+enabled_pressed_texture = SubResource( 2 )
+enabled_pressed_hover_texture = SubResource( 5 )
+enabled_pressed_focus_texture = SubResource( 9 )
+disabled_normal_texture = SubResource( 7 )
+disabled_normal_hover_texture = SubResource( 10 )
+disabled_normal_focus_texture = SubResource( 11 )
+disabled_pressed_texture = SubResource( 12 )
+disabled_pressed_hover_texture = SubResource( 13 )
+disabled_pressed_focus_texture = SubResource( 14 )
 enabled_hover_sound = null
 enabled_hover_volume_db = 0.0
 enabled_hover_pitch_scale = 1.0
@@ -185,14 +305,17 @@ enabled_pressed_hover_pitch_scale = 1.0
 enabled_pressed_focus_sound = null
 enabled_pressed_focus_volume_db = 0.0
 enabled_pressed_focus_pitch_scale = 1.0
+enabled_pressed_release_sound = null
+enabled_pressed_release_volume_db = 0.0
+enabled_pressed_release_pitch_scale = 1.0
 disabled_hover_sound = null
 disabled_hover_volume_db = 0.0
 disabled_hover_pitch_scale = 1.0
 disabled_focus_sound = null
 disabled_focus_volume_db = 0.0
 disabled_focus_pitch_scale = 1.0
-disabled_pressed_sound = null
-disabled_pressed_volume_db = 0.0
+disabled_pressed_sound = ExtResource( 10 )
+disabled_pressed_volume_db = 7.8
 disabled_pressed_pitch_scale = 1.0
 disabled_pressed_hover_sound = null
 disabled_pressed_hover_volume_db = 0.0
