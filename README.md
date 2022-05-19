@@ -37,6 +37,7 @@ The second method is to use a Label or a RichTextLabel. In order to do use this 
 
 ### Script Variables
 - **Is Disabled** - If *true* the button is in the disabled state. It can still be clicked, toggled, hovered and focused to use the corresponding **Disabled Textures** and **Disabled Audio**.
+- **Hover While Pressed** - If *true* the button will use the **Pressed Hover** textures if it is being both pressed and hovered.
 - **Mix Target** - If the audio configuration has more than two speakers, this sets the target channels. With *Stereo*, the audio will be played only on the first channel. With *Surround*, the audio will be played on all surround channels. With *Center*, the audio will be played on the second channel, which is usually the center.
 - **Bus Name** - The [audio bus](https://docs.godotengine.org/en/stable/tutorials/audio/audio_buses.html) on which this button's audio is playing. If the name of the audio bus is invalid or this property is unset it will default to the `Master` audio bus.
 
