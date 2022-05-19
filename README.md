@@ -36,8 +36,9 @@ The second method is to use a Label or a RichTextLabel. In order to do use this 
 ## Properties Guide
 
 ### Script Variables
-- **Is Disabled** - If *true* the button is in the disabled state. It can still be clicked, toggled, hovered and focused to use the corresponding **Disabled Textures** and **Disabled Audio**.
+- **Is Disabled** - If *true* the button is in the disabled state. It can still be clicked, toggled, hovered and focused to use the corresponding **Disabled Textures** and **Disabled Audio**. If you intend on using any of those properties then this should be use instead of `BaseButton/Disabled`.
 - **Can Hover While Pressed** - If *true* the button will use the **Pressed Hover** textures if it is being both pressed and hovered.
+- **Hover Focus Mode** - Not to be confused with `BaseButton/Enabled Focus Mode` or `Control/Focus/Mode`. With *None*, the button will act as usual. With *On Exit*, the button will be brought out of focus when the mouse cursor exits the button. With *On Enter*, the button will be brought into focus when the mouse cursor enters the button. With *Both*, the button will be brought into focus when the mouse cursor enters the button, and out of focus when the mouse cursor exits the button.
 - **Mix Target** - If the audio configuration has more than two speakers, this sets the target channels. With *Stereo*, the audio will be played only on the first channel. With *Surround*, the audio will be played on all surround channels. With *Center*, the audio will be played on the second channel, which is usually the center.
 - **Bus Name** - The [audio bus](https://docs.godotengine.org/en/stable/tutorials/audio/audio_buses.html) on which this button's audio is playing. If the name of the audio bus is invalid or this property is unset it will default to the `Master` audio bus.
 
@@ -95,6 +96,19 @@ The second method is to use a Label or a RichTextLabel. In order to do use this 
 - **Disabled Focused Sound** - The [AudioStream](https://docs.godotengine.org/en/stable/classes/class_audiostream.html) object to play when the button is disabled in conjunction with it having mouse or keyboard focus.
 - **Disabled Focused Volume Db** - The volume of the Disabled Focused Sound, in dB.
 - **Disabled Focused Pitch Scale** - The pitch and tempo of the Disabled Focused Sound, as a multiplier of the audio sample's sample rate.
+
+
+### BaseButton Properties
+- **Disabled** - If *true*, the button is in the disabled state and can't be pressed or toggled. *Note: This also disables all input events, meaning texture and sound handling gets disabled as well. In the event of this property being set to true, the plugin will use the texture provided by the `Disabled Normal` as a fallback. To prevent this, use the plugin's custom `Is Disabled` property instead.*
+- **Toggle Mode** - If *true*, the button is in the toggle mode. Makes the button flip state between pressed and unpressed each time it is clicked. If *false* then the button will only remain pressed as long as the button is being pressed down by holding the input down, and will revert to the non-pressed state as soon as the input is released.
+- **Shortcut In Tooltip** - If *true*, the button will add information about its shortcut in the tooltip.
+- **Pressed** - If *true*, the button is in the pressed state. Means the button is pressed down or toggled. Only works if the `Toggle Mode` property is set to *true*. *Note: Setting the `Pressed` property to *true* will result in the `toggled` signal to be emitted. If you want to change the pressed state without emitting the `toggled` signal, use the `set_pressed_no_signal()` built-in function.
+- **Action Mode** - Determines when the button is considered clicked.
+- **Button Mask** - The binary mark to choose which mouse buttons this button will respond to.
+- **Enabled Focus Mode** - This property has been deprecated due to redundancy and will be removed in Godot 4.0. This property no longer has any effect when set. Please use the `Control/Focus/Mode` property instead.
+- **Keep Pressed Outside** - If *true*, the button stays pressed when moving the cursor outside the button while pressing it.
+- **Shortcut** - The [ShortCut](https://docs.godotengine.org/en/stable/classes/class_shortcut.html) associated with the button.
+- **Group** - The [ButtonGroup](https://docs.godotengine.org/en/stable/classes/class_buttongroup.html) associated with the button.
 
 
 ## Got Any Feedback?
