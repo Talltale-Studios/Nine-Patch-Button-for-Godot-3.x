@@ -21,21 +21,21 @@ thirdparty/* linguist-vendored
 *.bat eol=crlf
 
 # Ignore some general files when exporting to a ZIP
-/.gitattributes					export-ignore
-/.gitignore						export-ignore
-/LICENSE						export-ignore
-/LICENSE.md						export-ignore
-/README							export-ignore
-/README.md						export-ignore
-/project.godot					export-ignore
-/icon.png						export-ignore
-/Icon.png						export-ignore
-/icon.svg						export-ignore
-/Icon.svg						export-ignore
+/.gitattributes                 export-ignore
+/.gitignore                     export-ignore
+/LICENSE                        export-ignore
+/LICENSE.md                     export-ignore
+/README                         export-ignore
+/README.md                      export-ignore
+/project.godot                  export-ignore
+/icon.png                       export-ignore
+/Icon.png                       export-ignore
+/icon.svg                       export-ignore
+/Icon.svg                       export-ignore
 # Ignore some project-specific files when exporting to a ZIP
-/media							export-ignore
-/Media							export-ignore
-/ninepatchbutton_development	export-ignore
+/media                          export-ignore
+/Media                          export-ignore
+/ninepatchbutton_development    export-ignore
 
 # Godot explicit EOL
 *.gd eol=lf
