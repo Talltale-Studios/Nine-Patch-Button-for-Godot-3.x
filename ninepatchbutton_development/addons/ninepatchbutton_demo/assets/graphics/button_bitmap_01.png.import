@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/button_bitmap_01.png-a04d8bc5b581542e04f3405abe945946.res"
+
+[deps]
+
+source_file="res://addons/ninepatchbutton_demo/assets/graphics/button_bitmap_01.png"
+dest_files=[ "res://.import/button_bitmap_01.png-a04d8bc5b581542e04f3405abe945946.res" ]
+
+[params]
+
+create_from=0
+threshold=0.5

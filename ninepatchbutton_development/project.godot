@@ -8,16 +8,26 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Reference",
+"class": "AdvExp",
+"language": "GDScript",
+"path": "res://addons/advanced-inspector-exporter/AdvExp.gd"
+} ]
+_global_script_class_icons={
+"AdvExp": "res://addons/advanced-inspector-exporter/adv_exp.svg"
+}
+
 [application]
 
 config/name="NinePatchButton Development"
-config/description="A project is for testing and developing the NinePatchButton (for Godot 3.x) plugin."
+config/description="This project is for testing and developing the NinePatchButton (for Godot 3.x) plugin."
 run/main_scene="res://addons/ninepatchbutton_demo/demo.tscn"
 config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/ninepatchbutton/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/advanced-inspector-exporter/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/ninepatchbutton/plugin.cfg" )
 
 [importer_defaults]
 
